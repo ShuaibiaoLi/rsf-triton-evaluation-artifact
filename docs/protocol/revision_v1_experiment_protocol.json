@@ -1,0 +1,73 @@
+{
+  "schema_version": "rsf-triton-experiment-protocol/1.0",
+  "protocol_id": "major-revision-v1",
+  "status": "FROZEN_BEFORE_FORMAL_RERUN",
+  "primary_platform": "BW1000",
+  "secondary_platform": "dongfang",
+  "rules": {
+    "primary_claims_require_bw1000_measurement": true,
+    "dongfang_is_frozen_protocol_replication": true,
+    "kernel_calls_are_not_independent_experimental_units": true,
+    "profiling_is_separate_from_formal_timing": true,
+    "failed_and_invalid_runs_are_retained": true
+  },
+  "timing": {
+    "warmup": 10,
+    "steady_calls_per_job": 30,
+    "independent_jobs_preferred": 10,
+    "independent_jobs_minimum": 5,
+    "formal_unit": "median steady-call latency within one independent job",
+    "paired_order": "alternate HIP-first and Triton-first by outer repeat",
+    "percentiles": [0.05, 0.5, 0.95]
+  },
+  "spmv": {
+    "dtype": "float64",
+    "index_dtype": "int32",
+    "layout": "CSR with identical rowptr, column indices, values, x and y semantics",
+    "mappings": {
+      "hip": ["one_thread_per_row", "cooperative_row"],
+      "triton": ["row_program", "block_row"]
+    },
+    "candidate_space": {
+      "block_size": [64, 128, 256],
+      "num_warps_or_wave_groups": [1, 2, 4, 8],
+      "maximum_candidates_per_mapping": 12
+    },
+    "selection_metric": "median device-event microseconds on tuning set",
+    "tie_break": ["lower median_us", "lower resource use", "smaller block_size", "fewer warps_or_wave_groups"],
+    "required_matrix_features": [
+      "rows", "cols", "nnz", "mean_row_nnz", "p95_row_nnz",
+      "p99_row_nnz", "max_row_nnz", "row_nnz_cv", "kmax",
+      "padded_items", "padding_amplification", "effective_lane_ratio"
+    ]
+  },
+  "splits": {
+    "correctness": [
+      "synthetic_empty_row", "synthetic_singleton", "synthetic_nondivisible",
+      "synthetic_short_regular", "synthetic_bimodal", "synthetic_long_tail",
+      "bcsstk17", "poisson3Da", "dw8192", "apache2", "orani678", "sme3Da"
+    ],
+    "tuning": ["bcsstk17", "poisson3Da"],
+    "formal_representatives": ["dw8192", "apache2", "orani678"],
+    "revision_holdout": ["sme3Da"]
+  },
+  "holdout_caveat": "sme3Da is isolated from revision-v1 tuning after this freeze, but appeared in prior exploratory work; it is a revision holdout, not a pristine never-observed sample.",
+  "formal_cases": [
+    "row_reduction_large", "interior_stencil_representative", "spmv_apache2",
+    "spmv_dw8192", "spmv_orani678", "rsf_c3_formal"
+  ],
+  "timing_decomposition_cases": [
+    "stencil_small", "interior_stencil_large", "row_reduction",
+    "spmv_short_row", "spmv_long_tail", "rsf_c3"
+  ],
+  "timing_boundaries": [
+    "first_call_including_jit", "post_jit_host_submit_to_sync", "single_device_event",
+    "steady_batch_per_call", "graph_or_equivalent_replay", "profiler_kernel_start_end",
+    "empty_kernel_same_protocol"
+  ],
+  "rsf_ablations": [
+    "original", "fixed_iteration_replay", "replace_log", "replace_exp",
+    "replace_sqrt", "replace_asinh", "replace_all_transcendentals_with_arithmetic",
+    "shared_polynomial_or_lut", "restored_original"
+  ]
+}

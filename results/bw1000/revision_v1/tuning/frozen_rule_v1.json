@@ -1,0 +1,93 @@
+{
+  "schema_version": "spmv-frozen-rule/1.0",
+  "status": "FROZEN",
+  "freeze_time_utc": "2026-10-15T08:10:02.743527+00:00",
+  "protocol_sha256": "3b848acf0e4e6dbdc999cc7bd64e13bad67576cff4d046e3aa176db247899fb3",
+  "tuning_ledger": {
+    "path": "results/bw1000/revision_v1/tuning/tuning-ledger-local-replay.json",
+    "sha256": "b4b5a6bd78723141ea0c35928bb21692f32ee6c0b8ade7a656c0fb3022efc027"
+  },
+  "source_sha256_manifest": {
+    "path": "results/raw/bw1000/revision-v1-spmv4-tuning-924088/source.sha256",
+    "sha256": "5b5c801ea7c6dc9b9f5d1be6e1d3d7198f1b61efc2006efbfea94f81f4e6d304"
+  },
+  "selection_metric": "geometric mean of per-matrix latency normalized by the best same-backend candidate",
+  "tie_break": [
+    "normalized_geomean",
+    "block_size",
+    "num_warps_or_wave_groups"
+  ],
+  "selected_per_cell": [
+    {
+      "backend": "hip",
+      "mapping": "cooperative_row",
+      "block_size": 256,
+      "num_warps_or_wave_groups": 4,
+      "normalized_geomean": 1.0255360376168177,
+      "per_matrix_normalized_slowdown": {
+        "bcsstk17": 1.051724164450803,
+        "poisson3Da": 1.0
+      }
+    },
+    {
+      "backend": "hip",
+      "mapping": "one_thread_per_row",
+      "block_size": 64,
+      "num_warps_or_wave_groups": 1,
+      "normalized_geomean": 4.147071353056813,
+      "per_matrix_normalized_slowdown": {
+        "bcsstk17": 4.413793181913893,
+        "poisson3Da": 3.896467301145054
+      }
+    },
+    {
+      "backend": "triton",
+      "mapping": "block_row",
+      "block_size": 256,
+      "num_warps_or_wave_groups": 1,
+      "normalized_geomean": 1.0,
+      "per_matrix_normalized_slowdown": {
+        "bcsstk17": 1.0,
+        "poisson3Da": 1.0
+      }
+    },
+    {
+      "backend": "triton",
+      "mapping": "row_program",
+      "block_size": 256,
+      "num_warps_or_wave_groups": 4,
+      "normalized_geomean": 1.2584120624973205,
+      "per_matrix_normalized_slowdown": {
+        "bcsstk17": 1.1796714936397072,
+        "poisson3Da": 1.3424083972333576
+      }
+    }
+  ],
+  "constant_default_per_backend": {
+    "hip": {
+      "backend": "hip",
+      "mapping": "cooperative_row",
+      "block_size": 256,
+      "num_warps_or_wave_groups": 4,
+      "normalized_geomean": 1.0255360376168177,
+      "per_matrix_normalized_slowdown": {
+        "bcsstk17": 1.051724164450803,
+        "poisson3Da": 1.0
+      }
+    },
+    "triton": {
+      "backend": "triton",
+      "mapping": "block_row",
+      "block_size": 256,
+      "num_warps_or_wave_groups": 1,
+      "normalized_geomean": 1.0,
+      "per_matrix_normalized_slowdown": {
+        "bcsstk17": 1.0,
+        "poisson3Da": 1.0
+      }
+    }
+  },
+  "rule_scope": "configuration freeze and constant default only",
+  "structural_rule_status": "NOT_ESTABLISHED_TWO_TUNING_MATRICES",
+  "holdout_policy": "revision holdout remains locked until this artifact exists; do not modify after holdout execution"
+}

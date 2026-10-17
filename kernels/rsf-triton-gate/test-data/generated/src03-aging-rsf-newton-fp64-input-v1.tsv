@@ -1,0 +1,10 @@
+case_id	shear_traction	effective_normal_stress	state_reference	direct_effect_a	evolution_effect_b	reference_friction	reference_velocity	state_evolution_distance	shear_impedance	previous_velocity	time_step	state_updates	newton_tolerance	max_newton_iterations
+steady_reference	8000000.0	10000000.0	0.2	0.01	0.015	0.6	1e-06	0.02	4000000.0	1e-06	0.001	2	1e-08	60
+near_zero_previous_velocity	5800000.0	10000000.0	20000.0	0.012	0.018	0.6	1e-06	0.02	4000000.0	0.0	0.001	2	1e-08	60
+low_traction	100000.0	10000000.0	20000.0	0.012	0.018	0.6	1e-06	0.02	4000000.0	1e-12	0.001	2	1e-08	60
+high_velocity	12000000.0	10000000.0	0.02	0.008	0.012	0.58	1e-06	0.01	2000000.0	1.0	0.002	2	1e-08	60
+weak_normal_stress	20000.0	1000.0	20000.0	0.01	0.015	0.6	1e-06	0.02	4000000.0	1e-06	0.001	2	1e-08	60
+small_direct_effect	7000000.0	10000000.0	0.2	0.004	0.018	0.6	1e-06	0.01	3000000.0	1e-05	0.0005	2	1e-08	60
+long_time_step	8000000.0	10000000.0	0.2	0.01	0.015	0.6	1e-06	0.02	4000000.0	0.0001	0.25	2	1e-08	60
+forced_nonconvergence	8000000.0	10000000.0	0.2	0.01	0.015	0.6	1e-06	0.02	4000000.0	1e-45	0.001	2	1e-08	1
+small_length_scale	6500000.0	9000000.0	0.05	0.009	0.014	0.59	1e-06	0.0001	3500000.0	0.001	0.0002	2	1e-08	60

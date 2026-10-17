@@ -1,0 +1,15 @@
+{
+  "artifact": "rsf-triton-artifact-v1",
+  "file_count_excluding_manifest": 705,
+  "claim_scope": [
+    "registered-space mapping",
+    "timing semantics",
+    "reversible RSF attribution"
+  ],
+  "production_seissol_triton": "NOT_TESTED",
+  "licenses": {
+    "code": "MIT",
+    "data_figures_documentation": "CC-BY-4.0"
+  },
+  "license_status": "APPROVED_BY_AUTHOR"
+}

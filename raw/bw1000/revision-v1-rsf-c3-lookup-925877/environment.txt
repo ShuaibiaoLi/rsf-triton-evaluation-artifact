@@ -1,0 +1,14 @@
+timestamp=2026-10-15T13:32:27Z
+hostname=f11r2n10
+slurm_job_id=925877
+dcc version: 25.10.0-0
+clang version 17.0.0 (http://112.11.119.99:55080/dcutoolkit/driverruntime/llvm-project.git ff5bf917a679c83afe927af051a20b86fef7b07d)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /public/software/compiler/dtk-26.04/llvm/bin
+Python 3.12.14
+/public/home/cnic_lsb/conda-envs/rsf-triton-v2/lib/python3.12/site-packages/torch/_subclasses/functional_tensor.py:283: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at /mnt/framework/workspace/build/torch-28498c-py312/torch/csrc/utils/tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+torch=2.10.0+das.opt1.dtk2604.2608141812.g28498c
+triton=3.5.0
+device=BW

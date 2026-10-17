@@ -1,0 +1,119 @@
+{
+  "schema_version": "rsf-c3-lookup-triton/2.0",
+  "status": "PASS",
+  "backend": "triton",
+  "n": 65537,
+  "warmup": 1,
+  "repeat": 1,
+  "differences": {
+    "fixed_original_pre": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "lookup_coefficient": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "lookup_sqrt": [
+      1.0587911840678754e-22,
+      0.0,
+      1.0587911840678754e-22,
+      0.0,
+      0.0
+    ],
+    "lookup_asinh": [
+      2.220446049250313e-16,
+      1.1102230246251565e-16,
+      2.220446049250313e-16,
+      0.0,
+      0.0
+    ],
+    "lookup_all_transcendentals": [
+      2.220446049250313e-16,
+      1.1102230246251565e-16,
+      2.220446049250313e-16,
+      0.0,
+      0.0
+    ],
+    "arithmetic_placeholder": [
+      2.220446049250313e-16,
+      0.0,
+      1.9776376758063815e-16,
+      0.0,
+      0.0
+    ],
+    "fixed_original_restore": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "variants": {
+    "fixed_original_pre": {
+      "median_us": 253.60000133514404,
+      "p5_us": 0.0,
+      "p95_us": 0.0,
+      "samples_us": [
+        253.60000133514404
+      ]
+    },
+    "lookup_coefficient": {
+      "median_us": 254.40001487731934,
+      "p5_us": 0.0,
+      "p95_us": 0.0,
+      "samples_us": [
+        254.40001487731934
+      ]
+    },
+    "lookup_sqrt": {
+      "median_us": 242.40000545978546,
+      "p5_us": 0.0,
+      "p95_us": 0.0,
+      "samples_us": [
+        242.40000545978546
+      ]
+    },
+    "lookup_asinh": {
+      "median_us": 209.60000157356262,
+      "p5_us": 0.0,
+      "p95_us": 0.0,
+      "samples_us": [
+        209.60000157356262
+      ]
+    },
+    "lookup_all_transcendentals": {
+      "median_us": 199.20000433921814,
+      "p5_us": 0.0,
+      "p95_us": 0.0,
+      "samples_us": [
+        199.20000433921814
+      ]
+    },
+    "arithmetic_placeholder": {
+      "median_us": 195.19999623298645,
+      "p5_us": 0.0,
+      "p95_us": 0.0,
+      "samples_us": [
+        195.19999623298645
+      ]
+    },
+    "fixed_original_restore": {
+      "median_us": 236.80000007152557,
+      "p5_us": 0.0,
+      "p95_us": 0.0,
+      "samples_us": [
+        236.80000007152557
+      ]
+    }
+  },
+  "restore_over_pre": 0.9337539385837128,
+  "reversibility_pass": true
+}

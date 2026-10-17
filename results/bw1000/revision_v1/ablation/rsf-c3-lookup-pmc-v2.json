@@ -1,0 +1,169 @@
+{
+  "schema_version": "rsf-c3-lookup-pmc/2.0",
+  "status": "PASS",
+  "profiler_timing_not_for_speedup": true,
+  "variants": [
+    {
+      "variant": "fixed_original",
+      "hip": {
+        "arch_vgpr": 64,
+        "sgpr": 32,
+        "SQ_ACTIVE_INST_VALU": 3960461,
+        "SQ_INSTS_VALU": 3680876,
+        "SQ_INSTS_VMEM_RD": 6150,
+        "SQ_INSTS_VMEM_WR": 5125,
+        "DispatchNs": 164789614200360,
+        "BeginNs": 164789618101799,
+        "EndNs": 164789618154279
+      },
+      "triton": {
+        "arch_vgpr": 52,
+        "sgpr": 48,
+        "SQ_ACTIVE_INST_VALU": 9369525,
+        "SQ_INSTS_VALU": 8610000,
+        "SQ_INSTS_VMEM_RD": 12300,
+        "SQ_INSTS_VMEM_WR": 5125,
+        "DispatchNs": 164856247921827,
+        "BeginNs": 164856251672583,
+        "EndNs": 164856251780903
+      },
+      "triton_over_hip_valu": 2.3391171014725844,
+      "triton_over_hip_vmem_read": 2.0
+    },
+    {
+      "variant": "lookup_coefficient",
+      "hip": {
+        "arch_vgpr": 48,
+        "sgpr": 32,
+        "SQ_ACTIVE_INST_VALU": 3818971,
+        "SQ_INSTS_VALU": 3551686,
+        "SQ_INSTS_VMEM_RD": 5125,
+        "SQ_INSTS_VMEM_WR": 5125,
+        "DispatchNs": 164789620957806,
+        "BeginNs": 164789621982108,
+        "EndNs": 164789622035068
+      },
+      "triton": {
+        "arch_vgpr": 52,
+        "sgpr": 48,
+        "SQ_ACTIVE_INST_VALU": 9215775,
+        "SQ_INSTS_VALU": 8468550,
+        "SQ_INSTS_VMEM_RD": 8200,
+        "SQ_INSTS_VMEM_WR": 5125,
+        "DispatchNs": 164856370883866,
+        "BeginNs": 164856371827713,
+        "EndNs": 164856371935233
+      },
+      "triton_over_hip_valu": 2.3843746322169244,
+      "triton_over_hip_vmem_read": 1.6
+    },
+    {
+      "variant": "lookup_sqrt",
+      "hip": {
+        "arch_vgpr": 60,
+        "sgpr": 32,
+        "SQ_ACTIVE_INST_VALU": 3470046,
+        "SQ_INSTS_VALU": 3258051,
+        "SQ_INSTS_VMEM_RD": 28680,
+        "SQ_INSTS_VMEM_WR": 5125,
+        "DispatchNs": 164789623523740,
+        "BeginNs": 164789624446903,
+        "EndNs": 164789624497783
+      },
+      "triton": {
+        "arch_vgpr": 60,
+        "sgpr": 48,
+        "SQ_ACTIVE_INST_VALU": 8123125,
+        "SQ_INSTS_VALU": 7551175,
+        "SQ_INSTS_VMEM_RD": 74825,
+        "SQ_INSTS_VMEM_WR": 5125,
+        "DispatchNs": 164856425769578,
+        "BeginNs": 164856426723031,
+        "EndNs": 164856426825431
+      },
+      "triton_over_hip_valu": 2.317696991238013,
+      "triton_over_hip_vmem_read": 2.6089609483960947
+    },
+    {
+      "variant": "lookup_asinh",
+      "hip": {
+        "arch_vgpr": 36,
+        "sgpr": 32,
+        "SQ_ACTIVE_INST_VALU": 1835446,
+        "SQ_INSTS_VALU": 1626526,
+        "SQ_INSTS_VMEM_RD": 28680,
+        "SQ_INSTS_VMEM_WR": 5125,
+        "DispatchNs": 164789625964102,
+        "BeginNs": 164789626843217,
+        "EndNs": 164789626876177
+      },
+      "triton": {
+        "arch_vgpr": 40,
+        "sgpr": 32,
+        "SQ_ACTIVE_INST_VALU": 4156375,
+        "SQ_INSTS_VALU": 3587500,
+        "SQ_INSTS_VMEM_RD": 74825,
+        "SQ_INSTS_VMEM_WR": 5125,
+        "DispatchNs": 164856482304297,
+        "BeginNs": 164856483289678,
+        "EndNs": 164856483347598
+      },
+      "triton_over_hip_valu": 2.2056210598539465,
+      "triton_over_hip_vmem_read": 2.6089609483960947
+    },
+    {
+      "variant": "lookup_all_transcendentals",
+      "hip": {
+        "arch_vgpr": 32,
+        "sgpr": 32,
+        "SQ_ACTIVE_INST_VALU": 1113321,
+        "SQ_INSTS_VALU": 981216,
+        "SQ_INSTS_VMEM_RD": 49160,
+        "SQ_INSTS_VMEM_WR": 5125,
+        "DispatchNs": 164789628352283,
+        "BeginNs": 164789629216011,
+        "EndNs": 164789629242891
+      },
+      "triton": {
+        "arch_vgpr": 44,
+        "sgpr": 48,
+        "SQ_ACTIVE_INST_VALU": 2637325,
+        "SQ_INSTS_VALU": 2265250,
+        "SQ_INSTS_VMEM_RD": 132225,
+        "SQ_INSTS_VMEM_WR": 5125,
+        "DispatchNs": 164856537278510,
+        "BeginNs": 164856538245743,
+        "EndNs": 164856538300143
+      },
+      "triton_over_hip_valu": 2.308615024622509,
+      "triton_over_hip_vmem_read": 2.689686737184703
+    },
+    {
+      "variant": "arithmetic_placeholder",
+      "hip": {
+        "arch_vgpr": 40,
+        "sgpr": 32,
+        "SQ_ACTIVE_INST_VALU": 1278206,
+        "SQ_INSTS_VALU": 1075436,
+        "SQ_INSTS_VMEM_RD": 5125,
+        "SQ_INSTS_VMEM_WR": 5125,
+        "DispatchNs": 164789630708843,
+        "BeginNs": 164789631574406,
+        "EndNs": 164789631599846
+      },
+      "triton": {
+        "arch_vgpr": 40,
+        "sgpr": 32,
+        "SQ_ACTIVE_INST_VALU": 3397875,
+        "SQ_INSTS_VALU": 2835150,
+        "SQ_INSTS_VMEM_RD": 10250,
+        "SQ_INSTS_VMEM_WR": 5125,
+        "DispatchNs": 164856592938365,
+        "BeginNs": 164856593893915,
+        "EndNs": 164856593940155
+      },
+      "triton_over_hip_valu": 2.6362796112460436,
+      "triton_over_hip_vmem_read": 2.0
+    }
+  ]
+}

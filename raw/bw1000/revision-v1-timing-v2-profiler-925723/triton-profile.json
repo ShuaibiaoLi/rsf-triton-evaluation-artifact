@@ -1,0 +1,347 @@
+{
+  "schema_version": "timing-decomposition-triton/2.0",
+  "backend": "triton",
+  "device": "BW",
+  "torch": "2.10.0+das.opt1.dtk2604.2608141812.g28498c",
+  "triton": "3.5.0",
+  "repeat": 1,
+  "batches": [
+    1
+  ],
+  "cases": [
+    {
+      "name": "empty",
+      "correctness": {
+        "status": "PASS"
+      },
+      "first_call_including_jit_us": 205629.42698597908,
+      "post_jit_host_submit_to_sync": {
+        "median_us": 66.56101322732866,
+        "p5_us": 66.56101322732866,
+        "p95_us": 66.56101322732866,
+        "samples_us": [
+          66.56101322732866
+        ]
+      },
+      "single_device_event": {
+        "median_us": 66.72000139951706,
+        "p5_us": 66.72000139951706,
+        "p95_us": 66.72000139951706,
+        "samples_us": [
+          66.72000139951706
+        ]
+      },
+      "steady_batch_per_call": {
+        "1": {
+          "median_us": 64.4799992442131,
+          "p5_us": 64.4799992442131,
+          "p95_us": 64.4799992442131,
+          "samples_us": [
+            64.4799992442131
+          ]
+        }
+      },
+      "graph_replay": {
+        "status": "PASS",
+        "median_us": 54.88000065088272,
+        "p5_us": 54.88000065088272,
+        "p95_us": 54.88000065088272,
+        "samples_us": [
+          54.88000065088272
+        ]
+      },
+      "profiler_kernel_start_end": {
+        "status": "NOT_COLLECTED_SEPARATE_PROFILER_JOB_REQUIRED"
+      }
+    },
+    {
+      "name": "stencil_small",
+      "correctness": {
+        "max_abs_error": 0.0,
+        "tolerance": 1.01e-10,
+        "status": "PASS"
+      },
+      "first_call_including_jit_us": 62199.35600529425,
+      "post_jit_host_submit_to_sync": {
+        "median_us": 88.23099778965116,
+        "p5_us": 88.23099778965116,
+        "p95_us": 88.23099778965116,
+        "samples_us": [
+          88.23099778965116
+        ]
+      },
+      "single_device_event": {
+        "median_us": 92.47999638319016,
+        "p5_us": 92.47999638319016,
+        "p95_us": 92.47999638319016,
+        "samples_us": [
+          92.47999638319016
+        ]
+      },
+      "steady_batch_per_call": {
+        "1": {
+          "median_us": 93.12000125646591,
+          "p5_us": 93.12000125646591,
+          "p95_us": 93.12000125646591,
+          "samples_us": [
+            93.12000125646591
+          ]
+        }
+      },
+      "graph_replay": {
+        "status": "PASS",
+        "median_us": 55.1999993622303,
+        "p5_us": 55.1999993622303,
+        "p95_us": 55.1999993622303,
+        "samples_us": [
+          55.1999993622303
+        ]
+      },
+      "profiler_kernel_start_end": {
+        "status": "NOT_COLLECTED_SEPARATE_PROFILER_JOB_REQUIRED"
+      }
+    },
+    {
+      "name": "interior_stencil_large",
+      "correctness": {
+        "max_abs_error": 0.0,
+        "tolerance": 4.19440275e-08,
+        "status": "PASS"
+      },
+      "first_call_including_jit_us": 16907.022014493123,
+      "post_jit_host_submit_to_sync": {
+        "median_us": 136.42199337482452,
+        "p5_us": 136.42199337482452,
+        "p95_us": 136.42199337482452,
+        "samples_us": [
+          136.42199337482452
+        ]
+      },
+      "single_device_event": {
+        "median_us": 139.3599957227707,
+        "p5_us": 139.3599957227707,
+        "p95_us": 139.3599957227707,
+        "samples_us": [
+          139.3599957227707
+        ]
+      },
+      "steady_batch_per_call": {
+        "1": {
+          "median_us": 124.15999919176102,
+          "p5_us": 124.15999919176102,
+          "p95_us": 124.15999919176102,
+          "samples_us": [
+            124.15999919176102
+          ]
+        }
+      },
+      "graph_replay": {
+        "status": "PASS",
+        "median_us": 83.03999900817871,
+        "p5_us": 83.03999900817871,
+        "p95_us": 83.03999900817871,
+        "samples_us": [
+          83.03999900817871
+        ]
+      },
+      "profiler_kernel_start_end": {
+        "status": "NOT_COLLECTED_SEPARATE_PROFILER_JOB_REQUIRED"
+      }
+    },
+    {
+      "name": "row_reduction",
+      "correctness": {
+        "max_abs_error": 1.4551915228366852e-11,
+        "tolerance": 4.295000936000001e-06,
+        "status": "PASS"
+      },
+      "first_call_including_jit_us": 18659.09999469295,
+      "post_jit_host_submit_to_sync": {
+        "median_us": 297.724996926263,
+        "p5_us": 297.724996926263,
+        "p95_us": 297.724996926263,
+        "samples_us": [
+          297.724996926263
+        ]
+      },
+      "single_device_event": {
+        "median_us": 277.75999903678894,
+        "p5_us": 277.75999903678894,
+        "p95_us": 277.75999903678894,
+        "samples_us": [
+          277.75999903678894
+        ]
+      },
+      "steady_batch_per_call": {
+        "1": {
+          "median_us": 275.6800055503845,
+          "p5_us": 275.6800055503845,
+          "p95_us": 275.6800055503845,
+          "samples_us": [
+            275.6800055503845
+          ]
+        }
+      },
+      "graph_replay": {
+        "status": "PASS",
+        "median_us": 239.68000710010529,
+        "p5_us": 239.68000710010529,
+        "p95_us": 239.68000710010529,
+        "samples_us": [
+          239.68000710010529
+        ]
+      },
+      "profiler_kernel_start_end": {
+        "status": "NOT_COLLECTED_SEPARATE_PROFILER_JOB_REQUIRED"
+      }
+    },
+    {
+      "name": "spmv_short_row",
+      "correctness": {
+        "max_abs_error": 2.3370194668359545e-14,
+        "tolerance": 1.0743911657529322e-09,
+        "status": "PASS",
+        "mapping": "block_row"
+      },
+      "first_call_including_jit_us": 18830.223998520523,
+      "post_jit_host_submit_to_sync": {
+        "median_us": 94.5619831327349,
+        "p5_us": 94.5619831327349,
+        "p95_us": 94.5619831327349,
+        "samples_us": [
+          94.5619831327349
+        ]
+      },
+      "single_device_event": {
+        "median_us": 100.47999769449234,
+        "p5_us": 100.47999769449234,
+        "p95_us": 100.47999769449234,
+        "samples_us": [
+          100.47999769449234
+        ]
+      },
+      "steady_batch_per_call": {
+        "1": {
+          "median_us": 94.24000233411789,
+          "p5_us": 94.24000233411789,
+          "p95_us": 94.24000233411789,
+          "samples_us": [
+            94.24000233411789
+          ]
+        }
+      },
+      "graph_replay": {
+        "status": "PASS",
+        "median_us": 29.759999364614487,
+        "p5_us": 29.759999364614487,
+        "p95_us": 29.759999364614487,
+        "samples_us": [
+          29.759999364614487
+        ]
+      },
+      "profiler_kernel_start_end": {
+        "status": "NOT_COLLECTED_SEPARATE_PROFILER_JOB_REQUIRED"
+      }
+    },
+    {
+      "name": "spmv_long_tail",
+      "correctness": {
+        "max_abs_error": 1.1102230246251565e-15,
+        "tolerance": 2.766707871744792e-10,
+        "status": "PASS",
+        "mapping": "block_row"
+      },
+      "first_call_including_jit_us": 18470.73799581267,
+      "post_jit_host_submit_to_sync": {
+        "median_us": 109.96198398061097,
+        "p5_us": 109.96198398061097,
+        "p95_us": 109.96198398061097,
+        "samples_us": [
+          109.96198398061097
+        ]
+      },
+      "single_device_event": {
+        "median_us": 100.47999769449234,
+        "p5_us": 100.47999769449234,
+        "p95_us": 100.47999769449234,
+        "samples_us": [
+          100.47999769449234
+        ]
+      },
+      "steady_batch_per_call": {
+        "1": {
+          "median_us": 99.20000284910202,
+          "p5_us": 99.20000284910202,
+          "p95_us": 99.20000284910202,
+          "samples_us": [
+            99.20000284910202
+          ]
+        }
+      },
+      "graph_replay": {
+        "status": "PASS",
+        "median_us": 46.560000628232956,
+        "p5_us": 46.560000628232956,
+        "p95_us": 46.560000628232956,
+        "samples_us": [
+          46.560000628232956
+        ]
+      },
+      "profiler_kernel_start_end": {
+        "status": "NOT_COLLECTED_SEPARATE_PROFILER_JOB_REQUIRED"
+      }
+    },
+    {
+      "name": "rsf_c3",
+      "correctness": {
+        "max_abs_differences": [
+          1.1102230246251565e-16,
+          1.1102230246251565e-16,
+          3.0137139182248657e-16,
+          0.0,
+          0.0
+        ],
+        "status": "PASS"
+      },
+      "first_call_including_jit_us": 22100.769012467936,
+      "post_jit_host_submit_to_sync": {
+        "median_us": 351.33599885739386,
+        "p5_us": 351.33599885739386,
+        "p95_us": 351.33599885739386,
+        "samples_us": [
+          351.33599885739386
+        ]
+      },
+      "single_device_event": {
+        "median_us": 321.1199939250946,
+        "p5_us": 321.1199939250946,
+        "p95_us": 321.1199939250946,
+        "samples_us": [
+          321.1199939250946
+        ]
+      },
+      "steady_batch_per_call": {
+        "1": {
+          "median_us": 319.2000091075897,
+          "p5_us": 319.2000091075897,
+          "p95_us": 319.2000091075897,
+          "samples_us": [
+            319.2000091075897
+          ]
+        }
+      },
+      "graph_replay": {
+        "status": "PASS",
+        "median_us": 128.48000228405,
+        "p5_us": 128.48000228405,
+        "p95_us": 128.48000228405,
+        "samples_us": [
+          128.48000228405
+        ]
+      },
+      "profiler_kernel_start_end": {
+        "status": "NOT_COLLECTED_SEPARATE_PROFILER_JOB_REQUIRED"
+      }
+    }
+  ]
+}

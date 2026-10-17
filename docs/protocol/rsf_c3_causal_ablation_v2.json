@@ -1,0 +1,74 @@
+{
+  "schema_version": "rsf-c3-causal-ablation/2.0",
+  "status": "FROZEN_BEFORE_RUN",
+  "platform": "BW1000",
+  "dtype": "fp64",
+  "size": 65537,
+  "input_pattern": "nine registered SRC-03 C3 cases repeated cyclically",
+  "backends": ["hip_aot", "triton_jit"],
+  "launch": {
+    "hip_block": 256,
+    "triton_block": 64,
+    "triton_num_warps": 1,
+    "warmup": 10,
+    "repeat": 30,
+    "timing": "same-stream device event; persistent inputs and outputs"
+  },
+  "variants": [
+    {
+      "name": "original_pre",
+      "purpose": "unaltered C3 before intervention",
+      "correctness": "independent scalar FP64 C3 reference"
+    },
+    {
+      "name": "fixed_iteration_replay",
+      "purpose": "replace dynamic convergence predicates with the registered per-row actual iteration count while retaining original math",
+      "correctness": "original C3 output, iteration and convergence contract"
+    },
+    {
+      "name": "lookup_asinh",
+      "purpose": "replace the asinh-equivalent log result along the frozen Newton trajectory; retain runtime sqrt for the derivative",
+      "correctness": "shared frozen-trajectory lookup reference"
+    },
+    {
+      "name": "lookup_sqrt",
+      "purpose": "replace sqrt along the frozen Newton trajectory while retaining runtime asinh-equivalent log",
+      "correctness": "shared frozen-trajectory lookup reference"
+    },
+    {
+      "name": "lookup_coefficient",
+      "purpose": "replace the invariant log plus exp coefficient path with an identical lookup",
+      "correctness": "shared frozen-trajectory lookup reference"
+    },
+    {
+      "name": "lookup_all_transcendentals",
+      "purpose": "replace coefficient, sqrt and asinh-equivalent results with identical trajectory lookups",
+      "correctness": "shared frozen-trajectory lookup reference"
+    },
+    {
+      "name": "arithmetic_placeholder",
+      "purpose": "preserve loop/dataflow shape but replace transcendental functions with bounded ordinary arithmetic on both backends",
+      "correctness": "shared variant-specific scalar FP64 reference; not compared with physical C3 output"
+    },
+    {
+      "name": "original_restore",
+      "purpose": "restore the unaltered C3 after all interventions",
+      "correctness": "independent scalar FP64 C3 reference"
+    }
+  ],
+  "causal_criteria": {
+    "reversibility": "original_restore/original_pre latency ratio must lie in [0.9, 1.1] on each backend",
+    "iteration_control": "fixed replay must reproduce original registered outputs and iteration diagnostics",
+    "mechanism": "a function-path claim requires the cross-backend gap to shrink when removed and return after restoration",
+    "profiling": "latency and profiler jobs remain separate; report VGPR/VALU/VMEM only from the dedicated profiler job",
+    "negative_result": "if the gap does not respond reversibly, retain only an association statement"
+  },
+  "reporting": [
+    "all raw samples and P5/median/P95",
+    "Triton/HIP paired ratio per variant",
+    "actual iteration histogram and active-lane fraction",
+    "max residual and convergence flags",
+    "source and protocol SHA256",
+    "all failed runs"
+  ]
+}

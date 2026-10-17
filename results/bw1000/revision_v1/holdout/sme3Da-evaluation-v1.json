@@ -1,0 +1,45 @@
+{
+  "schema_version": "spmv-holdout-evaluation/1.0",
+  "status": "PASS",
+  "holdout": "sme3Da",
+  "rule_sha256": "55416c70f9b9ca0257cee1a9993d38eeeb185baf54ff468214f2d2bfa192e1f9",
+  "ledger_sha256": "09a5148c41f6e726aa37bb060a4e39a2d39946a59c92c8346e9f6d8017c10d71",
+  "evaluations": [
+    {
+      "backend": "hip",
+      "predicted": {
+        "mapping": "cooperative_row",
+        "block_size": 256,
+        "num_warps_or_wave_groups": 4,
+        "median_us": 27.519999072
+      },
+      "oracle_best": {
+        "mapping": "cooperative_row",
+        "block_size": 256,
+        "num_warps_or_wave_groups": 1,
+        "median_us": 23.360000923
+      },
+      "top1_hit": false,
+      "regret": 0.17808210550643055
+    },
+    {
+      "backend": "triton",
+      "predicted": {
+        "mapping": "block_row",
+        "block_size": 256,
+        "num_warps_or_wave_groups": 1,
+        "median_us": 96.96000069379807
+      },
+      "oracle_best": {
+        "mapping": "row_program",
+        "block_size": 256,
+        "num_warps_or_wave_groups": 1,
+        "median_us": 94.32000294327736
+      },
+      "top1_hit": false,
+      "regret": 0.02798979716008243
+    }
+  ],
+  "rule_modified_after_holdout": false,
+  "scope": "revision holdout; not pristine because the matrix appeared in prior exploratory work"
+}

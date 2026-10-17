@@ -1,0 +1,20 @@
+/public/home/cnic_lsb/generic-microbench/timing_decomposition_native_v2.cpp:18:32: warning: void function is missing a return statement [-Wreturn-type]
+__global__ void empty_kernel(){}
+                               ^
+/public/home/cnic_lsb/generic-microbench/timing_decomposition_native_v2.cpp:19:165: warning: void function is missing a return statement [-Wreturn-type]
+__global__ void stencil7(const double*x,double*y,int n){int i=blockIdx.x*blockDim.x+threadIdx.x;if(i<n){int l=i?i-1:0,r=i+1<n?i+1:n-1;y[i]=.5*x[i]+.25*(x[l]+x[r]);}}
+                                                                                                                                                                    ^
+/public/home/cnic_lsb/generic-microbench/timing_decomposition_native_v2.cpp:24:389: warning: void function is missing a return statement [-Wreturn-type]
+void emit_summary(const std::string&name,const char*boundary,int batch,const std::vector<double>&v){std::printf("summary case=%s boundary=%s batch=%d median_us=%.9f p5_us=%.9f p95_us=%.9f\n",name.c_str(),boundary,batch,pct(v,.5),pct(v,.05),pct(v,.95));for(size_t i=0;i<v.size();i++)std::printf("sample case=%s boundary=%s batch=%d index=%zu us=%.9f\n",name.c_str(),boundary,batch,i,v[i]);}
+                                                                                                                                                                                                                                                                                                                                                                                                    ^
+3 warnings generated when compiling for gfx936.
+/public/home/cnic_lsb/generic-microbench/timing_decomposition_native_v2.cpp:18:32: warning: void function is missing a return statement [-Wreturn-type]
+__global__ void empty_kernel(){}
+                               ^
+/public/home/cnic_lsb/generic-microbench/timing_decomposition_native_v2.cpp:19:165: warning: void function is missing a return statement [-Wreturn-type]
+__global__ void stencil7(const double*x,double*y,int n){int i=blockIdx.x*blockDim.x+threadIdx.x;if(i<n){int l=i?i-1:0,r=i+1<n?i+1:n-1;y[i]=.5*x[i]+.25*(x[l]+x[r]);}}
+                                                                                                                                                                    ^
+/public/home/cnic_lsb/generic-microbench/timing_decomposition_native_v2.cpp:24:389: warning: void function is missing a return statement [-Wreturn-type]
+void emit_summary(const std::string&name,const char*boundary,int batch,const std::vector<double>&v){std::printf("summary case=%s boundary=%s batch=%d median_us=%.9f p5_us=%.9f p95_us=%.9f\n",name.c_str(),boundary,batch,pct(v,.5),pct(v,.05),pct(v,.95));for(size_t i=0;i<v.size();i++)std::printf("sample case=%s boundary=%s batch=%d index=%zu us=%.9f\n",name.c_str(),boundary,batch,i,v[i]);}
+                                                                                                                                                                                                                                                                                                                                                                                                    ^
+3 warnings generated when compiling for host.

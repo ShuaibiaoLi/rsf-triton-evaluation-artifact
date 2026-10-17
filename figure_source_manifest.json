@@ -1,0 +1,61 @@
+{
+  "schema_version": "figure-source-manifest/1.0",
+  "entries": [
+    {
+      "figure": 1,
+      "stem": "figure1_mapping_reversal",
+      "source_data": "docs/paper/rewrite_20261016/source_data/figure1_mapping_reversal.csv",
+      "png": "docs/paper/rewrite_20261016/figures/figure1_mapping_reversal.png",
+      "svg": "docs/paper/rewrite_20261016/figures/figure1_mapping_reversal.svg",
+      "pdf": "docs/paper/rewrite_20261016/figures/figure1_mapping_reversal.pdf"
+    },
+    {
+      "figure": 2,
+      "stem": "figure2_evidence_framework",
+      "source_data": "docs/paper/rewrite_20261016/source_data/figure2_framework_evidence.csv",
+      "png": "docs/paper/rewrite_20261016/figures/figure2_evidence_framework.png",
+      "svg": "docs/paper/rewrite_20261016/figures/figure2_evidence_framework.svg",
+      "pdf": "docs/paper/rewrite_20261016/figures/figure2_evidence_framework.pdf"
+    },
+    {
+      "figure": 3,
+      "stem": "figure3_spmv_fair_mapping",
+      "source_data": "docs/paper/rewrite_20261016/source_data/figure3_spmv_fair_mapping.csv",
+      "png": "docs/paper/rewrite_20261016/figures/figure3_spmv_fair_mapping.png",
+      "svg": "docs/paper/rewrite_20261016/figures/figure3_spmv_fair_mapping.svg",
+      "pdf": "docs/paper/rewrite_20261016/figures/figure3_spmv_fair_mapping.pdf"
+    },
+    {
+      "figure": 4,
+      "stem": "figure4_timing_decomposition",
+      "source_data": "docs/paper/rewrite_20261016/source_data/figure4_timing_decomposition.csv",
+      "png": "docs/paper/rewrite_20261016/figures/figure4_timing_decomposition.png",
+      "svg": "docs/paper/rewrite_20261016/figures/figure4_timing_decomposition.svg",
+      "pdf": "docs/paper/rewrite_20261016/figures/figure4_timing_decomposition.pdf"
+    },
+    {
+      "figure": 5,
+      "stem": "figure5_rsf_reversible_ablation",
+      "source_data": "docs/paper/rewrite_20261016/source_data/figure5_rsf_reversible_ablation.csv",
+      "png": "docs/paper/rewrite_20261016/figures/figure5_rsf_reversible_ablation.png",
+      "svg": "docs/paper/rewrite_20261016/figures/figure5_rsf_reversible_ablation.svg",
+      "pdf": "docs/paper/rewrite_20261016/figures/figure5_rsf_reversible_ablation.pdf"
+    },
+    {
+      "figure": 6,
+      "stem": "figure6_tpv101_application_context",
+      "source_data": "docs/paper/rewrite_20261016/source_data/figure6_tpv101_application_context.csv",
+      "png": "docs/paper/rewrite_20261016/figures/figure6_tpv101_application_context.png",
+      "svg": "docs/paper/rewrite_20261016/figures/figure6_tpv101_application_context.svg",
+      "pdf": "docs/paper/rewrite_20261016/figures/figure6_tpv101_application_context.pdf"
+    },
+    {
+      "figure": 7,
+      "stem": "figure7_seissol_migration_gates",
+      "source_data": "docs/paper/rewrite_20261016/source_data/figure7_seissol_migration_gates.csv",
+      "png": "docs/paper/rewrite_20261016/figures/figure7_seissol_migration_gates.png",
+      "svg": "docs/paper/rewrite_20261016/figures/figure7_seissol_migration_gates.svg",
+      "pdf": "docs/paper/rewrite_20261016/figures/figure7_seissol_migration_gates.pdf"
+    }
+  ]
+}

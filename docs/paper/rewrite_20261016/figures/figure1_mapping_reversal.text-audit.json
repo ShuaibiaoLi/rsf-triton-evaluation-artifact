@@ -1,0 +1,10 @@
+{
+  "pdf": "docs/paper/rewrite_20261016/figures/figure1_mapping_reversal.pdf",
+  "auditable": true,
+  "minimum_required_pt": 5.0,
+  "minimum_found_pt": 5.04,
+  "text_run_count": 17,
+  "below_minimum_count": 0,
+  "below_minimum": [],
+  "warnings": []
+}

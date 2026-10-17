@@ -1,0 +1,19 @@
+/public/home/cnic_lsb/conda-envs/rsf-triton-v2/lib/python3.12/site-packages/torch/_subclasses/functional_tensor.py:283: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at /mnt/framework/workspace/build/torch-28498c-py312/torch/csrc/utils/tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+Traceback (most recent call last):
+  File "/public/home/cnic_lsb/generic-microbench/timing_decomposition_triton_v2.py", line 185, in <module>
+    if __name__=="__main__":main()
+                            ^^^^^^
+  File "/public/home/cnic_lsb/generic-microbench/timing_decomposition_triton_v2.py", line 177, in main
+    cases["spmv_long_tail"]=setup_spmv(args.root/"data/suitesparse/expanded/orani678/orani678.mtx",rule);cases["rsf_c3"]=setup_rsf(args.rsf_root,65537)
+                                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/public/home/cnic_lsb/generic-microbench/timing_decomposition_triton_v2.py", line 160, in setup_rsf
+    probe=bench.load_probe(rsf_root/"probes/triton/rsf/aging_rsf_numerical_feasibility.py")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/public/home/cnic_lsb/rsf-triton-gate/probes/triton/rsf/benchmark_c3_native_compare_v1.py", line 28, in load_probe
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/public/home/cnic_lsb/rsf-triton-gate/probes/triton/rsf/aging_rsf_numerical_feasibility.py", line 24, in <module>
+    from tolerance import compare
+ModuleNotFoundError: No module named 'tolerance'

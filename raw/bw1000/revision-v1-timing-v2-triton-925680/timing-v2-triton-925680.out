@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "cases": [
+    "empty",
+    "stencil_small",
+    "interior_stencil_large",
+    "row_reduction",
+    "spmv_short_row",
+    "spmv_long_tail",
+    "rsf_c3"
+  ]
+}
+TIMING_DECOMPOSITION_TRITON_V2_PASS output=/public/home/cnic_lsb/generic-microbench/evidence/revision-v1-timing-v2-triton-925680

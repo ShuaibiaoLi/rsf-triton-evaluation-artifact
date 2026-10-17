@@ -1,0 +1,32 @@
+correctness max_abs_difference=2.7755752963152245e-16 failures=0 status=PASS
+summary variant=fixed_original_pre median_us=2148.794531822 p5_us=2120.282971859 p95_us=2177.306091785
+sample variant=fixed_original_pre index=0 us=2180.474042892
+sample variant=fixed_original_pre index=1 us=2117.115020752
+summary variant=lookup_coefficient median_us=2108.875036240 p5_us=2096.419072151 p95_us=2121.331000328
+sample variant=lookup_coefficient index=0 us=2122.714996338
+sample variant=lookup_coefficient index=1 us=2095.035076141
+summary variant=lookup_sqrt median_us=2099.515080452 p5_us=2098.507106304 p95_us=2100.523054600
+sample variant=lookup_sqrt index=0 us=2100.635051727
+sample variant=lookup_sqrt index=1 us=2098.395109177
+summary variant=lookup_asinh median_us=2142.634987831 p5_us=2141.698896885 p95_us=2143.571078777
+sample variant=lookup_asinh index=0 us=2143.675088882
+sample variant=lookup_asinh index=1 us=2141.594886780
+summary variant=lookup_all_transcendentals median_us=2097.836017609 p5_us=2079.475116730 p95_us=2116.196918488
+sample variant=lookup_all_transcendentals index=0 us=2077.435016632
+sample variant=lookup_all_transcendentals index=1 us=2118.237018585
+summary variant=arithmetic_placeholder median_us=2077.196478844 p5_us=2070.356953144 p95_us=2084.036004543
+sample variant=arithmetic_placeholder index=0 us=2084.795951843
+sample variant=arithmetic_placeholder index=1 us=2069.597005844
+summary variant=fixed_original_restore median_us=2160.156488419 p5_us=2146.908092499 p95_us=2173.404884338
+sample variant=fixed_original_restore index=0 us=2174.876928329
+sample variant=fixed_original_restore index=1 us=2145.436048508
+reversibility restore_over_pre=1.005287596 status=PASS
+RSF_C3_LOOKUP_NATIVE_V2_PASS
+HIP_PROF:on Thu Oct 15 21:34:29 2026
+HIP_PROF:process id '1315647'
+HIP_PROF:db file '/public/home/cnic_lsb/generic-microbench/evidence/revision-v1-rsf-c3-lookup-pmc-925991/native-pmc.db'
+HIP_PROF:out put file '/public/home/cnic_lsb/generic-microbench/evidence/revision-v1-rsf-c3-lookup-pmc-925991/native-pmc'
+HIP_PROF:profiling ' /public/home/cnic_lsb/generic-microbench/evidence/revision-v1-rsf-c3-lookup-pmc-925991/native 65537 1 2'
+HIP_PROF:process begin
+HIP_PROF:process end run total cost:1(s)
+HIP_PROF:finish

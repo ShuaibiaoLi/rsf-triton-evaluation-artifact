@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "candidate_count": 48,
+  "best": [
+    {
+      "matrix": "sme3Da",
+      "backend": "hip",
+      "mapping": "cooperative_row",
+      "block_size": 256,
+      "num_warps_or_wave_groups": 1,
+      "median_us": 23.360000923
+    },
+    {
+      "matrix": "sme3Da",
+      "backend": "hip",
+      "mapping": "one_thread_per_row",
+      "block_size": 64,
+      "num_warps_or_wave_groups": 4,
+      "median_us": 168.478995562
+    },
+    {
+      "matrix": "sme3Da",
+      "backend": "triton",
+      "mapping": "block_row",
+      "block_size": 128,
+      "num_warps_or_wave_groups": 1,
+      "median_us": 96.3199995458126
+    },
+    {
+      "matrix": "sme3Da",
+      "backend": "triton",
+      "mapping": "row_program",
+      "block_size": 256,
+      "num_warps_or_wave_groups": 1,
+      "median_us": 94.32000294327736
+    }
+  ]
+}
+SPMV_FOUR_CELL_HOLDOUT_PASS output=/public/home/cnic_lsb/generic-microbench/evidence/revision-v1-spmv4-holdout-924488

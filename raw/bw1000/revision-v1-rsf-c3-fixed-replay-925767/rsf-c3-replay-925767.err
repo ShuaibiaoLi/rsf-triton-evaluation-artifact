@@ -1,0 +1,23 @@
+/public/home/cnic_lsb/generic-microbench/rsf_c3_fixed_replay_native_v2.cpp:62:1: warning: void function is missing a return statement [-Wreturn-type]
+}
+^
+1 warning generated when compiling for gfx936.
+/public/home/cnic_lsb/generic-microbench/rsf_c3_fixed_replay_native_v2.cpp:62:1: warning: void function is missing a return statement [-Wreturn-type]
+}
+^
+1 warning generated when compiling for host.
+/public/home/cnic_lsb/conda-envs/rsf-triton-v2/lib/python3.12/site-packages/torch/_subclasses/functional_tensor.py:283: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at /mnt/framework/workspace/build/torch-28498c-py312/torch/csrc/utils/tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+Traceback (most recent call last):
+  File "/public/home/cnic_lsb/generic-microbench/rsf_c3_fixed_replay_triton_v2.py", line 156, in <module>
+    main()
+  File "/public/home/cnic_lsb/generic-microbench/rsf_c3_fixed_replay_triton_v2.py", line 103, in main
+    probe = load_module(args.rsf_root / "probes/triton/rsf/aging_rsf_numerical_feasibility.py")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/public/home/cnic_lsb/generic-microbench/rsf_c3_fixed_replay_triton_v2.py", line 69, in load_module
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/public/home/cnic_lsb/rsf-triton-gate/probes/triton/rsf/aging_rsf_numerical_feasibility.py", line 24, in <module>
+    from tolerance import compare
+ModuleNotFoundError: No module named 'tolerance'

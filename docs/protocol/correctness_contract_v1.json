@@ -1,0 +1,54 @@
+{
+  "schema_version": "rsf-triton-correctness-contract/1.0",
+  "global": {
+    "oracle_policy": "independent CPU FP64 reference; one accelerator backend must not validate another",
+    "nonfinite_policy": "any unexpected NaN or Inf is FAIL",
+    "performance_eligibility": "only PASS cases and PASS configurations may enter formal timing",
+    "required_case_classes": ["tiny", "boundary", "nondivisible", "typical", "large"]
+  },
+  "operators": {
+    "csr_spmv": {
+      "semantics": "y[r] = sum(val[p] * x[col[p]]) for p in rowptr[r]:rowptr[r+1]",
+      "dtype": "float64",
+      "index_dtype": "int32",
+      "layout": "CSR input and dense contiguous x/y",
+      "absolute_tolerance": 1e-12,
+      "relative_tolerance": 1e-10,
+      "required_inputs": [
+        "empty row", "single nonzero", "nondivisible row count", "short regular rows",
+        "bimodal rows", "long-tail rows", "high padding amplification", "real matrices"
+      ]
+    },
+    "row_reduction": {
+      "semantics": "one FP64 sum per row over the registered reduction width",
+      "dtype": "float64",
+      "absolute_tolerance": 1e-12,
+      "relative_tolerance": 1e-10,
+      "required_inputs": ["tiny", "nondivisible", "representative large"]
+    },
+    "interior_stencil": {
+      "semantics": "registered stencil coefficients and boundary policy must match the CPU reference",
+      "dtype": "float64",
+      "absolute_tolerance": 1e-12,
+      "relative_tolerance": 1e-10,
+      "required_inputs": ["tiny boundary-dominated", "nondivisible", "representative large"]
+    },
+    "aging_rsf_c3": {
+      "semantics_source": "BW1000_test/rsf-triton-gate/seissol_aging_rsf_newton_semantics_v1.md",
+      "reference": "reference_impl/aging_rsf_fp64_reference.py",
+      "dtype": "float64",
+      "absolute_tolerance": 1e-12,
+      "relative_tolerance": 1e-10,
+      "residual_tolerance": 1e-8,
+      "nonconvergence_policy": "explicit convergence=false at iteration cap; never silently accepted",
+      "required_inputs": [
+        "finite-difference g-prime check", "V_floor neighborhood", "extreme psi eta sigma tau",
+        "near stopping threshold", "expected nonconvergence", "non-power-of-two batch"
+      ],
+      "required_outputs": [
+        "velocity", "friction", "state", "residual", "iterations", "convergence flag",
+        "post-update physical-domain checks"
+      ]
+    }
+  }
+}

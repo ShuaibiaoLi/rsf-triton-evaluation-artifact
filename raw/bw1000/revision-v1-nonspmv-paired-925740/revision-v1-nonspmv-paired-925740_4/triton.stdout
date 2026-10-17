@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cases": [
+    "empty",
+    "stencil_small",
+    "interior_stencil_large",
+    "row_reduction",
+    "spmv_short_row",
+    "spmv_long_tail",
+    "rsf_c3"
+  ]
+}

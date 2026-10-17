@@ -1,0 +1,3 @@
+"Name","Calls","TotalDurationNs","AverageNs","Percentage"
+"c3(Input const*, double*, double*, double*, int*, int*, int)","184","10487496","56997","100.0"
+"Total","184","10487496","56997","100.0"

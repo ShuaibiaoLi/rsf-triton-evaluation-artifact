@@ -1,0 +1,5 @@
+platform,comparison,ratio,evidence
+BW1000,simple row-level,0.2716660735125764,A independent jobs
+BW1000,best/best registered candidates,1.9580515115801878,n=5 independent Slurm tasks; median
+Dongfang,simple row-level,0.3107578764208914,A formal replay
+Dongfang,best/best registered candidates,4.6619427124928725,one frozen formal replay

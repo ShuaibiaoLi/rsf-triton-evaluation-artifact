@@ -1,0 +1,146 @@
+correctness case=empty status=PASS
+first case=empty boundary=first_call_aot_cold_us value=25921.028000000
+summary case=empty boundary=post_aot_host_submit_to_sync batch=1 median_us=29.610000000 p5_us=29.610000000 p95_us=29.610000000
+sample case=empty boundary=post_aot_host_submit_to_sync batch=1 index=0 us=29.610000000
+summary case=empty boundary=single_device_event batch=1 median_us=10.400000028 p5_us=10.400000028 p95_us=10.400000028
+sample case=empty boundary=single_device_event batch=1 index=0 us=10.400000028
+summary case=empty boundary=steady_batch_per_call batch=1 median_us=10.398999788 p5_us=10.398999788 p95_us=10.398999788
+sample case=empty boundary=steady_batch_per_call batch=1 index=0 us=10.398999788
+summary case=empty boundary=steady_batch_per_call batch=8 median_us=7.359624840 p5_us=7.359624840 p95_us=7.359624840
+sample case=empty boundary=steady_batch_per_call batch=8 index=0 us=7.359624840
+summary case=empty boundary=steady_batch_per_call batch=32 median_us=8.179624565 p5_us=8.179624565 p95_us=8.179624565
+sample case=empty boundary=steady_batch_per_call batch=32 index=0 us=8.179624565
+summary case=empty boundary=steady_batch_per_call batch=128 median_us=8.284633048 p5_us=8.284633048 p95_us=8.284633048
+sample case=empty boundary=steady_batch_per_call batch=128 index=0 us=8.284633048
+summary case=empty boundary=graph_replay batch=1 median_us=15.359000303 p5_us=15.359000303 p95_us=15.359000303
+sample case=empty boundary=graph_replay batch=1 index=0 us=15.359000303
+correctness case=stencil_small max_abs_error=0 tolerance=1.01e-10 status=PASS
+first case=stencil_small boundary=first_call_aot_cold_us value=132.552000000
+summary case=stencil_small boundary=post_aot_host_submit_to_sync batch=1 median_us=30.210000000 p5_us=30.210000000 p95_us=30.210000000
+sample case=stencil_small boundary=post_aot_host_submit_to_sync batch=1 index=0 us=30.210000000
+summary case=stencil_small boundary=single_device_event batch=1 median_us=10.239000432 p5_us=10.239000432 p95_us=10.239000432
+sample case=stencil_small boundary=single_device_event batch=1 index=0 us=10.239000432
+summary case=stencil_small boundary=steady_batch_per_call batch=1 median_us=10.879999958 p5_us=10.879999958 p95_us=10.879999958
+sample case=stencil_small boundary=steady_batch_per_call batch=1 index=0 us=10.879999958
+summary case=stencil_small boundary=steady_batch_per_call batch=8 median_us=7.839749567 p5_us=7.839749567 p95_us=7.839749567
+sample case=stencil_small boundary=steady_batch_per_call batch=8 index=0 us=7.839749567
+summary case=stencil_small boundary=steady_batch_per_call batch=32 median_us=7.969718426 p5_us=7.969718426 p95_us=7.969718426
+sample case=stencil_small boundary=steady_batch_per_call batch=32 index=0 us=7.969718426
+summary case=stencil_small boundary=steady_batch_per_call batch=128 median_us=8.400969207 p5_us=8.400969207 p95_us=8.400969207
+sample case=stencil_small boundary=steady_batch_per_call batch=128 index=0 us=8.400969207
+summary case=stencil_small boundary=graph_replay batch=1 median_us=14.879000373 p5_us=14.879000373 p95_us=14.879000373
+sample case=stencil_small boundary=graph_replay batch=1 index=0 us=14.879000373
+correctness case=interior_stencil_large max_abs_error=0 tolerance=4.1944027500000002e-08 status=PASS
+first case=interior_stencil_large boundary=first_call_aot_cold_us value=132.372000000
+summary case=interior_stencil_large boundary=post_aot_host_submit_to_sync batch=1 median_us=87.792000000 p5_us=87.792000000 p95_us=87.792000000
+sample case=interior_stencil_large boundary=post_aot_host_submit_to_sync batch=1 index=0 us=87.792000000
+summary case=interior_stencil_large boundary=single_device_event batch=1 median_us=63.198998570 p5_us=63.198998570 p95_us=63.198998570
+sample case=interior_stencil_large boundary=single_device_event batch=1 index=0 us=63.198998570
+summary case=interior_stencil_large boundary=steady_batch_per_call batch=1 median_us=63.038997352 p5_us=63.038997352 p95_us=63.038997352
+sample case=interior_stencil_large boundary=steady_batch_per_call batch=1 index=0 us=63.038997352
+summary case=interior_stencil_large boundary=steady_batch_per_call batch=8 median_us=57.838875800 p5_us=57.838875800 p95_us=57.838875800
+sample case=interior_stencil_large boundary=steady_batch_per_call batch=8 index=0 us=57.838875800
+summary case=interior_stencil_large boundary=steady_batch_per_call batch=32 median_us=57.283844799 p5_us=57.283844799 p95_us=57.283844799
+sample case=interior_stencil_large boundary=steady_batch_per_call batch=32 index=0 us=57.283844799
+summary case=interior_stencil_large boundary=steady_batch_per_call batch=128 median_us=57.177584618 p5_us=57.177584618 p95_us=57.177584618
+sample case=interior_stencil_large boundary=steady_batch_per_call batch=128 index=0 us=57.177584618
+summary case=interior_stencil_large boundary=graph_replay batch=1 median_us=68.158000708 p5_us=68.158000708 p95_us=68.158000708
+sample case=interior_stencil_large boundary=graph_replay batch=1 index=0 us=68.158000708
+correctness case=row_reduction max_abs_error=2.9103830456733704e-11 tolerance=4.2950009360000004e-06 status=PASS
+first case=row_reduction boundary=first_call_aot_cold_us value=375.356000000
+summary case=row_reduction boundary=post_aot_host_submit_to_sync batch=1 median_us=254.864000000 p5_us=254.864000000 p95_us=254.864000000
+sample case=row_reduction boundary=post_aot_host_submit_to_sync batch=1 index=0 us=254.864000000
+summary case=row_reduction boundary=single_device_event batch=1 median_us=227.041006088 p5_us=227.041006088 p95_us=227.041006088
+sample case=row_reduction boundary=single_device_event batch=1 index=0 us=227.041006088
+summary case=row_reduction boundary=steady_batch_per_call batch=1 median_us=226.879999042 p5_us=226.879999042 p95_us=226.879999042
+sample case=row_reduction boundary=steady_batch_per_call batch=1 index=0 us=226.879999042
+summary case=row_reduction boundary=steady_batch_per_call batch=8 median_us=222.720503807 p5_us=222.720503807 p95_us=222.720503807
+sample case=row_reduction boundary=steady_batch_per_call batch=8 index=0 us=222.720503807
+summary case=row_reduction boundary=steady_batch_per_call batch=32 median_us=222.065463662 p5_us=222.065463662 p95_us=222.065463662
+sample case=row_reduction boundary=steady_batch_per_call batch=32 index=0 us=222.065463662
+summary case=row_reduction boundary=steady_batch_per_call batch=128 median_us=221.974402666 p5_us=221.974402666 p95_us=221.974402666
+sample case=row_reduction boundary=steady_batch_per_call batch=128 index=0 us=221.974402666
+summary case=row_reduction boundary=graph_replay batch=1 median_us=231.038004160 p5_us=231.038004160 p95_us=231.038004160
+sample case=row_reduction boundary=graph_replay batch=1 index=0 us=231.038004160
+correctness case=spmv_short_row max_abs_error=1.865174681370263e-14 tolerance=1.0743911657529322e-09 status=PASS
+first case=spmv_short_row boundary=first_call_aot_cold_us value=115.822000000
+summary case=spmv_short_row boundary=post_aot_host_submit_to_sync batch=1 median_us=32.800000000 p5_us=32.800000000 p95_us=32.800000000
+sample case=spmv_short_row boundary=post_aot_host_submit_to_sync batch=1 index=0 us=32.800000000
+summary case=spmv_short_row boundary=single_device_event batch=1 median_us=10.560000315 p5_us=10.560000315 p95_us=10.560000315
+sample case=spmv_short_row boundary=single_device_event batch=1 index=0 us=10.560000315
+summary case=spmv_short_row boundary=steady_batch_per_call batch=1 median_us=10.400000028 p5_us=10.400000028 p95_us=10.400000028
+sample case=spmv_short_row boundary=steady_batch_per_call batch=1 index=0 us=10.400000028
+summary case=spmv_short_row boundary=steady_batch_per_call batch=8 median_us=7.480000146 p5_us=7.480000146 p95_us=7.480000146
+sample case=spmv_short_row boundary=steady_batch_per_call batch=8 index=0 us=7.480000146
+summary case=spmv_short_row boundary=steady_batch_per_call batch=32 median_us=8.720000274 p5_us=8.720000274 p95_us=8.720000274
+sample case=spmv_short_row boundary=steady_batch_per_call batch=32 index=0 us=8.720000274
+summary case=spmv_short_row boundary=steady_batch_per_call batch=128 median_us=9.447491728 p5_us=9.447491728 p95_us=9.447491728
+sample case=spmv_short_row boundary=steady_batch_per_call batch=128 index=0 us=9.447491728
+summary case=spmv_short_row boundary=graph_replay batch=1 median_us=15.200000256 p5_us=15.200000256 p95_us=15.200000256
+sample case=spmv_short_row boundary=graph_replay batch=1 index=0 us=15.200000256
+correctness case=spmv_long_tail max_abs_error=2.6645352591003757e-15 tolerance=2.7667078717447918e-10 status=PASS
+first case=spmv_long_tail boundary=first_call_aot_cold_us value=87.171000000
+summary case=spmv_long_tail boundary=post_aot_host_submit_to_sync batch=1 median_us=71.441000000 p5_us=71.441000000 p95_us=71.441000000
+sample case=spmv_long_tail boundary=post_aot_host_submit_to_sync batch=1 index=0 us=71.441000000
+summary case=spmv_long_tail boundary=single_device_event batch=1 median_us=48.640001565 p5_us=48.640001565 p95_us=48.640001565
+sample case=spmv_long_tail boundary=single_device_event batch=1 index=0 us=48.640001565
+summary case=spmv_long_tail boundary=steady_batch_per_call batch=1 median_us=47.839000821 p5_us=47.839000821 p95_us=47.839000821
+sample case=spmv_long_tail boundary=steady_batch_per_call batch=1 index=0 us=47.839000821
+summary case=spmv_long_tail boundary=steady_batch_per_call batch=8 median_us=33.979874104 p5_us=33.979874104 p95_us=33.979874104
+sample case=spmv_long_tail boundary=steady_batch_per_call batch=8 index=0 us=33.979874104
+summary case=spmv_long_tail boundary=steady_batch_per_call batch=32 median_us=32.199844718 p5_us=32.199844718 p95_us=32.199844718
+sample case=spmv_long_tail boundary=steady_batch_per_call batch=32 index=0 us=32.199844718
+summary case=spmv_long_tail boundary=steady_batch_per_call batch=128 median_us=31.368609518 p5_us=31.368609518 p95_us=31.368609518
+sample case=spmv_long_tail boundary=steady_batch_per_call batch=128 index=0 us=31.368609518
+summary case=spmv_long_tail boundary=graph_replay batch=1 median_us=55.360000581 p5_us=55.360000581 p95_us=55.360000581
+sample case=spmv_long_tail boundary=graph_replay batch=1 index=0 us=55.360000581
+TIMING_DECOMPOSITION_NATIVE_V2_PASS
+HIP_PROF:on Thu Oct 15 21:08:23 2026
+HIP_PROF:process id '561835'
+HIP_PROF:db file '/public/home/cnic_lsb/generic-microbench/evidence/revision-v1-timing-v2-profiler-925723/hip-generic.db'
+HIP_PROF:out put file '/public/home/cnic_lsb/generic-microbench/evidence/revision-v1-timing-v2-profiler-925723/hip-generic'
+HIP_PROF:profiling ' /public/home/cnic_lsb/generic-microbench/evidence/revision-v1-timing-v2-profiler-925723/timing_native /public/home/cnic_lsb/generic-microbench 1 unused'
+HIP_PROF:process begin
+HIP_PROF:process end run total cost:0(s)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HIP_PROF:IP:[31m12.6.11.30[0m HIP API statistics
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Name                                                          |Calls          |TotalDurationNs            |AverageNs                  |Percentage                 |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|hipEventSynchronize                                           |36             |50912392                   |1414233                    |41.4667589985623           |
+|hipLaunchKernel                                               |1098           |33148817                   |30190                      |26.998810144816            |
+|hipMemcpy                                                     |16             |19555891                   |1222243                    |15.9277415034665           |
+|hipGraphInstantiate                                           |6              |10016267                   |1669377                    |8.15797713362698           |
+|hipStreamSynchronize                                          |25             |4290024                    |171600                     |3.49410790414342           |
+|hipMalloc                                                     |16             |1567087                    |97942                      |1.27634975309705           |
+|hipEventRecord                                                |72             |1002543                    |13924                      |0.816544014798906          |
+|hipStreamDestroy                                              |6              |812414                     |135402                     |0.661689113822388          |
+|hipDeviceSynchronize                                          |5              |478766                     |95753                      |0.389941889564052          |
+|__hipPopCallConfiguration                                     |1098           |161741                     |147                        |0.131733646833692          |
+|__hipPushCallConfiguration                                    |1098           |140360                     |127                        |0.114319403673632          |
+|hipGraphLaunch                                                |12             |131184                     |10932                      |0.106845801165017          |
+|hipFree                                                       |16             |125344                     |7834                       |0.102089279952036          |
+|hipGraphExecDestroy                                           |6              |77171                      |12861                      |0.0628536812546159         |
+|hipEventDestroy                                               |72             |70220                      |975                        |0.0571922807492339         |
+|hipEventElapsedTime                                           |36             |69222                      |1922                       |0.0563794368844128         |
+|hipStreamBeginCapture                                         |6              |58741                      |9790                       |0.0478429473581707         |
+|hipEventCreate                                                |72             |51081                      |709                        |0.0416040856301853         |
+|hipStreamCreate                                               |6              |44440                      |7406                       |0.0361951716960403         |
+|hipStreamEndCapture                                           |6              |42792                      |7132                       |0.034852920504432          |
+|hipGraphDestroy                                               |6              |22310                      |3718                       |0.0181708884009599         |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Total                                                         |3714           |122778807                  |33058                      |100.0                      |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HIP_PROF:IP:[31m12.6.11.30[0m HIPOPS API statistics
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Name                                                          |Calls          |TotalDurationNs            |AverageNs                  |Percentage                 |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|reduce256(double const*, double*, int)                        |184            |40827308                   |221887                     |69.31                      |
+|stencil7(double const*, double*, int)                         |368            |10974009                   |29820                      |18.63                      |
+|cooperative_spmv(int const*, int const*, double const*, dou...|368            |6831973                    |18565                      |11.598                     |
+|empty_kernel()                                                |184            |271984                     |1478                       |0.462                      |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Total                                                         |1104           |58905274                   |53356                      |100.0                      |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HIP_PROF:finish

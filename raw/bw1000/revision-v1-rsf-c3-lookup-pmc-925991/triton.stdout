@@ -1,0 +1,9 @@
+{"status": "PASS", "restore_over_pre": 1.0164597797585468, "medians": {"fixed_original_pre": 2114.240527153015, "lookup_coefficient": 2124.959945678711, "lookup_sqrt": 2151.1199474334717, "lookup_asinh": 2108.1604957580566, "lookup_all_transcendentals": 2117.2800064086914, "arithmetic_placeholder": 2069.1200494766235, "fixed_original_restore": 2149.040460586548}}
+HIP_PROF:on Thu Oct 15 21:35:08 2026
+HIP_PROF:process id '1324209'
+HIP_PROF:db file '/public/home/cnic_lsb/generic-microbench/evidence/revision-v1-rsf-c3-lookup-pmc-925991/triton-pmc.db'
+HIP_PROF:out put file '/public/home/cnic_lsb/generic-microbench/evidence/revision-v1-rsf-c3-lookup-pmc-925991/triton-pmc'
+HIP_PROF:profiling ' python /public/home/cnic_lsb/generic-microbench/rsf_c3_lookup_triton_v2.py --rsf-root /public/home/cnic_lsb/rsf-triton-gate --n 65537 --warmup 1 --repeat 2 --output /public/home/cnic_lsb/generic-microbench/evidence/revision-v1-rsf-c3-lookup-pmc-925991/triton.json'
+HIP_PROF:process begin
+HIP_PROF:process end run total cost:31(s)
+HIP_PROF:finish

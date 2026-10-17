@@ -1,0 +1,445 @@
+{
+  "schema_version": "spmv-four-cell-independent-jobs/1.0",
+  "status": "PASS",
+  "experimental_unit": "one independent Slurm array task; within-task median device-event latency",
+  "kernel_calls_are_not_counted_as_independent_replicates": true,
+  "jobs": [
+    {
+      "job_key": "924336_0",
+      "path": "results/raw/bw1000/revision-v1-spmv4-paired-924336_0/formal-summary.json",
+      "comparisons": [
+        {
+          "matrix": "dw8192",
+          "hip_cooperative_over_thread": 0.9411764772635527,
+          "triton_block_over_row": 0.8896289255501527,
+          "row_level_triton_over_hip": 10.3039218378562,
+          "cooperative_triton_over_hip": 9.739583526584326,
+          "best_triton_over_best_hip": 9.739583526584326
+        },
+        {
+          "matrix": "apache2",
+          "hip_cooperative_over_thread": 0.5558017055133467,
+          "triton_block_over_row": 0.2696871976114087,
+          "row_level_triton_over_hip": 7.503316514068755,
+          "cooperative_triton_over_hip": 3.640774008783631,
+          "best_triton_over_best_hip": 3.640774008783631
+        },
+        {
+          "matrix": "orani678",
+          "hip_cooperative_over_thread": 0.10467158694185726,
+          "triton_block_over_row": 0.7175177622539957,
+          "row_level_triton_over_hip": 0.27168949502822826,
+          "cooperative_triton_over_hip": 1.8624160022419305,
+          "best_triton_over_best_hip": 1.8624160022419305
+        }
+      ]
+    },
+    {
+      "job_key": "924336_1",
+      "path": "results/raw/bw1000/revision-v1-spmv4-paired-924336_1/formal-summary.json",
+      "comparisons": [
+        {
+          "matrix": "dw8192",
+          "hip_cooperative_over_thread": 0.9411764772635527,
+          "triton_block_over_row": 0.8749992390747238,
+          "row_level_triton_over_hip": 10.274449129661482,
+          "cooperative_triton_over_hip": 9.552018550765686,
+          "best_triton_over_best_hip": 9.552018550765686
+        },
+        {
+          "matrix": "apache2",
+          "hip_cooperative_over_thread": 0.5699551670578855,
+          "triton_block_over_row": 0.2691541850387554,
+          "row_level_triton_over_hip": 7.512767848807904,
+          "cooperative_triton_over_hip": 3.547810467565931,
+          "best_triton_over_best_hip": 3.547810467565931
+        },
+        {
+          "matrix": "orani678",
+          "hip_cooperative_over_thread": 0.10682702858856029,
+          "triton_block_over_row": 0.6979126307838256,
+          "row_level_triton_over_hip": 0.2716660735125764,
+          "cooperative_triton_over_hip": 1.7748240924130487,
+          "best_triton_over_best_hip": 1.7748240924130487
+        }
+      ]
+    },
+    {
+      "job_key": "924336_2",
+      "path": "results/raw/bw1000/revision-v1-spmv4-paired-924336_2/formal-summary.json",
+      "comparisons": [
+        {
+          "matrix": "dw8192",
+          "hip_cooperative_over_thread": 0.936170221947148,
+          "triton_block_over_row": 0.9157688510270636,
+          "row_level_triton_over_hip": 10.861702126497892,
+          "cooperative_triton_over_hip": 10.62499985941952,
+          "best_triton_over_best_hip": 10.62499985941952
+        },
+        {
+          "matrix": "apache2",
+          "hip_cooperative_over_thread": 0.5572237097350671,
+          "triton_block_over_row": 0.26878092870636594,
+          "row_level_triton_over_hip": 7.5353159218999055,
+          "cooperative_triton_over_hip": 3.6347147047046473,
+          "best_triton_over_best_hip": 3.6347147047046473
+        },
+        {
+          "matrix": "orani678",
+          "hip_cooperative_over_thread": 0.09655183164041103,
+          "triton_block_over_row": 0.7098886544996009,
+          "row_level_triton_over_hip": 0.27002681684925234,
+          "cooperative_triton_over_hip": 1.9853478741432384,
+          "best_triton_over_best_hip": 1.9853478741432384
+        }
+      ]
+    },
+    {
+      "job_key": "924336_3",
+      "path": "results/raw/bw1000/revision-v1-spmv4-paired-924336_3/formal-summary.json",
+      "comparisons": [
+        {
+          "matrix": "dw8192",
+          "hip_cooperative_over_thread": 0.9574467939310773,
+          "triton_block_over_row": 0.9426248649305929,
+          "row_level_triton_over_hip": 10.7553193282785,
+          "cooperative_triton_over_hip": 10.588819653861336,
+          "best_triton_over_best_hip": 10.588819653861336
+        },
+        {
+          "matrix": "apache2",
+          "hip_cooperative_over_thread": 0.5571674512027893,
+          "triton_block_over_row": 0.2692610469767027,
+          "row_level_triton_over_hip": 7.525445463918853,
+          "cooperative_triton_over_hip": 3.6368049142256225,
+          "best_triton_over_best_hip": 3.6368049142256225
+        },
+        {
+          "matrix": "orani678",
+          "hip_cooperative_over_thread": 0.09584924557606272,
+          "triton_block_over_row": 0.7159841345444956,
+          "row_level_triton_over_hip": 0.26626743928791735,
+          "cooperative_triton_over_hip": 1.9889907419735553,
+          "best_triton_over_best_hip": 1.9889907419735553
+        }
+      ]
+    },
+    {
+      "job_key": "924336_4",
+      "path": "results/raw/bw1000/revision-v1-spmv4-paired-924336_4/formal-summary.json",
+      "comparisons": [
+        {
+          "matrix": "dw8192",
+          "hip_cooperative_over_thread": 0.9474307347089354,
+          "triton_block_over_row": 0.9303675571876219,
+          "row_level_triton_over_hip": 10.884926177309222,
+          "cooperative_triton_over_hip": 10.688889231424328,
+          "best_triton_over_best_hip": 10.688889231424328
+        },
+        {
+          "matrix": "apache2",
+          "hip_cooperative_over_thread": 0.564524182322759,
+          "triton_block_over_row": 0.2690246602681879,
+          "row_level_triton_over_hip": 7.627799872651887,
+          "cooperative_triton_over_hip": 3.6350369631475945,
+          "best_triton_over_best_hip": 3.6350369631475945
+        },
+        {
+          "matrix": "orani678",
+          "hip_cooperative_over_thread": 0.0964439174038396,
+          "triton_block_over_row": 0.6909207832788677,
+          "row_level_triton_over_hip": 0.2733195509898027,
+          "cooperative_triton_over_hip": 1.9580515115801878,
+          "best_triton_over_best_hip": 1.9580515115801878
+        }
+      ]
+    }
+  ],
+  "aggregate": [
+    {
+      "matrix": "apache2",
+      "metric": "hip_cooperative_over_thread",
+      "independent_jobs": 5,
+      "job_values": [
+        0.5558017055133467,
+        0.5699551670578855,
+        0.5572237097350671,
+        0.5571674512027893,
+        0.564524182322759
+      ],
+      "median": 0.5572237097350671,
+      "p5": 0.5560748546512353,
+      "p95": 0.5688689701108602,
+      "bootstrap_median_ci95": [
+        0.5558017055133467,
+        0.5699551670578855
+      ]
+    },
+    {
+      "matrix": "apache2",
+      "metric": "triton_block_over_row",
+      "independent_jobs": 5,
+      "job_values": [
+        0.2696871976114087,
+        0.2691541850387554,
+        0.26878092870636594,
+        0.2692610469767027,
+        0.2690246602681879
+      ],
+      "median": 0.2691541850387554,
+      "p5": 0.26882967501873034,
+      "p95": 0.2696019674844675,
+      "bootstrap_median_ci95": [
+        0.26878092870636594,
+        0.2696871976114087
+      ]
+    },
+    {
+      "matrix": "apache2",
+      "metric": "row_level_triton_over_hip",
+      "independent_jobs": 5,
+      "job_values": [
+        7.503316514068755,
+        7.512767848807904,
+        7.5353159218999055,
+        7.525445463918853,
+        7.627799872651887
+      ],
+      "median": 7.525445463918853,
+      "p5": 7.505206781016586,
+      "p95": 7.609303082501491,
+      "bootstrap_median_ci95": [
+        7.503316514068755,
+        7.627799872651887
+      ]
+    },
+    {
+      "matrix": "apache2",
+      "metric": "cooperative_triton_over_hip",
+      "independent_jobs": 5,
+      "job_values": [
+        3.640774008783631,
+        3.547810467565931,
+        3.6347147047046473,
+        3.6368049142256225,
+        3.6350369631475945
+      ],
+      "median": 3.6350369631475945,
+      "p5": 3.5651913149936743,
+      "p95": 3.6399801898720296,
+      "bootstrap_median_ci95": [
+        3.547810467565931,
+        3.640774008783631
+      ]
+    },
+    {
+      "matrix": "apache2",
+      "metric": "best_triton_over_best_hip",
+      "independent_jobs": 5,
+      "job_values": [
+        3.640774008783631,
+        3.547810467565931,
+        3.6347147047046473,
+        3.6368049142256225,
+        3.6350369631475945
+      ],
+      "median": 3.6350369631475945,
+      "p5": 3.5651913149936743,
+      "p95": 3.6399801898720296,
+      "bootstrap_median_ci95": [
+        3.547810467565931,
+        3.640774008783631
+      ]
+    },
+    {
+      "matrix": "dw8192",
+      "metric": "hip_cooperative_over_thread",
+      "independent_jobs": 5,
+      "job_values": [
+        0.9411764772635527,
+        0.9411764772635527,
+        0.936170221947148,
+        0.9574467939310773,
+        0.9474307347089354
+      ],
+      "median": 0.9411764772635527,
+      "p5": 0.937171473010429,
+      "p95": 0.9554435820866489,
+      "bootstrap_median_ci95": [
+        0.936170221947148,
+        0.9574467939310773
+      ]
+    },
+    {
+      "matrix": "dw8192",
+      "metric": "triton_block_over_row",
+      "independent_jobs": 5,
+      "job_values": [
+        0.8896289255501527,
+        0.8749992390747238,
+        0.9157688510270636,
+        0.9426248649305929,
+        0.9303675571876219
+      ],
+      "median": 0.9157688510270636,
+      "p5": 0.8779251763698096,
+      "p95": 0.9401734033819986,
+      "bootstrap_median_ci95": [
+        0.8749992390747238,
+        0.9426248649305929
+      ]
+    },
+    {
+      "matrix": "dw8192",
+      "metric": "row_level_triton_over_hip",
+      "independent_jobs": 5,
+      "job_values": [
+        10.3039218378562,
+        10.274449129661482,
+        10.861702126497892,
+        10.7553193282785,
+        10.884926177309222
+      ],
+      "median": 10.7553193282785,
+      "p5": 10.280343671300425,
+      "p95": 10.880281367146956,
+      "bootstrap_median_ci95": [
+        10.274449129661482,
+        10.884926177309222
+      ]
+    },
+    {
+      "matrix": "dw8192",
+      "metric": "cooperative_triton_over_hip",
+      "independent_jobs": 5,
+      "job_values": [
+        9.739583526584326,
+        9.552018550765686,
+        10.62499985941952,
+        10.588819653861336,
+        10.688889231424328
+      ],
+      "median": 10.588819653861336,
+      "p5": 9.589531545929415,
+      "p95": 10.676111357023366,
+      "bootstrap_median_ci95": [
+        9.552018550765686,
+        10.688889231424328
+      ]
+    },
+    {
+      "matrix": "dw8192",
+      "metric": "best_triton_over_best_hip",
+      "independent_jobs": 5,
+      "job_values": [
+        9.739583526584326,
+        9.552018550765686,
+        10.62499985941952,
+        10.588819653861336,
+        10.688889231424328
+      ],
+      "median": 10.588819653861336,
+      "p5": 9.589531545929415,
+      "p95": 10.676111357023366,
+      "bootstrap_median_ci95": [
+        9.552018550765686,
+        10.688889231424328
+      ]
+    },
+    {
+      "matrix": "orani678",
+      "metric": "hip_cooperative_over_thread",
+      "independent_jobs": 5,
+      "job_values": [
+        0.10467158694185726,
+        0.10682702858856029,
+        0.09655183164041103,
+        0.09584924557606272,
+        0.0964439174038396
+      ],
+      "median": 0.09655183164041103,
+      "p5": 0.0959681799416181,
+      "p95": 0.10639594025921968,
+      "bootstrap_median_ci95": [
+        0.09584924557606272,
+        0.10682702858856029
+      ]
+    },
+    {
+      "matrix": "orani678",
+      "metric": "triton_block_over_row",
+      "independent_jobs": 5,
+      "job_values": [
+        0.7175177622539957,
+        0.6979126307838256,
+        0.7098886544996009,
+        0.7159841345444956,
+        0.6909207832788677
+      ],
+      "median": 0.7098886544996009,
+      "p5": 0.6923191527798593,
+      "p95": 0.7172110367120956,
+      "bootstrap_median_ci95": [
+        0.6909207832788677,
+        0.7175177622539957
+      ]
+    },
+    {
+      "matrix": "orani678",
+      "metric": "row_level_triton_over_hip",
+      "independent_jobs": 5,
+      "job_values": [
+        0.27168949502822826,
+        0.2716660735125764,
+        0.27002681684925234,
+        0.26626743928791735,
+        0.2733195509898027
+      ],
+      "median": 0.2716660735125764,
+      "p5": 0.26701931480018437,
+      "p95": 0.2729935397974878,
+      "bootstrap_median_ci95": [
+        0.26626743928791735,
+        0.2733195509898027
+      ]
+    },
+    {
+      "matrix": "orani678",
+      "metric": "cooperative_triton_over_hip",
+      "independent_jobs": 5,
+      "job_values": [
+        1.8624160022419305,
+        1.7748240924130487,
+        1.9853478741432384,
+        1.9889907419735553,
+        1.9580515115801878
+      ],
+      "median": 1.9580515115801878,
+      "p5": 1.7923424743788252,
+      "p95": 1.9882621684074917,
+      "bootstrap_median_ci95": [
+        1.7748240924130487,
+        1.9889907419735553
+      ]
+    },
+    {
+      "matrix": "orani678",
+      "metric": "best_triton_over_best_hip",
+      "independent_jobs": 5,
+      "job_values": [
+        1.8624160022419305,
+        1.7748240924130487,
+        1.9853478741432384,
+        1.9889907419735553,
+        1.9580515115801878
+      ],
+      "median": 1.9580515115801878,
+      "p5": 1.7923424743788252,
+      "p95": 1.9882621684074917,
+      "bootstrap_median_ci95": [
+        1.7748240924130487,
+        1.9889907419735553
+      ]
+    }
+  ]
+}

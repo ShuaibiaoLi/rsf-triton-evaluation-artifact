@@ -1,0 +1,4 @@
+platform,configuration,dynamic_rupture_s,rsf_delta_s,rsf_fraction_percent
+CPU,FL=3 Aging RSF,1.24865,0.594436,47.6
+BW1000 gfx936 HIP,FL=3 Aging RSF,0.29279,0.079184,27.0
+BW1000 gfx936 HIP,TPV101 kernel breakdown,7.18198,,33.4

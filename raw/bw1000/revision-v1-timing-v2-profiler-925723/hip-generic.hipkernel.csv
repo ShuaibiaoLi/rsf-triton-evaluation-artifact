@@ -1,0 +1,6 @@
+"Name","Calls","TotalDurationNs","AverageNs","Percentage"
+"reduce256(double const*, double*, int)","184","40827308","221887","69.31"
+"stencil7(double const*, double*, int)","368","10974009","29820","18.63"
+"cooperative_spmv(int const*, int const*, double const*, double const*, double*, int, int)","368","6831973","18565","11.598"
+"empty_kernel()","184","271984","1478","0.462"
+"Total","1104","58905274","53356","100.0"

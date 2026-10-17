@@ -1,0 +1,90 @@
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:52:1: warning: void function is missing a return statement [-Wreturn-type]
+}
+^
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:63:424: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  std::vector<double> samples;if(pass){for(int i=0;i<warmup;i++)launch();HIP_OK(hipDeviceSynchronize());hipEvent_t begin,end;HIP_OK(hipEventCreate(&begin));HIP_OK(hipEventCreate(&end));for(int i=0;i<repeat;i++){float milliseconds;HIP_OK(hipEventRecord(begin));launch();HIP_OK(hipEventRecord(end));HIP_OK(hipEventSynchronize(end));HIP_OK(hipEventElapsedTime(&milliseconds,begin,end));samples.push_back(milliseconds*1000.0);}hipEventDestroy(begin);hipEventDestroy(end);}
+                                                                                                                                                                                                                                                                                                                                                                                                                                       ^~~~~~~~~~~~~~~ ~~~~~
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:63:447: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  std::vector<double> samples;if(pass){for(int i=0;i<warmup;i++)launch();HIP_OK(hipDeviceSynchronize());hipEvent_t begin,end;HIP_OK(hipEventCreate(&begin));HIP_OK(hipEventCreate(&end));for(int i=0;i<repeat;i++){float milliseconds;HIP_OK(hipEventRecord(begin));launch();HIP_OK(hipEventRecord(end));HIP_OK(hipEventSynchronize(end));HIP_OK(hipEventElapsedTime(&milliseconds,begin,end));samples.push_back(milliseconds*1000.0);}hipEventDestroy(begin);hipEventDestroy(end);}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^~~~~~~~~~~~~~~ ~~~
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:65:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  hipFree(dr);hipFree(dc);hipFree(dv);hipFree(dx);hipFree(dy);return pass?0:3;
+  ^~~~~~~ ~~
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:65:15: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  hipFree(dr);hipFree(dc);hipFree(dv);hipFree(dx);hipFree(dy);return pass?0:3;
+              ^~~~~~~ ~~
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:65:27: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  hipFree(dr);hipFree(dc);hipFree(dv);hipFree(dx);hipFree(dy);return pass?0:3;
+                          ^~~~~~~ ~~
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:65:39: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  hipFree(dr);hipFree(dc);hipFree(dv);hipFree(dx);hipFree(dy);return pass?0:3;
+                                      ^~~~~~~ ~~
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:65:51: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  hipFree(dr);hipFree(dc);hipFree(dv);hipFree(dx);hipFree(dy);return pass?0:3;
+                                                  ^~~~~~~ ~~
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:46:1: warning: void function is missing a return statement [-Wreturn-type]
+}
+^
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:49:16: note: in instantiation of function template specialization 'launch_one_thread_min_blocks<64>' requested here
+  if(block==64)launch_one_thread_min_blocks<64>(min_blocks,rp,ci,val,x,y,rows);
+               ^
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:46:1: warning: void function is missing a return statement [-Wreturn-type]
+}
+^
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:50:22: note: in instantiation of function template specialization 'launch_one_thread_min_blocks<128>' requested here
+  else if(block==128)launch_one_thread_min_blocks<128>(min_blocks,rp,ci,val,x,y,rows);
+                     ^
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:46:1: warning: void function is missing a return statement [-Wreturn-type]
+}
+^
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:51:8: note: in instantiation of function template specialization 'launch_one_thread_min_blocks<256>' requested here
+  else launch_one_thread_min_blocks<256>(min_blocks,rp,ci,val,x,y,rows);
+       ^
+11 warnings generated when compiling for gfx936.
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:52:1: warning: void function is missing a return statement [-Wreturn-type]
+}
+^
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:63:424: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  std::vector<double> samples;if(pass){for(int i=0;i<warmup;i++)launch();HIP_OK(hipDeviceSynchronize());hipEvent_t begin,end;HIP_OK(hipEventCreate(&begin));HIP_OK(hipEventCreate(&end));for(int i=0;i<repeat;i++){float milliseconds;HIP_OK(hipEventRecord(begin));launch();HIP_OK(hipEventRecord(end));HIP_OK(hipEventSynchronize(end));HIP_OK(hipEventElapsedTime(&milliseconds,begin,end));samples.push_back(milliseconds*1000.0);}hipEventDestroy(begin);hipEventDestroy(end);}
+                                                                                                                                                                                                                                                                                                                                                                                                                                       ^~~~~~~~~~~~~~~ ~~~~~
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:63:447: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  std::vector<double> samples;if(pass){for(int i=0;i<warmup;i++)launch();HIP_OK(hipDeviceSynchronize());hipEvent_t begin,end;HIP_OK(hipEventCreate(&begin));HIP_OK(hipEventCreate(&end));for(int i=0;i<repeat;i++){float milliseconds;HIP_OK(hipEventRecord(begin));launch();HIP_OK(hipEventRecord(end));HIP_OK(hipEventSynchronize(end));HIP_OK(hipEventElapsedTime(&milliseconds,begin,end));samples.push_back(milliseconds*1000.0);}hipEventDestroy(begin);hipEventDestroy(end);}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                              ^~~~~~~~~~~~~~~ ~~~
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:65:3: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  hipFree(dr);hipFree(dc);hipFree(dv);hipFree(dx);hipFree(dy);return pass?0:3;
+  ^~~~~~~ ~~
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:65:15: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  hipFree(dr);hipFree(dc);hipFree(dv);hipFree(dx);hipFree(dy);return pass?0:3;
+              ^~~~~~~ ~~
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:65:27: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  hipFree(dr);hipFree(dc);hipFree(dv);hipFree(dx);hipFree(dy);return pass?0:3;
+                          ^~~~~~~ ~~
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:65:39: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  hipFree(dr);hipFree(dc);hipFree(dv);hipFree(dx);hipFree(dy);return pass?0:3;
+                                      ^~~~~~~ ~~
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:65:51: warning: ignoring return value of function declared with 'nodiscard' attribute [-Wunused-result]
+  hipFree(dr);hipFree(dc);hipFree(dv);hipFree(dx);hipFree(dy);return pass?0:3;
+                                                  ^~~~~~~ ~~
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:46:1: warning: void function is missing a return statement [-Wreturn-type]
+}
+^
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:49:16: note: in instantiation of function template specialization 'launch_one_thread_min_blocks<64>' requested here
+  if(block==64)launch_one_thread_min_blocks<64>(min_blocks,rp,ci,val,x,y,rows);
+               ^
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:46:1: warning: void function is missing a return statement [-Wreturn-type]
+}
+^
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:50:22: note: in instantiation of function template specialization 'launch_one_thread_min_blocks<128>' requested here
+  else if(block==128)launch_one_thread_min_blocks<128>(min_blocks,rp,ci,val,x,y,rows);
+                     ^
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:46:1: warning: void function is missing a return statement [-Wreturn-type]
+}
+^
+/public/home/cnic_lsb/generic-microbench/spmv_four_cell_native_v1.cpp:51:8: note: in instantiation of function template specialization 'launch_one_thread_min_blocks<256>' requested here
+  else launch_one_thread_min_blocks<256>(min_blocks,rp,ci,val,x,y,rows);
+       ^
+11 warnings generated when compiling for host.
+/public/home/cnic_lsb/conda-envs/rsf-triton-v2/lib/python3.12/site-packages/torch/_subclasses/functional_tensor.py:283: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at /mnt/framework/workspace/build/torch-28498c-py312/torch/csrc/utils/tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))
+/public/home/cnic_lsb/conda-envs/rsf-triton-v2/lib/python3.12/site-packages/torch/_subclasses/functional_tensor.py:283: UserWarning: Failed to initialize NumPy: No module named 'numpy' (Triggered internally at /mnt/framework/workspace/build/torch-28498c-py312/torch/csrc/utils/tensor_numpy.cpp:84.)
+  cpu = _conversion_method_template(device=torch.device("cpu"))

@@ -1,0 +1,1 @@
+{"status": "PASS", "restore_over_pre": 0.9635953684223918, "medians": {"fixed_original_pre": 248.31999838352203, "lookup_coefficient": 244.80000138282776, "lookup_sqrt": 234.48000103235245, "lookup_asinh": 195.28000056743622, "lookup_all_transcendentals": 191.20000302791595, "fixed_original_restore": 239.28000032901764}}

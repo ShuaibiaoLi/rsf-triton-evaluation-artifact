@@ -1,0 +1,5 @@
+loop,sequence,result
+mapping fairness,simple observation > four-cell tuning > independent replay,bounded backend statement
+timing boundary,first call > host > event > batch > graph > profiler,steady-state statement
+causal intervention,hypothesis > fixed replay > removal > restoration,negative causal result
+migration gates,kernel > interop > production,production pending

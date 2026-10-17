@@ -1,0 +1,9 @@
+platform,gate,status,detail
+BW1000,RSF correctness,PASS,C0-C6
+BW1000,minimal interop,PASS,pointer/stream/padded layout
+BW1000,native TPV101 application,PASS,official HIP baseline
+BW1000,Triton production application,NOT_TESTED,real LTS/MPI
+Dongfang,RSF correctness,PASS,C2-C3; decomposed C4-C6
+Dongfang,fused C4,FAIL_COMPILE,old Triton/MLIR assertion
+Dongfang,minimal interop,PASS,max abs error 1.6965e-16
+Dongfang,production application,NOT_TESTED,real LTS/MPI

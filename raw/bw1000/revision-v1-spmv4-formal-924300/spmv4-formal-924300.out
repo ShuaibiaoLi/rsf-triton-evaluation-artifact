@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "comparisons": [
+    {
+      "matrix": "dw8192",
+      "hip_cooperative_over_thread": 0.9411764772635527,
+      "triton_block_over_row": 1.0817431206955104,
+      "row_level_triton_over_hip": 10.31372583439391,
+      "cooperative_triton_over_hip": 11.854102009150612,
+      "best_triton_over_best_hip": 10.958333621321279
+    },
+    {
+      "matrix": "apache2",
+      "hip_cooperative_over_thread": 0.5629075778044811,
+      "triton_block_over_row": 0.2688109873694335,
+      "row_level_triton_over_hip": 7.423025951723877,
+      "cooperative_triton_over_hip": 3.54479316681876,
+      "best_triton_over_best_hip": 3.54479316681876
+    },
+    {
+      "matrix": "orani678",
+      "hip_cooperative_over_thread": 0.10767634759595536,
+      "triton_block_over_row": 0.7040682419910993,
+      "row_level_triton_over_hip": 0.2707928128529447,
+      "cooperative_triton_over_hip": 1.7706453083328686,
+      "best_triton_over_best_hip": 1.7706453083328686
+    }
+  ]
+}
+SPMV_FOUR_CELL_FORMAL_PASS output=/public/home/cnic_lsb/generic-microbench/evidence/revision-v1-spmv4-formal-924300

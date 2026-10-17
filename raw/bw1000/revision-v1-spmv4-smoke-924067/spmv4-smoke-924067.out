@@ -1,0 +1,66 @@
+{
+  "schema_version": "spmv-four-cell-result/1.0",
+  "backend": "triton",
+  "mapping": "row_program",
+  "matrix": "bcsstk17",
+  "matrix_path": "/public/home/cnic_lsb/generic-microbench/data/bcsstk17/bcsstk17.mtx",
+  "rows": 10974,
+  "cols": 10974,
+  "nnz": 428650,
+  "kmax": 256,
+  "block_size": 128,
+  "num_warps_or_wave_groups": 4,
+  "chunk_size": 128,
+  "requested_rows_per_program": null,
+  "rows_per_program": 1,
+  "warmup": 2,
+  "repeat": 3,
+  "max_abs_error": 5.960464477539062e-07,
+  "tolerance": 0.1754489359729169,
+  "correctness": "PASS",
+  "samples_us": [
+    107.0379987359047,
+    103.67999970912933,
+    101.75999999046326
+  ],
+  "median_us": 103.67999970912933,
+  "p5_us": 101.95199996232986,
+  "p95_us": 106.70219883322716,
+  "device": "BW",
+  "torch": "2.10.0+das.opt1.dtk2604.2608141812.g28498c",
+  "triton": "3.5.0"
+}
+{
+  "schema_version": "spmv-four-cell-result/1.0",
+  "backend": "triton",
+  "mapping": "block_row",
+  "matrix": "bcsstk17",
+  "matrix_path": "/public/home/cnic_lsb/generic-microbench/data/bcsstk17/bcsstk17.mtx",
+  "rows": 10974,
+  "cols": 10974,
+  "nnz": 428650,
+  "kmax": 256,
+  "block_size": 128,
+  "num_warps_or_wave_groups": 4,
+  "chunk_size": null,
+  "requested_rows_per_program": 2,
+  "rows_per_program": 2,
+  "warmup": 2,
+  "repeat": 3,
+  "max_abs_error": 9.5367431640625e-07,
+  "tolerance": 0.1754489359729169,
+  "correctness": "PASS",
+  "samples_us": [
+    106.71799629926682,
+    105.27999699115753,
+    101.75999999046326
+  ],
+  "median_us": 105.27999699115753,
+  "p5_us": 102.11199969053268,
+  "p95_us": 106.57419636845589,
+  "device": "BW",
+  "torch": "2.10.0+das.opt1.dtk2604.2608141812.g28498c",
+  "triton": "3.5.0"
+}
+TRITON_CORRECTNESS_PASS
+SPMV_FOUR_CELL_SMOKE_PASS output=/public/home/cnic_lsb/generic-microbench/evidence/revision-v1-spmv4-smoke-924067

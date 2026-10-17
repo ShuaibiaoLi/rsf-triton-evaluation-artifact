@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "candidate_count": 96,
+  "best": [
+    {
+      "matrix": "bcsstk17",
+      "backend": "hip",
+      "mapping": "cooperative_row",
+      "block_size": 256,
+      "num_warps_or_wave_groups": 2,
+      "median_us": 13.919999823
+    },
+    {
+      "matrix": "bcsstk17",
+      "backend": "hip",
+      "mapping": "one_thread_per_row",
+      "block_size": 64,
+      "num_warps_or_wave_groups": 1,
+      "median_us": 61.440000311
+    },
+    {
+      "matrix": "bcsstk17",
+      "backend": "triton",
+      "mapping": "block_row",
+      "block_size": 256,
+      "num_warps_or_wave_groups": 1,
+      "median_us": 77.91999727487564
+    },
+    {
+      "matrix": "bcsstk17",
+      "backend": "triton",
+      "mapping": "row_program",
+      "block_size": 256,
+      "num_warps_or_wave_groups": 4,
+      "median_us": 91.91999956965446
+    },
+    {
+      "matrix": "poisson3Da",
+      "backend": "hip",
+      "mapping": "cooperative_row",
+      "block_size": 128,
+      "num_warps_or_wave_groups": 4,
+      "median_us": 14.720000327
+    },
+    {
+      "matrix": "poisson3Da",
+      "backend": "hip",
+      "mapping": "one_thread_per_row",
+      "block_size": 64,
+      "num_warps_or_wave_groups": 8,
+      "median_us": 57.200498879
+    },
+    {
+      "matrix": "poisson3Da",
+      "backend": "triton",
+      "mapping": "block_row",
+      "block_size": 256,
+      "num_warps_or_wave_groups": 1,
+      "median_us": 76.40000060200691
+    },
+    {
+      "matrix": "poisson3Da",
+      "backend": "triton",
+      "mapping": "row_program",
+      "block_size": 128,
+      "num_warps_or_wave_groups": 1,
+      "median_us": 101.03999823331833
+    }
+  ]
+}
+SPMV_FOUR_CELL_TUNING_PASS output=/public/home/cnic_lsb/generic-microbench/evidence/revision-v1-spmv4-tuning-924088

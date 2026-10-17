@@ -1,0 +1,20 @@
+case,timing_layer,triton_over_hip,source
+Empty,Single event,4.46,timing_decomposition_revision_v2
+Empty,Batch=128,5.72,timing_decomposition_revision_v2
+Empty,Graph replay,1.52,timing_decomposition_revision_v2
+Empty,Kernel duration,1.0,timing_decomposition_revision_v2
+Large stencil,Single event,1.64,timing_decomposition_revision_v2
+Large stencil,Batch=128,1.0,timing_decomposition_revision_v2
+Large stencil,Graph replay,1.0,timing_decomposition_revision_v2
+Large stencil,Kernel duration,1.1,timing_decomposition_revision_v2
+Reduction,Single event,1.15,timing_decomposition_revision_v2
+Reduction,Batch=128,1.0,timing_decomposition_revision_v2
+Reduction,Graph replay,1.0,timing_decomposition_revision_v2
+Reduction,Kernel duration,1.09,timing_decomposition_revision_v2
+RSF-C3,Single event,3.8,timing_decomposition_revision_v2
+RSF-C3,Batch=128,1.99,timing_decomposition_revision_v2
+RSF-C3,Graph replay,1.81,timing_decomposition_revision_v2
+RSF-C3,Kernel duration,3.24,timing_decomposition_revision_v2
+interior_stencil_large,independent jobs median,1.0020894473638409,nonspmv-independent-jobs-v1.json
+row_reduction,independent jobs median,0.9962882952906265,nonspmv-independent-jobs-v1.json
+rsf_c3,independent jobs median,1.9835988293910614,nonspmv-independent-jobs-v1.json

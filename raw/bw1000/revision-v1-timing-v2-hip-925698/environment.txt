@@ -1,0 +1,8 @@
+timestamp=2026-10-15T12:59:33Z
+hostname=f11r1n20
+slurm_job_id=925698
+dcc version: 25.10.0-0
+clang version 17.0.0 (http://112.11.119.99:55080/dcutoolkit/driverruntime/llvm-project.git ff5bf917a679c83afe927af051a20b86fef7b07d)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /public/software/compiler/dtk-26.04/llvm/bin

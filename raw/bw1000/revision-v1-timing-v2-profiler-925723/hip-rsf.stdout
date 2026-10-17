@@ -1,0 +1,62 @@
+correctness case=rsf_c3 max_abs_error=2.2204460492503131e-16 failures=0 status=PASS
+first case=rsf_c3 boundary=first_call_aot_cold_us value=11516.955000000
+summary case=rsf_c3 boundary=post_aot_host_submit_to_sync batch=1 median_us=100.021000000 p5_us=100.021000000 p95_us=100.021000000
+sample case=rsf_c3 boundary=post_aot_host_submit_to_sync batch=1 index=0 us=100.021000000
+summary case=rsf_c3 boundary=single_device_event batch=1 median_us=70.720002055 p5_us=70.720002055 p95_us=70.720002055
+sample case=rsf_c3 boundary=single_device_event batch=1 index=0 us=70.720002055
+summary case=rsf_c3 boundary=steady_batch_per_call batch=1 median_us=71.199998260 p5_us=71.199998260 p95_us=71.199998260
+sample case=rsf_c3 boundary=steady_batch_per_call batch=1 index=0 us=71.199998260
+summary case=rsf_c3 boundary=steady_batch_per_call batch=8 median_us=59.839874506 p5_us=59.839874506 p95_us=59.839874506
+sample case=rsf_c3 boundary=steady_batch_per_call batch=8 index=0 us=59.839874506
+summary case=rsf_c3 boundary=steady_batch_per_call batch=32 median_us=56.604873389 p5_us=56.604873389 p95_us=56.604873389
+sample case=rsf_c3 boundary=steady_batch_per_call batch=32 index=0 us=56.604873389
+summary case=rsf_c3 boundary=steady_batch_per_call batch=128 median_us=56.459881365 p5_us=56.459881365 p95_us=56.459881365
+sample case=rsf_c3 boundary=steady_batch_per_call batch=128 index=0 us=56.459881365
+summary case=rsf_c3 boundary=graph_replay batch=1 median_us=67.359998822 p5_us=67.359998822 p95_us=67.359998822
+sample case=rsf_c3 boundary=graph_replay batch=1 index=0 us=67.359998822
+TIMING_DECOMPOSITION_RSF_NATIVE_V2_PASS
+HIP_PROF:on Thu Oct 15 21:08:24 2026
+HIP_PROF:process id '562004'
+HIP_PROF:db file '/public/home/cnic_lsb/generic-microbench/evidence/revision-v1-timing-v2-profiler-925723/hip-rsf.db'
+HIP_PROF:out put file '/public/home/cnic_lsb/generic-microbench/evidence/revision-v1-timing-v2-profiler-925723/hip-rsf'
+HIP_PROF:profiling ' /public/home/cnic_lsb/generic-microbench/evidence/revision-v1-timing-v2-profiler-925723/timing_rsf_native 65537 1'
+HIP_PROF:process begin
+HIP_PROF:process end run total cost:1(s)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HIP_PROF:IP:[31m12.6.11.30[0m HIP API statistics
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Name                                                          |Calls          |TotalDurationNs            |AverageNs                  |Percentage                 |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|hipMalloc                                                     |6              |23141651                   |3856941                    |48.4875387220489           |
+|hipLaunchKernel                                               |183            |12124725                   |66255                      |25.4043271559015           |
+|hipEventSynchronize                                           |6              |8845258                    |1474209                    |18.5330247086309           |
+|hipMemcpy                                                     |6              |2076825                    |346137                     |4.35146708445388           |
+|hipStreamSynchronize                                          |4              |910566                     |227641                     |1.90786319368403           |
+|hipStreamDestroy                                              |1              |185003                     |185003                     |0.387627491495538          |
+|hipEventRecord                                                |12             |169062                     |14088                      |0.354227115058776          |
+|hipGraphInstantiate                                           |1              |78131                      |78131                      |0.163703959060328          |
+|hipFree                                                       |6              |56151                      |9358                       |0.117650369318151          |
+|__hipPushCallConfiguration                                    |183            |26050                      |142                        |0.0545812562685944         |
+|__hipPopCallConfiguration                                     |183            |20812                      |113                        |0.0436063380215734         |
+|hipGraphLaunch                                                |2              |20470                      |10235                      |0.042889762603383          |
+|hipEventDestroy                                               |12             |15881                      |1323                       |0.0332746614511151         |
+|hipStreamEndCapture                                           |1              |12111                      |12111                      |0.0253755698529346         |
+|hipGraphExecDestroy                                           |1              |10161                      |10161                      |0.021289832819393          |
+|hipEventCreate                                                |12             |8800                       |733                        |0.018438197894957          |
+|hipStreamCreate                                               |1              |8180                       |8180                       |0.0171391430432669         |
+|hipEventElapsedTime                                           |6              |7860                       |1310                       |0.0164686631198139         |
+|hipStreamBeginCapture                                         |1              |6200                       |6200                       |0.0129905485169016         |
+|hipGraphDestroy                                               |1              |3110                       |3110                       |0.00651622675605868        |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Total                                                         |628            |47727007                   |75998                      |100.0                      |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HIP_PROF:IP:[31m12.6.11.30[0m HIPOPS API statistics
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Name                                                          |Calls          |TotalDurationNs            |AverageNs                  |Percentage                 |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|c3(Input const*, double*, double*, double*, int*, int*, int...|184            |10487496                   |56997                      |100.0                      |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|Total                                                         |184            |10487496                   |56997                      |100.0                      |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HIP_PROF:finish

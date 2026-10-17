@@ -1,0 +1,4 @@
+schema=spmv-four-cell-result/1.0 backend=hip mapping=one_thread_per_row matrix=/public/home/cnic_lsb/generic-microbench/data/bcsstk17/bcsstk17.mtx rows=10974 cols=10974 nnz=428650 block_size=128 num_warps_or_wave_groups=1 warmup=2 repeat=3 max_abs_error=1.2516975402832031e-06 tolerance=0.17544893597291689 correctness=PASS median_us=67.359000444 p5_us=65.919901431 p95_us=67.934099585
+sample backend=hip mapping=one_thread_per_row index=0 event_us=67.997999489
+sample backend=hip mapping=one_thread_per_row index=1 event_us=65.760001540
+sample backend=hip mapping=one_thread_per_row index=2 event_us=67.359000444
