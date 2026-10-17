@@ -1,0 +1,225 @@
+timestamp=2026-09-27T21:01:10+08:00
+host=f11r1n17
+job=866206
+source_revision=20334d02af9c539a9cf7cc4cd03c3e2622104aea
+compat_patch_sha256=16e3ec77113cd9f01d0f8dc639460376cc09d6c8f50308670359cbd310b4249d
+
+================================= System Management Interface ==================================
+================================================================================================
+HCU[0]		: Card Series:		 BW
+HCU[0]		: Card Vendor:		 C-3000 IC Design Co., Ltd.
+================================================================================================
+================================================================================================
+HCU[0]		: Unique ID: TBH49801050301
+================================================================================================
+======================================== End of SMI Log ========================================
+
+torch_probe_error= ModuleNotFoundError("No module named 'torch'")
+2d2669115aa77d3801d600f960afd5ae6ec3d21da007d0b4073ed3f8b100c415  /public/home/cnic_lsb/seissol-rsf-hotspot/build-hip-gfx936/SeisSol_Release_dgfx936_hip_6_elastic
+Sun Sep 27 21:01:11, Info:  From device: env. variable "DEVICE_STACK_MEM_SIZE" has not been set.  The default amount of the device memory (1 GB)  is going to be used to store temp. variables during execution of compute-algorithms. 
+Sun Sep 27 21:01:11, Info:  Welcome to SeisSol 
+Sun Sep 27 21:01:11, Info:  Copyright (c) 2012 - 9999  SeisSol Group 
+Sun Sep 27 21:01:11, Info:  Version: (unknown) 
+Sun Sep 27 21:01:11, Info:  Built on: Sep 27 2026 21:00:33 
+Sun Sep 27 21:01:11, Info:  Built with Convergence Order: 6 
+Sun Sep 27 21:01:11, Info:  Last commit: (unknown) at 9999-12-31T00:00:00+00:00 
+Sun Sep 27 21:01:11, Info:  Compiled with HOST_ARCH = hsw 
+Sun Sep 27 21:01:11, Info:  Compiled with DEVICE_BACKEND = hip 
+Sun Sep 27 21:01:11, Info:  Compiled with DEVICE_ARCH = gfx936 
+Sun Sep 27 21:01:11, Info:  Using the parameter file parameters.par 
+Sun Sep 27 21:01:11, Info:  Reading SeisSol parameter file... 
+Sun Sep 27 21:01:11, Info:  The field "rf_output_on" is no longer in use. You may safely remove it from your parameters file. 
+Sun Sep 27 21:01:11, Info:  In your parameter file, you have specified a non-positive interval for "checkpointinterval" . This mechanism is deprecated and may be removed in a future version of SeisSol. Consider disabling the whole module by setting "checkpoint" to 0 instead by adding "checkpoint = 0" to the "output" section of your parameter file instead. 
+Sun Sep 27 21:01:11, Info:  The field "printintervalcriterion" is no longer in use. You may safely remove it from your parameters file. 
+Sun Sep 27 21:01:11, Info:  The field "noutpoints" is no longer in use. You may safely remove it from your parameters file. 
+Sun Sep 27 21:01:11, Info:  The field "printintervalcriterion" is no longer in use. You may safely remove it from your parameters file. 
+Sun Sep 27 21:01:11, Info:  The field "pickdttype" is no longer in use. You may safely remove it from your parameters file. 
+Sun Sep 27 21:01:11, Info:  The field "faultoutputflag" is no longer in use. You may safely remove it from your parameters file. 
+Sun Sep 27 21:01:11, Info:  The field "boundaries" is no longer in use. You may safely remove it from your parameters file. 
+Sun Sep 27 21:01:11, Info:  SeisSol parameter file read successfully. 
+Sun Sep 27 21:01:11, Info:  Model information: 
+Sun Sep 27 21:01:11, Info:  Elastic model: yes 
+Sun Sep 27 21:01:11, Info:  Viscoelastic model: no 
+Sun Sep 27 21:01:11, Info:  Anelastic model: no 
+Sun Sep 27 21:01:11, Info:  Poroelastic model: no 
+Sun Sep 27 21:01:11, Info:  Anisotropic model: no 
+Sun Sep 27 21:01:11, Info:  Plasticity: no 
+Sun Sep 27 21:01:11, Warn:  The field "faultenergiesfromacrossfaultvelocities" in "output" was given in the parameter file, but is unknown to SeisSol. 
+Sun Sep 27 21:01:11, Info:  Running on (rank=0): "f11r1n17" 
+Sun Sep 27 21:01:11, Info:  Using MPI with #ranks: 1 
+Sun Sep 27 21:01:11, Info:  Node-wide (shared memory) MPI with #ranks/node: 1 
+Sun Sep 27 21:01:11, Info:  SYCL device for Dynamic Rupture and Point sources (GPU: true): BW 
+Sun Sep 27 21:01:11, Info:  Device API: HIP 
+Sun Sep 27 21:01:11, Info:  Device (rank=0): BW 
+Sun Sep 27 21:01:11, Info:  Using persistent MPI routines. 
+Sun Sep 27 21:01:11, Info:  Using separate buffers for CPU-GPU data. 
+Sun Sep 27 21:01:11, Info:  Using separate buffers for CPU-GPU MPI data. 
+Sun Sep 27 21:01:11, Info:  Running clusters with 0 or more cells on the GPU (and on the CPU otherwise) 
+Sun Sep 27 21:01:11, Info:  Using OMP with #threads/rank: 8 
+Sun Sep 27 21:01:11, Info:  OpenMP worker affinity (this process): "----------|----------|----------|--2-------|----------|----------|----------|----------|----------|----------|----------|----------|--------" 
+Sun Sep 27 21:01:11, Info:  OpenMP worker affinity (this node)   : "----------|----------|----------|--2-------|----------|----------|----------|----------|----------|----------|----------|----------|--------" 
+Sun Sep 27 21:01:11, Info:  Using polling for advancing MPI communication, due to having only one MPI rank running. 
+Sun Sep 27 21:01:11, Info:  The stack size ulimit is 8192 [kiB] ( = 8.0000 MiB ). 
+Sun Sep 27 21:01:11, Warn:  Stack size of 8192 [kiB] ( = 8.0000 MiB ) is lower than recommended minimum of 2097152 [kiB] ( = 2.0000 GiB ). You can increase the stack size by running the command: ulimit -Ss unlimited. 
+Sun Sep 27 21:01:11, Info:  Begin init mesh. 
+Sun Sep 27 21:01:11, Info:  Mesh file: "/public/home/cnic_lsb/seissol-rsf-hotspot/cases/tpv101/tpv5-20k.h5" 
+Sun Sep 27 21:01:11, Info:  Skipping mini SeisSol (SeisSol is used with a single rank only). 
+Sun Sep 27 21:01:11, Info:  Reading PUML mesh 
+Sun Sep 27 21:01:11, Info:  Inferring boundary format. 
+Sun Sep 27 21:01:11, Info:  Boundary format not given in PUML file; inferring from array shape. 
+Sun Sep 27 21:01:11, Info:  Using boundary format: i32 (4xi8) 
+Sun Sep 27 21:01:11, Info:  Found 19183 cells 
+Sun Sep 27 21:01:11, Info:  Found 3454 vertices 
+Sun Sep 27 21:01:11, Info:  Computing LTS weights. 
+Sun Sep 27 21:01:12, Info:  Limiting number of clusters to 2147483646 
+Sun Sep 27 21:01:12, Info:  Computing LTS weights. Done.  (315 reductions.)
+Sun Sep 27 21:01:12, Warn:  Default not found. Expect poor performance as the mesh is not properly partitioned. 
+Sun Sep 27 21:01:12, Info:  Using the None partition library and strategy. 
+Sun Sep 27 21:01:12, Info:  PUML mesh read in: 1.0930 s (min: 1.0930 s, max: 1.0930 s)
+Sun Sep 27 21:01:12, Info:  The mesh has been read. Starting post processing. 
+Sun Sep 27 21:01:12, Info:  Exchanging ghostlayer metadata. 
+Sun Sep 27 21:01:12, Info:  Extracting fault information. 
+Sun Sep 27 21:01:13, Info:  Mesh initialized in: 1.8974 s (min: 1.8974 s, max: 1.8974 s)
+Sun Sep 27 21:01:13, Info:  End init mesh. 
+Sun Sep 27 21:01:13, Info:  Begin init model. 
+Sun Sep 27 21:01:13, Info:  Initialize LTS. 
+Sun Sep 27 21:01:13, Info:  Deriving clusters ids for min. time step width / multiRate: 0.00141759 / 2 
+Sun Sep 27 21:01:13, Info:  Due to wiggle factor of 1 the minimum timestep size is reduced to 0.00141759 
+Sun Sep 27 21:01:13, Info:  Number of elements in time clusters: 
+Sun Sep 27 21:01:13, Info:  0: 1001 
+Sun Sep 27 21:01:13, Info:  1: 7591 
+Sun Sep 27 21:01:13, Info:  2: 5192 
+Sun Sep 27 21:01:13, Info:  3: 3046 
+Sun Sep 27 21:01:13, Info:  4: 1880 
+Sun Sep 27 21:01:13, Info:  5: 473 
+Sun Sep 27 21:01:13, Info:  maximum theoretical speedup (compared to GTS): 4.11659 per cell LTS, 2.9032 with the used clustering. 
+Sun Sep 27 21:01:13, Info:  Number of elements in dynamic rupture time clusters: 
+Sun Sep 27 21:01:13, Info:  0 (dr): 200 
+Sun Sep 27 21:01:13, Info:  1 (dr): 892 
+Sun Sep 27 21:01:13, Info:  2 (dr): 0 
+Sun Sep 27 21:01:13, Info:  3 (dr): 0 
+Sun Sep 27 21:01:13, Info:  4 (dr): 0 
+Sun Sep 27 21:01:13, Info:  5 (dr): 0 
+Sun Sep 27 21:01:13, Info:  Initialize Friction Model 
+Sun Sep 27 21:01:13, Info:  Initialize cell material parameters. 
+Sun Sep 27 21:01:14, Info:  Initialize Memory layout. 
+Sun Sep 27 21:01:14, Info:  Initialize cell-local matrices. 
+Sun Sep 27 21:01:15, Info:  Initializing Fault, using a quadrature rule with  49  points. 
+Sun Sep 27 21:01:16, Info:  Model initialized in: 2.7378 s (min: 2.7378 s, max: 2.7378 s)
+Sun Sep 27 21:01:16, Info:  End init model. 
+Sun Sep 27 21:01:16, Info:  Setting initial conditions. 
+Sun Sep 27 21:01:16, Info:  Using initial condition "Zero" . 
+Sun Sep 27 21:01:16, Info:  Reading source. 
+Sun Sep 27 21:01:16, Info:  No source term specified. 
+Sun Sep 27 21:01:16, Info:  Setting up boundary conditions. 
+Sun Sep 27 21:01:16, Info:  Begin init output. 
+Sun Sep 27 21:01:16, Info:  Enabling on-fault receiver output 
+Sun Sep 27 21:01:16, Info:  Enabling 2D fault output 
+Sun Sep 27 21:01:16, Info:  Initializing Fault output. Number of sub-triangles: 4 
+Sun Sep 27 21:01:16, Info:  Initializing XDMF fault output. 
+Sun Sep 27 21:01:16, Info:  Initializing XDMF fault output. Done. 
+Sun Sep 27 21:01:16, Info:  all point receivers found along the fault 
+Sun Sep 27 21:01:16, Info:  Initializing XDMF wave field output. 
+Sun Sep 27 21:01:16, Info:  Refinement Strategy is "Divide by 4" 
+Sun Sep 27 21:01:16, Info:  Refinement class initialized 
+Sun Sep 27 21:01:16, Info:  VariableSubsampler initialized 
+Sun Sep 27 21:01:16, Info:  High order output initialized 
+Sun Sep 27 21:01:16, Info:  Initializing XDMF wave field output. Done. 
+Sun Sep 27 21:01:16, Info:  Record points read from "Receivers.dat" 
+Sun Sep 27 21:01:16, Info:  Number of record points = 6 
+Sun Sep 27 21:01:16, Info:  Finding meshIds for receivers... 
+Sun Sep 27 21:01:16, Info:  Cleaning possible double occurring receivers for MPI... 
+Sun Sep 27 21:01:16, Info:  Mapping receivers to LTS cells... 
+Sun Sep 27 21:01:16, Info:  Initializing energy output. 
+Sun Sep 27 21:01:16, Info:  End init output. 
+Sun Sep 27 21:01:16, Info:  Synchronizing data... (host->device) 
+Sun Sep 27 21:01:16, Info:  occupied memory on devices (%):  mean = 1.21944  std = 5.91142e-09  min = 1.21944  median = 1.21944  max = 1.21944 
+Sun Sep 27 21:01:17, Info:  Finishing initialization... 
+Sun Sep 27 21:01:17, Info:  Starting simulation. 
+Sun Sep 27 21:01:17, Info:  Writing faultoutput at time 0.
+Sun Sep 27 21:01:17, Info:  Writing faultoutput at time 0. Done.
+Sun Sep 27 21:01:17, Info:  Waiting for last wave field. 
+Sun Sep 27 21:01:17, Info:  Writing wave field at time 0.
+Sun Sep 27 21:01:17, Info:  Writing wave field at time 0. Done.
+Sun Sep 27 21:01:17, Info:  Writing energy output at time 0 
+Sun Sep 27 21:01:18, Info:   Total momentum (X, Y, Z): 0  , 0  , 0 
+Sun Sep 27 21:01:18, Info:  Writing energy output at time 0 Done. 
+Sun Sep 27 21:01:18, Info:  Time spent for initial IO: 1.2057 s (min: 1.2057 s, max: 1.2057 s)
+Sun Sep 27 21:01:33, Info:  Synchronizing data... (device->host) 
+Sun Sep 27 21:01:33, Info:  Writing faultoutput at time 1.
+Sun Sep 27 21:01:33, Info:  Writing faultoutput at time 1. Done.
+Sun Sep 27 21:01:33, Info:  Waiting for last wave field. 
+Sun Sep 27 21:01:33, Info:  Writing wave field at time 1.
+Sun Sep 27 21:01:33, Info:  Writing wave field at time 1. Done.
+Sun Sep 27 21:01:33, Info:  Writing energy output at time 1 
+Sun Sep 27 21:01:34, Info:   Elastic energy (total, % kinematic, % potential):  2.40915e+10  , 25.5445  , 74.4555 
+Sun Sep 27 21:01:34, Info:   Total momentum (X, Y, Z): 0.0013504  , 0.0010643  , -0.000204086 
+Sun Sep 27 21:01:34, Info:   Frictional work (total, % static, % radiated):  2.40643e+10  , 89.7459  , 10.2541 
+Sun Sep 27 21:01:34, Info:   Seismic moment (without plasticity): 1.30349e+15  Mw: 4.00674 
+Sun Sep 27 21:01:34, Info:  Writing energy output at time 1 Done. 
+Sun Sep 27 21:01:34, Info:  Time spent this phase (total): 17.6839 s (min: 17.6839 s, max: 17.6839 s)
+Sun Sep 27 21:01:34, Info:  Time spent this phase (compute): 16.4782 s (min: 16.4782 s, max: 16.4782 s)
+Sun Sep 27 21:01:34, Info:  Time spent this phase (blocking IO): 1.4102 s (min: 1.4102 s, max: 1.4102 s)
+Sun Sep 27 21:01:34, Info:  Performance since the start: 275.8185 GFLOP/s (rank 0: 275.8185 GFLOP/s , average over ranks: 275.8185 GFLOP/s ) 
+Sun Sep 27 21:01:34, Info:  Performance since last sync point: 275.8185 GFLOP/s (rank 0: 275.8185 GFLOP/s , average over ranks: 275.8185 GFLOP/s ) 
+Sun Sep 27 21:01:46, Info:  Synchronizing data... (device->host) 
+Sun Sep 27 21:01:46, Info:  Writing faultoutput at time 2.
+Sun Sep 27 21:01:46, Info:  Writing faultoutput at time 2. Done.
+Sun Sep 27 21:01:46, Info:  Waiting for last wave field. 
+Sun Sep 27 21:01:46, Info:  Writing wave field at time 2.
+Sun Sep 27 21:01:46, Info:  Writing wave field at time 2. Done.
+Sun Sep 27 21:01:46, Info:  Wrote receivers in 0.14004 seconds. 
+Sun Sep 27 21:01:46, Info:  Writing energy output at time 2 
+Sun Sep 27 21:01:48, Info:   Elastic energy (total, % kinematic, % potential):  5.0081e+14  , 26.7385  , 73.2615 
+Sun Sep 27 21:01:48, Info:   Total momentum (X, Y, Z): 0.236328  , 0.271484  , 0.0805664 
+Sun Sep 27 21:01:48, Info:   Frictional work (total, % static, % radiated):  5.00577e+14  , 66.8461  , 33.1539 
+Sun Sep 27 21:01:48, Info:   Seismic moment (without plasticity): 7.89367e+17  Mw: 5.86152 
+Sun Sep 27 21:01:48, Info:  Writing energy output at time 2 Done. 
+Sun Sep 27 21:01:48, Info:  Time spent this phase (total): 13.1560 s (min: 13.1560 s, max: 13.1560 s)
+Sun Sep 27 21:01:48, Info:  Time spent this phase (compute): 13.1559 s (min: 13.1559 s, max: 13.1559 s)
+Sun Sep 27 21:01:48, Info:  Time spent this phase (blocking IO): 1.3743 s (min: 1.3743 s, max: 1.3743 s)
+Sun Sep 27 21:01:48, Info:  Performance since the start: 316.3142 GFLOP/s (rank 0: 316.3142 GFLOP/s , average over ranks: 316.3142 GFLOP/s ) 
+Sun Sep 27 21:01:48, Info:  Performance since last sync point: 370.7474 GFLOP/s (rank 0: 370.7474 GFLOP/s , average over ranks: 370.7474 GFLOP/s ) 
+Sun Sep 27 21:01:48, Info:  Synchronizing data... (device->host) 
+Sun Sep 27 21:01:48, Info:  Ignoring duplicate synchronization point at time 2 ; the last sync point was at  2 
+Sun Sep 27 21:01:48, Info:  Ignoring duplicate synchronization point at time 2 ; the last sync point was at  2 
+Sun Sep 27 21:01:48, Info:  Ignoring duplicate synchronization point at time 2 ; the last sync point was at  2 
+Sun Sep 27 21:01:48, Info:  Ignoring duplicate synchronization point at time 2 ; the last sync point was at  2 
+Sun Sep 27 21:01:48, Info:  Simulation time (total): 30.9230 s (min: 30.9230 s, max: 30.9230 s)
+Sun Sep 27 21:01:48, Info:  Simulation time (compute): 26.8497 s (min: 26.8497 s, max: 26.8497 s)
+Sun Sep 27 21:01:48, Info:  Simulation time (blocking IO): 3.9901 s (min: 3.9901 s, max: 3.9901 s)
+Sun Sep 27 21:01:48, Info:  Time spent in compute kernels: mean = 21.4876  std = 1.28752e-07  min = 21.4876  median = 21.4876  max = 21.4876 
+Sun Sep 27 21:01:48, Info:  Load imbalance: 0 % 
+Sun Sep 27 21:01:48, Info:  Regression analysis of compute kernels: 
+Sun Sep 27 21:01:48, Info:  "computeLocalIntegration" (total time): 7.13288 s ( = 7.1329 s ) 
+Sun Sep 27 21:01:48, Info:  "computeLocalIntegration" ( constant ): 0.000740449 (sample size: 2786 , standard error: -nan ) 
+Sun Sep 27 21:01:48, Info:  "computeLocalIntegration" ( per element ): 5.42606e-07 (sample size: 2786 , standard error: -nan ) 
+Sun Sep 27 21:01:48, Info:  "computeNeighboringIntegration" (total time): 7.17273 s ( = 7.1727 s ) 
+Sun Sep 27 21:01:48, Info:  "computeNeighboringIntegration" ( constant ): 0.0027651 (sample size: 2786 , standard error: -nan ) 
+Sun Sep 27 21:01:48, Info:  "computeNeighboringIntegration" ( per element ): -5.68118e-08 (sample size: 2786 , standard error: -nan ) 
+Sun Sep 27 21:01:48, Info:  "computeDynamicRupture" (total time): 7.18198 s ( = 7.1820 s ) 
+Sun Sep 27 21:01:48, Info:  "computeDynamicRupture" ( constant ): 0.000891768 (sample size: 2118 , standard error: -nan ) 
+Sun Sep 27 21:01:48, Info:  "computeDynamicRupture" ( per element ): 5.803e-06 (sample size: 2118 , standard error: -nan ) 
+Sun Sep 27 21:01:48, Info:  "computePointSources" (total time): 0 s ( = 0.0000 s ) 
+Sun Sep 27 21:01:48, Info:  "computePointSources" ( constant ): -nan (sample size: 0 , standard error: -nan ) 
+Sun Sep 27 21:01:48, Info:  "computePointSources" ( per element ): -nan (sample size: 0 , standard error: -nan ) 
+Sun Sep 27 21:01:48, Info:  Total time spent in compute kernels: 21.4876 s ( = 21.4876 s ) 
+Sun Sep 27 21:01:48, Info:  Total calculated HW-FLOP:  9.7551 TFLOP 
+Sun Sep 27 21:01:48, Info:  Total calculated NZ-FLOP:  3.0253 TFLOP 
+Sun Sep 27 21:01:48, Info:  Total calculated HW-FLOP/s:  315.4650 GFLOP/s 
+Sun Sep 27 21:01:48, Info:  Total calculated NZ-FLOP/s:  97.8346 GFLOP/s 
+Sun Sep 27 21:01:48, Info:  WP calculated HW-FLOP:  8.7943 TFLOP 
+Sun Sep 27 21:01:48, Info:  WP calculated NZ-FLOP:  2.3195 TFLOP 
+Sun Sep 27 21:01:48, Info:  DR calculated HW-FLOP:  960.8244 GFLOP 
+Sun Sep 27 21:01:48, Info:  DR calculated NZ-FLOP:  705.8250 GFLOP 
+Sun Sep 27 21:01:48, Info:  PL calculated HW-FLOP:  0.0000 FLOP 
+Sun Sep 27 21:01:48, Info:  PL calculated NZ-FLOP:  0.0000 FLOP 
+Sun Sep 27 21:01:48, Info:  Time spent in simulation: 30.9352 s (min: 30.9352 s, max: 30.9352 s)
+Sun Sep 27 21:01:48, Info:  Simulation done. 
+Sun Sep 27 21:01:48, Info:  Closing IO. 
+Sun Sep 27 21:01:48, Info:  Time wave field writer backend: 53.9071 ms (min: 53.9071 ms, max: 53.9071 ms)
+Sun Sep 27 21:01:48, Info:  Time wave field writer frontend: 102.8619 ms (min: 102.8619 ms, max: 102.8619 ms)
+Sun Sep 27 21:01:48, Info:  Time fault writer backend: 98.9417 ms (min: 98.9417 ms, max: 98.9417 ms)
+Sun Sep 27 21:01:48, Info:  Time fault writer frontend: 99.2014 ms (min: 99.2014 ms, max: 99.2014 ms)
+Sun Sep 27 21:01:48, Info:  SeisSol done. Goodbye. 
+SMOKE_STATUS=PASS

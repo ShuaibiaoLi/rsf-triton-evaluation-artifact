@@ -1,0 +1,76 @@
+{
+  "schema_version": "paper-supplement-manifest/1.0",
+  "root": "Paper_RSF_Triton",
+  "artifacts": [
+    {
+      "path": "results/bw1000/revision_v1/formal/nonspmv-independent-jobs-v1.json",
+      "bytes": 5736,
+      "sha256": "179bbec574a66a5bc46ffe89c058b793871384916215d8af12272c7af3902908"
+    },
+    {
+      "path": "results/bw1000/revision_v1/formal/spmv-four-cell-independent-jobs-v1.json",
+      "bytes": 13467,
+      "sha256": "4165c816a92693730a2d514b1e283bb94477b6d400b384967ee7022be9aa7857"
+    },
+    {
+      "path": "results/bw1000/revision_v1/tuning/tuning-ledger-local-replay.json",
+      "bytes": 43159,
+      "sha256": "b4b5a6bd78723141ea0c35928bb21692f32ee6c0b8ade7a656c0fb3022efc027"
+    },
+    {
+      "path": "results/bw1000/revision_v1/tuning/frozen_rule_v1.json",
+      "bytes": 2898,
+      "sha256": "55416c70f9b9ca0257cee1a9993d38eeeb185baf54ff468214f2d2bfa192e1f9"
+    },
+    {
+      "path": "docs/protocol/revision_v1_experiment_protocol.json",
+      "bytes": 3074,
+      "sha256": "3b848acf0e4e6dbdc999cc7bd64e13bad67576cff4d046e3aa176db247899fb3"
+    },
+    {
+      "path": "docs/protocol/bw1000_capture_manifest_v1.md",
+      "bytes": 1605,
+      "sha256": "0363028743a9150bb88669ccaf4ce945a4ec73bc19a7bc0123d6d8ef9e269107"
+    },
+    {
+      "path": "docs/reports/rsf_c3_causal_ablation_revision_v2.md",
+      "bytes": 6731,
+      "sha256": "003d3241a432be0c3aebef1883e6eb6bd73662470abc522ccacff138b48adc22"
+    },
+    {
+      "path": "docs/reports/seissol_rsf_hotspot_final_report_v1.md",
+      "bytes": 3178,
+      "sha256": "704adb48e91f2ab3958435cfa0afc2f8ff84a8bb1d858b7ed36d9c80fb5a3ffd"
+    },
+    {
+      "path": "docs/reports/seissol_hotspot_inventory_and_portability_stage_v1.md",
+      "bytes": 4433,
+      "sha256": "e2da36b17f7c298d7d15323d9401364878c41a4495f111edaf77ff0f03beb661"
+    },
+    {
+      "path": "docs/reports/seissol_triton_production_integration_boundary_v1.md",
+      "bytes": 3085,
+      "sha256": "02f2537536993a73612ccb3ff3a662df7916c6cf78c0998535c1d88716929e5b"
+    },
+    {
+      "path": "docs/reports/seissol_native_backend_build_audit_v1.md",
+      "bytes": 3144,
+      "sha256": "5adb8e75fb89370d442caf2ed6de9b8d5e8e49c42caadac7949c8a62d9fd8629"
+    },
+    {
+      "path": "BW1000_test/seissol-source/evidence/866206/slurm-smoke-866206.out",
+      "bytes": 17813,
+      "sha256": "e4e7e0db812a06db1d838b7d1561b2d70a8bd9bd07554bb96cfd4c2ab65374fd"
+    },
+    {
+      "path": "docs/paper/rewrite_20261016/generate_main_figures.py",
+      "bytes": 21328,
+      "sha256": "3be7cc660324185ad775f59f18f615233ed639dae768b893c4de76e46b180184"
+    },
+    {
+      "path": "docs/paper/rewrite_20261016/reproduce_aggregate_stats.py",
+      "bytes": 2158,
+      "sha256": "ff9e5c37d6a281ca8c3933f665c3494a2edd328197bc4d25b02d9d1c36f0e702"
+    }
+  ]
+}

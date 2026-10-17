@@ -3,6 +3,8 @@
 00f28a51524d22065ba6ad4d86815572e51cfbc396468c728a3d5cd43acea79e  raw/bw1000/revision-v1-spmv4-holdout-924488/raw/hip/sme3Da-cooperative_row-b256-g2.txt
 01d4880e2627fbe8faeaff8864f0471f01fb416b02eb971d5c1c19c06c11ca7e  raw/bw1000/revision-v1-spmv4-tuning-924088/raw/hip/bcsstk17-one_thread_per_row-b256-g4.txt
 01e8601dc4cb4c8c196654a523341e1202a45ba9637f779af5c19a3b16e48a39  raw/bw1000/revision-v1-spmv4-holdout-924488/raw/hip/sme3Da-cooperative_row-b128-g1.txt
+02f2537536993a73612ccb3ff3a662df7916c6cf78c0998535c1d88716929e5b  docs/reports/seissol_triton_production_integration_boundary_v1.md
+0363028743a9150bb88669ccaf4ce945a4ec73bc19a7bc0123d6d8ef9e269107  docs/protocol/bw1000_capture_manifest_v1.md
 03c5ce009a5a8f049746bfbc136ee68d1f535984b4cfb4c96ca277df946598cc  raw/bw1000/revision-v1-spmv4-holdout-924488/raw/triton/sme3Da-block_row-b128-g4.json
 03c5ce009a5a8f049746bfbc136ee68d1f535984b4cfb4c96ca277df946598cc  raw/bw1000/revision-v1-spmv4-holdout-924488/raw/triton/sme3Da-block_row-b128-g4.stdout
 0471b4d8dec85005d3963b2da68bdbb5e6468944d247fb2ab66ab35e5eb1e125  docs/paper/rewrite_20261016/figures/figure5_rsf_reversible_ablation.alignment.json
@@ -95,7 +97,6 @@
 2263d8ea9a1cb411b904ae17a5dd9254d4b2e45ab87f07873deab86e567cb971  raw/bw1000/revision-v1-nonspmv-paired-925740/revision-v1-nonspmv-paired-925740_3/hip-generic.txt
 22757cda91418c5af6f95f5b4343584912b8b7f2a1626c01a79489fa08d02342  raw/bw1000/revision-v1-spmv4-formal-924300/raw/hip/dw8192-cooperative_row-b256-g4.txt
 228a01ccc7801f9a0039f7b127f1e39d2fecdcf4454428194d8cb3fd78c00e68  raw/bw1000/revision-v1-spmv4-paired-924336_4/raw/hip/dw8192-one_thread_per_row-b64-g1.txt
-22e163d863214254ff83e6c10f7b145cd753ee5ce35338a2bc4e65e0fa32df60  docs/paper/rewrite_20261016/manuscript_cn_rewritten_v1.md
 2383a2a26b89e1ce79bfb079b49eb7c99b9f296bcc90896f9e966a1f7d0efd59  raw/bw1000/revision-v1-timing-v2-triton-925673/timing-v2-triton-925673.err
 23ce792ac6e0f47300eff64b38ca7680f25accc60197e4886818e06b0caa115b  kernels/generic_microbench/run_spmv_four_cell_paired_v1.slurm
 24cae792730144264a0c86bf40864e55b1cd80154c379bccbbbe6a839752012b  raw/bw1000/revision-v1-spmv4-formal-924300/raw/hip/apache2-one_thread_per_row-b64-g1.txt
@@ -114,12 +115,13 @@
 2b3adbf42b4127edffa9ae147d68ab52982fee9a6adaa94202d4f6725d7695a4  raw/bw1000/revision-v1-spmv4-formal-924300/raw/triton/apache2-row_program-b256-g4.stdout
 2bc7f6eed734b23a8171ce186d0c35e7d15bdf59b04d1aa7c5e52d81365bcc8e  raw/bw1000/revision-v1-spmv4-paired-924336_3/raw/triton/dw8192-block_row-b256-g1.json
 2bc7f6eed734b23a8171ce186d0c35e7d15bdf59b04d1aa7c5e52d81365bcc8e  raw/bw1000/revision-v1-spmv4-paired-924336_3/raw/triton/dw8192-block_row-b256-g1.stdout
+2c9e7c0bf001cd401d87454bc81a0ac588c01167b3d4b4ad64cbc3d6dd9846dd  verify_artifact.py
 2d04bf16101cff706b36dad13fca356e7ca3755ca7a49fcd1ca6560762138ae6  raw/bw1000/revision-v1-spmv4-tuning-924026/source.sha256
 2db520422507696c8215e6d4f7a85d9acb83bce5cf244bae9ad23fe2c6bef600  results/dongfang/revision_v1/formal/spmv-four-cell-formal-local-replay.json
 2e33d64d7d8a83e72ae40f0ccdf7c82e3452e88256d2778511cc2fce3fa004b2  raw/bw1000/revision-v1-spmv4-tuning-924088/raw/triton/poisson3Da-row_program-b64-g8.json
 2e33d64d7d8a83e72ae40f0ccdf7c82e3452e88256d2778511cc2fce3fa004b2  raw/bw1000/revision-v1-spmv4-tuning-924088/raw/triton/poisson3Da-row_program-b64-g8.stdout
 2f48112b0f1557c7c885a39b94f8e82de911d292c2482c7145afa8f40d6ea768  raw/bw1000/revision-v1-spmv4-smoke-924008/source.sha256
-2fa398219a8df2c31f7e8ac1ac83f8b3dbf8c3ab104253e1af4ebf5ffb345d74  artifact_metadata.json
+2f652dd1e3c18a570c6c2414fa4441b8d0c6940a13e14f5939bb32b227733977  docs/paper/rewrite_20261016/supplementary_manifest_v1.json
 2fd3ba62cbea19ffbb016a1a8fc7c2f85c95bb8319cff8068b433f1462abefdb  raw/bw1000/revision-v1-rsf-c3-lookup-pmc-925991/environment.txt
 30263d67ba4393e9b92bce531c015381856cdf75eba03a4f2154490ee0273ff4  raw/bw1000/revision-v1-spmv4-tuning-924088/raw/hip/poisson3Da-one_thread_per_row-b128-g8.txt
 30bfc3237a288ace8e2d249c668d38d83ecf6eb876a0ba8f36521ef149308da5  kernels/generic_microbench/rsf_c3_fixed_replay_triton_v2.py
@@ -240,6 +242,7 @@
 59e106a6f4601383b61c8afeb4113df81cd00b10f8490744f889efaa26a34161  raw/bw1000/revision-v1-spmv4-paired-924336_1/raw/hip/dw8192-one_thread_per_row-b64-g1.txt
 59e68d5650179aed17c93851806ba74a0a9f9589b547ad9a38aff4e7e2cdba3d  raw/bw1000/revision-v1-rsf-c3-fixed-replay-925767/native
 5ad227386c6c38afdda16f3f695309f5e3a900aa2057a628b607a993ccd37c35  raw/bw1000/revision-v1-nonspmv-paired-925740/revision-v1-nonspmv-paired-925740_0/environment.txt
+5adb8e75fb89370d442caf2ed6de9b8d5e8e49c42caadac7949c8a62d9fd8629  docs/reports/seissol_native_backend_build_audit_v1.md
 5b5c801ea7c6dc9b9f5d1be6e1d3d7198f1b61efc2006efbfea94f81f4e6d304  raw/bw1000/revision-v1-spmv4-tuning-924088/source.sha256
 5b9edde57929bb2e0f713cff68e15ec9c369443bfcdb9853cdea787f59387ecb  raw/bw1000/revision-v1-rsf-c3-fixed-replay-925767/native.txt
 5babb573866bbc3a7cdf08a882e0ce2e9798aee265235511cf47dd18b24f5847  kernels/generic_microbench/run_timing_decomposition_rsf_native_v2.slurm
@@ -270,6 +273,7 @@
 65b3aee42fd975000fb98d39229141d0ee90bb360b679b0d44966df62ef498a5  raw/bw1000/revision-v1-spmv4-paired-924336_4/raw/triton/orani678-row_program-b256-g4.stdout
 65ea00a151091ae4cb71c5623463d213815e9d85fa3fbb420109881b55c816bc  raw/bw1000/revision-v1-spmv4-holdout-924488/raw/triton/sme3Da-block_row-b256-g8.json
 65ea00a151091ae4cb71c5623463d213815e9d85fa3fbb420109881b55c816bc  raw/bw1000/revision-v1-spmv4-holdout-924488/raw/triton/sme3Da-block_row-b256-g8.stdout
+6685ad7ae442c40dd2474eb102e1c063f05b334f9cb1306ee71b626c7b02fb17  docs/paper/rewrite_20261016/manuscript_cn_rewritten_v1.md
 66f47491d6a41a42e7159de233e6ed2d541ebf72d4e783a67a342698e776686b  raw/bw1000/revision-v1-spmv4-smoke-923991/spmv4-smoke-923991.err
 675b00227c3a46309162b2f0c010634e44162dd72b7a70822edd31b70a6c88f9  raw/bw1000/revision-v1-spmv4-holdout-924488/raw/hip/sme3Da-one_thread_per_row-b256-g8.txt
 67c6d838341c3ac970b8b62ea271b5cd25adc74294090580015376150e831f79  raw/bw1000/revision-v1-spmv4-holdout-924488/raw/triton/sme3Da-block_row-b128-g1.json
@@ -317,7 +321,6 @@
 75c7d591cf55891d101ce5b87a51af22b1999ef5c8155e2d433bc2d4d44af7ca  raw/bw1000/revision-v1-spmv4-paired-924336_0/raw/triton/orani678-row_program-b256-g4.json
 75c7d591cf55891d101ce5b87a51af22b1999ef5c8155e2d433bc2d4d44af7ca  raw/bw1000/revision-v1-spmv4-paired-924336_0/raw/triton/orani678-row_program-b256-g4.stdout
 7836b20ae0cdf4bb252a39e4b9148a5eb11f5669b34ca011d2b85b66e077981c  raw/bw1000/revision-v1-timing-v2-hip-925708/timing-v2-hip-925708.out
-784270153534c71bcefa9eda5a628ba183a8b25b160b64209780d74d71bc5d0d  docs/reports/goal_completion_audit_v1.md
 78524bfa779ee8a60c5ff4cce03bceae4516f0cc9cc59d9cdeb4a33283971139  raw/bw1000/revision-v1-timing-v2-hip-925698/source.sha256
 7880222848a746dbb18d6b5c46079a84458790873c0632df80ed7149bc74a4b9  raw/bw1000/revision-v1-spmv4-tuning-924088/raw/triton/poisson3Da-row_program-b64-g4.json
 7880222848a746dbb18d6b5c46079a84458790873c0632df80ed7149bc74a4b9  raw/bw1000/revision-v1-spmv4-tuning-924088/raw/triton/poisson3Da-row_program-b64-g4.stdout
@@ -340,6 +343,7 @@
 8269faf5e5888b1122d3d3ae6c53bd388cef44144354abffd2bb4bceb0db66c8  raw/bw1000/revision-v1-rsf-c3-lookup-925877/rsf-c3-lookup-925877.out
 82fdde4b15721bc118d004737c1ccaeb814d94b2ce51eee43f5ff1feee9c892a  raw/bw1000/revision-v1-spmv4-paired-924336_1/raw/triton/dw8192-block_row-b256-g1.json
 82fdde4b15721bc118d004737c1ccaeb814d94b2ce51eee43f5ff1feee9c892a  raw/bw1000/revision-v1-spmv4-paired-924336_1/raw/triton/dw8192-block_row-b256-g1.stdout
+83306967ded08187689f5efcfc5bb991a788672e99795358c9389a3897966111  docs/reports/goal_completion_audit_v1.md
 8375accc72904dc126144f283b112a71b1737656ec1f34d29e83fbba48d5fe73  kernels/generic_microbench/run_rsf_c3_lookup_pmc_v2.slurm
 83bc26db3d971c4db7df9b79db689db927431244e64a433e1284c553c101aa37  raw/bw1000/revision-v1-timing-v2-profiler-925723/hip-rsf.stdout
 842c72fc6493bb306d5b1360e7600f895247d972ea70bc002c0aa4db2fd17408  docs/paper/rewrite_20261016/figures/figure2_evidence_framework.text-audit.json
@@ -385,6 +389,7 @@
 90abd79811cb439466a879c980fdcc6f7660e27052327e939df238ff972b1ec4  .gitignore
 921e4e03e84504d032ae0e045c07e517b82d08280adeab97f7123108fe06eb51  raw/bw1000/revision-v1-spmv4-tuning-924088/raw/triton/poisson3Da-row_program-b128-g2.json
 921e4e03e84504d032ae0e045c07e517b82d08280adeab97f7123108fe06eb51  raw/bw1000/revision-v1-spmv4-tuning-924088/raw/triton/poisson3Da-row_program-b128-g2.stdout
+92fb03166874959857a39ca39e4d35853f1a265b9a3aec96d6c7bc82a2b163c3  docs/paper/rewrite_20261016/reproducibility_check_v1.json
 92fd0d690307512435589fd0b57c90248c083f5b49b5ecfce4844810c9c245fe  raw/bw1000/revision-v1-timing-v2-profiler-925723/file_manifest.txt
 93dd4df56d1e7f02892d92be1b504a3e3990f865c2736b6c0d95bc0b6f8b339b  raw/bw1000/revision-v1-spmv4-holdout-924488/raw/triton/sme3Da-row_program-b128-g4.json
 93dd4df56d1e7f02892d92be1b504a3e3990f865c2736b6c0d95bc0b6f8b339b  raw/bw1000/revision-v1-spmv4-holdout-924488/raw/triton/sme3Da-row_program-b128-g4.stdout
@@ -508,6 +513,7 @@ b724113a252aeeb5bf79d14519e9d3116d93dd8f4c86bc29a7a69a4f90e8c9db  raw/bw1000/rev
 b948af6cd76ad371c91245d7c9c99ce9d05da6923b967c0992b5ba7af619636c  raw/bw1000/revision-v1-spmv4-tuning-924088/raw/triton/bcsstk17-row_program-b64-g1.json
 b948af6cd76ad371c91245d7c9c99ce9d05da6923b967c0992b5ba7af619636c  raw/bw1000/revision-v1-spmv4-tuning-924088/raw/triton/bcsstk17-row_program-b64-g1.stdout
 b9d8de1a21944e3c80008e18125be4e5558d315e8a91457d542ccb676865959a  raw/bw1000/revision-v1-timing-v2-triton-925673/source.sha256
+ba1466c2bdb498648a1f879ff981d85e92e1897b3e18710814571b2b9c330566  docs/paper/rewrite_20261016/supplementary_materials_index.md
 baa55810776c56a3d4d5dcc4e0ad5596de2a53f50e77af27a7c2c0519e3cc3dc  docs/paper/rewrite_20261016/figures/figure4_timing_decomposition.png
 bc2b4058a64b24bd150a0f3bd8ce4f06476110fa48f21658a1597fad45aea9c4  raw/bw1000/revision-v1-spmv4-tuning-924088/raw/triton/bcsstk17-block_row-b256-g2.json
 bc2b4058a64b24bd150a0f3bd8ce4f06476110fa48f21658a1597fad45aea9c4  raw/bw1000/revision-v1-spmv4-tuning-924088/raw/triton/bcsstk17-block_row-b256-g2.stdout
@@ -574,6 +580,7 @@ d4f960b790ad9b2e244bfee95b603ef73db2a76be181d255b86682d71eec4173  raw/bw1000/rev
 d4fd2276c74fc337e0603084b218acd6be567b22d2662890b3fa1e23086db758  raw/bw1000/revision-v1-spmv4-tuning-924088/raw/triton/poisson3Da-block_row-b256-g2.json
 d4fd2276c74fc337e0603084b218acd6be567b22d2662890b3fa1e23086db758  raw/bw1000/revision-v1-spmv4-tuning-924088/raw/triton/poisson3Da-block_row-b256-g2.stdout
 d513f5e65ae5b330bfc0a6446acf6f27a45aa3d2126033eda83a1d238a3405ef  raw/bw1000/revision-v1-timing-v2-hip-925698/result.txt
+d52b120e0ef6ed17c80e12f59873e3cf0b2ee6e716e8b4210d1bcbd3d1056e31  artifact_metadata.json
 d651579f8c75f3b71d6c37393e58fd06ba5dc4441a7b757f872b28919e67a85d  raw/bw1000/revision-v1-nonspmv-paired-925740/nonspmv-pair-925740_2.out
 d6f5c6608034b5ded35c0141f27775ef2d37ea3cfc1e5cd433bab50cd020e450  raw/bw1000/revision-v1-spmv4-tuning-924088/raw/hip/bcsstk17-cooperative_row-b256-g2.txt
 d71e6baa087cd0bab795f201df64a5fa7b344ccb90cb93ff323de4df4156eb41  raw/bw1000/revision-v1-spmv4-paired-924336_4/source.sha256
@@ -601,7 +608,6 @@ dc4bf68bf6ef9d3397fd652fb704c806cc7a1f21a6c64d47c06fa81cfe2ea843  docs/paper/rew
 dd493792454d2a86bffebc8d0f889646ead9faac64ec204f44be578eb10794f1  raw/bw1000/revision-v1-rsf-c3-lookup-pmc-925991/source.sha256
 dd7c14e5e6d579344d0652c34db2904a0104d3231ac57f153483fc585e6a341a  results/bw1000/revision_v1/timing/hip-rsf-kernel-timeline-v2.json
 de7bf2716c692a55066d3023fcae1c5d149cbbc0a45a6d1bf09557570b3a1fa0  raw/bw1000/revision-v1-spmv4-tuning-924088/raw/hip/bcsstk17-one_thread_per_row-b128-g4.txt
-df20d312264d65c8a63129adfa8c1f28075ea511ce14ecf415a7a5d16da9382b  verify_artifact.py
 df3b2a34f086313fe2a9041579aade0c85284c3ba106b2ae107c5c2a49c3a108  raw/bw1000/revision-v1-timing-v2-profiler-925723/timing-v2-prof-925723.out
 df5f8a3bfc5034d7265da52de8e166982c2c65c092c42deb0aa156462594d3b5  raw/bw1000/revision-v1-spmv4-paired-924336_1/raw/triton/orani678-row_program-b256-g4.json
 df5f8a3bfc5034d7265da52de8e166982c2c65c092c42deb0aa156462594d3b5  raw/bw1000/revision-v1-spmv4-paired-924336_1/raw/triton/orani678-row_program-b256-g4.stdout
@@ -614,6 +620,7 @@ e1e9c0c305e55535ff6b5e01b9896aa056527a70a5b3428297112c96b8b3d286  raw/bw1000/rev
 e26dc9ebae378780fc7dccb37305d267125ca3874e35f4386729d36e85eeab8f  raw/bw1000/revision-v1-spmv4-tuning-924088/raw/triton/bcsstk17-block_row-b128-g2.json
 e26dc9ebae378780fc7dccb37305d267125ca3874e35f4386729d36e85eeab8f  raw/bw1000/revision-v1-spmv4-tuning-924088/raw/triton/bcsstk17-block_row-b128-g2.stdout
 e2c6ac583edd9b9bf79c55ce2ceac4c698617c640fa40184cf07666e3af7c286  kernels/generic_microbench/rsf_coefficient_isolation_triton_v1.py
+e2da36b17f7c298d7d15323d9401364878c41a4495f111edaf77ff0f03beb661  docs/reports/seissol_hotspot_inventory_and_portability_stage_v1.md
 e2e5732106d3e619cef1acef5624c32e649d6d791eb5f73ab431deaa98867d01  docs/paper/rewrite_20261016/figures/figure1_mapping_reversal.collision-audit.json
 e2e944f05a005a53d5ccef94219cf963dd3d1073b96a6abffab2ed7673d1d443  raw/bw1000/revision-v1-spmv4-holdout-924488/raw/triton/sme3Da-block_row-b64-g1.json
 e2e944f05a005a53d5ccef94219cf963dd3d1073b96a6abffab2ed7673d1d443  raw/bw1000/revision-v1-spmv4-holdout-924488/raw/triton/sme3Da-block_row-b64-g1.stdout
@@ -634,6 +641,7 @@ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  raw/bw1000/rev
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  raw/bw1000/revision-v1-timing-v2-triton-925673/timing-v2-triton-925673.out
 e3f5e62d74fb34fb43a09b35d43f3dd8fd15c870134a3107bc7b15115b66ef91  raw/bw1000/revision-v1-spmv4-holdout-924488/raw/triton/sme3Da-block_row-b128-g8.json
 e3f5e62d74fb34fb43a09b35d43f3dd8fd15c870134a3107bc7b15115b66ef91  raw/bw1000/revision-v1-spmv4-holdout-924488/raw/triton/sme3Da-block_row-b128-g8.stdout
+e4e7e0db812a06db1d838b7d1561b2d70a8bd9bd07554bb96cfd4c2ab65374fd  BW1000_test/seissol-source/evidence/866206/slurm-smoke-866206.out
 e4f37727ce29f6b58c9f91c4f4c12665aa94123bf3319d297b5c229f645d2661  docs/paper/rewrite_20261016/figures/figure5_rsf_reversible_ablation.text-audit.json
 e541997cfb56cf1dc99fbdfbcb3e84c2ca993b95636ed776203b4034f8fe9a83  raw/bw1000/revision-v1-spmv4-tuning-924088/raw/triton/bcsstk17-block_row-b256-g1.json
 e541997cfb56cf1dc99fbdfbcb3e84c2ca993b95636ed776203b4034f8fe9a83  raw/bw1000/revision-v1-spmv4-tuning-924088/raw/triton/bcsstk17-block_row-b256-g1.stdout
@@ -658,7 +666,6 @@ ebc6ad45bdc305a775cfd07a5262004908d304db334d2dd60bc73900a9ee66c9  raw/bw1000/rev
 ed4aa2a31497c7f45c3ff42b71b6a5d9cd1c61d7241b3cec4fd2a38759f05f57  raw/bw1000/revision-v1-spmv4-tuning-924088/raw/hip/poisson3Da-cooperative_row-b64-g2.txt
 edc75a62ce0dc7ac0114c537d4813106244586fa253e32b5b881759abd785d84  raw/bw1000/revision-v1-spmv4-paired-924336_1/formal-summary.json
 edd24147b5c5ba77f65df9af416e02bdce75b818e97c73c4a07ed8f4d8fb6bf7  kernels/generic_microbench/run_rsf_coefficient_isolation_v1.slurm
-ede73348a0aecd27f97238177bc5271ed25598447477ee6265fa7f32a686a733  docs/paper/rewrite_20261016/supplementary_materials_index.md
 ef3e5173bf75ecbdb15625ec05cf421801de90995c2e640f5912e1630e0c9c11  raw/bw1000/revision-v1-spmv4-tuning-924026/environment.txt
 ef6b650fafb6b348a9ffe1e29173936bb2470bd1c6701a5dac3021214d305f66  raw/bw1000/revision-v1-nonspmv-paired-925740/revision-v1-nonspmv-paired-925740_0/triton.stdout
 ef6b650fafb6b348a9ffe1e29173936bb2470bd1c6701a5dac3021214d305f66  raw/bw1000/revision-v1-nonspmv-paired-925740/revision-v1-nonspmv-paired-925740_1/triton.stdout

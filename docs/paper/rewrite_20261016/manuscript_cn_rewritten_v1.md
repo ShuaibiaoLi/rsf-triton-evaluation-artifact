@@ -206,7 +206,7 @@ RSF 消融没有给出唯一根因，却提高了机制结论的可信度。固�
 
 ## 数据与代码可用性
 
-本文实验脚本、冻结协议、结构化结果、任务级日志、失败记录、内核源码、图件源数据和版本信息已整理为本地冻结证据包 `rsf-triton-artifact-v1`；代码采用 MIT License，数据、图件与文档采用 CC BY 4.0。补充材料 SM1—SM8 的文件清单见 `supplementary_materials_index.md`。GitHub 仓库 URL、`v1.0.0` commit/tag 和持久标识符只能在实际上传与归档后补入，因此当前稿仍不把材料描述为已公开。涉及平台访问限制的第三方材料不在本包内重新授权。
+本文实验脚本、冻结协议、结构化结果、任务级日志、失败记录、内核源码、图件源数据和版本信息已公开于 https://github.com/ShuaibiaoLi/rsf-triton-evaluation-artifact ，冻结版本为 `v1.0.1`。代码采用 MIT License，数据、图件与文档采用 CC BY 4.0。补充材料 SM1—SM8 的文件清单见 `supplementary_materials_index.md`。本公开仓库不是匿名审稿入口，目前尚无 DOI；涉及平台访问限制的第三方材料不在本包内重新授权。
 
 ## 伦理声明
 

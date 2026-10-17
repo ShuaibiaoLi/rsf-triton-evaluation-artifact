@@ -34,4 +34,4 @@
 
 ## 外部发布状态
 
-版权所有者已批准代码采用 MIT、数据/图件/文档采用 CC BY 4.0。发布包包含正式许可文件及相应 SPDX 语义。下一步按包内 `UPLOAD.md` 创建 GitHub 仓库和冻结 `v1.0.0` release；仓库 URL、release commit/tag 和 DOI 只能在实际创建后写入论文。
+版权所有者已批准代码采用 MIT、数据/图件/文档采用 CC BY 4.0。发布包包含正式许可文件及相应 SPDX 语义。公开仓库为 https://github.com/ShuaibiaoLi/rsf-triton-evaluation-artifact ；`v1.0.0` 为首版，`v1.0.1` 补齐补充材料索引的文件并更新可用性声明。尚无 DOI 或匿名审稿入口。

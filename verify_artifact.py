@@ -53,6 +53,15 @@ for entry in fig_manifest["entries"]:
             raise SystemExit(f"FAIL missing figure artifact: {entry[key]}")
 print("PASS unique Figure 1-7 source mapping")
 
+supplement = json.loads((root / "docs/paper/rewrite_20261016/supplementary_manifest_v1.json").read_text())
+for entry in supplement["artifacts"]:
+    path = root / entry["path"]
+    if not path.is_file() or path.stat().st_size != entry["bytes"]:
+        raise SystemExit(f"FAIL missing or size-mismatched supplement: {entry['path']}")
+    if hashlib.sha256(path.read_bytes()).hexdigest() != entry["sha256"]:
+        raise SystemExit(f"FAIL supplement hash: {entry['path']}")
+print(f"PASS {len(supplement['artifacts'])} supplement links and hashes")
+
 for line in (root / "SHA256SUMS").read_text().splitlines():
     expected, rel = line.split("  ", 1)
     got = hashlib.sha256((root / rel).read_bytes()).hexdigest()
