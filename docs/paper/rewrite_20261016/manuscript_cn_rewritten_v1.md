@@ -7,7 +7,7 @@
 
 ## 摘要
 
-高层 GPU 内核语言能降低并行算子的表达成本，但其与原生后端的相对效率容易受到基线实现、映射策略和计时边界的共同影响。本文以两种国产 DCU 平台栈上的 FP64 stencil、reduction、稀疏矩阵向量乘和 SeisSol Aging 速率—状态摩擦迭代为对象，构建包含独立数值参考、同预算映射候选、七层计时、独立作业复测与可逆干预的 Triton/HIP 评测协议。结果表明：在简单映射下，重尾矩阵 `orani678` 呈现 Triton 优势；加入两端对称候选后，登记候选空间内 best Triton/best HIP 在 BW1000 和东方平台栈分别变为 1.958 和 4.662，原结论发生逆转。对大规模规则 stencil 与 reduction，五个独立作业的稳态 Triton/HIP 比值分别为 1.0021（P5—P95：0.9965—1.0035）和 0.9963（0.9952—0.9964）；这些是描述性观测，不构成统计等效性检验。RSF-C3 在 batch 独立作业中仍保持 1.9836 倍差距；固定实际迭代并移除超越函数后差距未缩小，否定了迭代数或超越函数存在本身这一单因素解释。官方 BW1000 HIP 的 2 s TPV101 基线中，Dynamic Rupture 占 compute-kernel 时间 33.4%，但该结果只是应用背景，不是 Triton 应用路径。研究说明，在受测平台栈和登记候选范围内，可信的后端选择需要同时约束映射候选、计时语义和可逆归因；SeisSol 仅用于检验这些独立内核结论与 TPV101 应用背景之间的边界。
+高层 GPU 内核语言能降低并行算子的表达成本，但其与原生后端的相对效率容易受到基线实现、映射策略和计时边界的共同影响。本文以两种国产 DCU 平台栈上的 FP64 stencil、reduction、稀疏矩阵向量乘和 SeisSol Aging 速率—状态摩擦迭代为对象，构建包含独立数值参考、同预算映射候选、七层计时、独立作业复测与可逆干预的 Triton/HIP 评测协议。结果表明：在简单映射下，重尾矩阵 `orani678` 呈现 Triton 优势；加入两端对称候选后，登记候选空间内 best Triton/best HIP 在 BW1000 和东方平台栈分别变为 1.958 和 4.662，原结论发生逆转。对大规模规则 stencil 与 reduction，五个独立作业的稳态 Triton/HIP 比值分别为 1.0021（P5—P95：0.9965—1.0035）和 0.9963（0.9952—0.9964）；这些是描述性观测，不构成统计等效性检验。RSF-C3 在 batch 独立作业中仍保持 1.9836 倍差距；固定实际迭代并移除超越函数后差距未缩小，而在九个冻结案例中将 fixed replay 静态上界从 60 缩至已知最大迭代数 22 后，BW1000 的任务级 Triton/HIP 中位比值从 3.714 降至 2.900。该 oracle 上界只支持受测案例的机制归因，不是通用 RSF 优化。官方 BW1000 HIP 的 2 s TPV101 基线中，Dynamic Rupture 占 compute-kernel 时间 33.4%，但该结果只是应用背景，不是 Triton 应用路径。研究说明，在受测平台栈和登记候选范围内，可信的后端选择需要同时约束映射候选、计时语义和可逆归因；SeisSol 仅用于检验这些独立内核结论与 TPV101 应用背景之间的边界。
 
 **关键词：** 国产 DCU；Triton；HIP；科学计算；公平性能评测；速率—状态摩擦；SeisSol
 
@@ -32,13 +32,13 @@ Triton 以 program instance 和 tile 为主要抽象，使开发者能够用较�
 
 **图1  登记候选改变 `orani678` 的后端结论。** 图内四个数值统一来自正式复核合同：BW1000 为五个独立作业的中位数，东方为冻结后的正式重放。简单映射与 best-vs-best 属于不同映射合同；后者只表示登记候选空间内的结果，不代表厂商库或全局最优。探索阶段的 BW1000 旧汇总值 0.186 不进入本图或主叙事。
 
-现有工作分别提供了本文所需的基础认识：Roofline 和性能可移植性研究强调效率基准、平台集合与问题定义必须明确[5-6]；Kokkos、RAJA、Halide 和 Devito 表明高层抽象仍需要目标相关的布局或调度[7-10]；GPU SpMV 的性能依赖稀疏结构、存储格式和线程分配，并已有可复用的标准矩阵集合[11-12]。SeisSol 已有生成内核、融合 batched GEMM 和多后端加速的生产实践[13-14]，而速率—状态摩擦模型具有历史状态和非线性求解特征[15-17]。截至 2026-10-16 的限定检索中，尚未发现同时覆盖双国产 DCU 栈、同源 Triton/HIP 对称调优、多类 FP64 科学算子、Aging-RSF 可逆消融及分级应用门禁的公开研究。该陈述描述组合场景，不构成“首次”或“唯一”的断言。
+现有工作分别提供了本文所需的基础认识：Roofline 和性能可移植性研究强调效率基准、平台集合与问题定义必须明确[5-6]；Kokkos、RAJA、Halide 和 Devito 表明高层抽象仍需要目标相关的布局或调度[7-10]；GPU SpMV 的性能依赖稀疏结构、存储格式和线程分配[11-12]，已有工作还在国产 DCU 上针对 CSR SpMV 和 SpGEMM 进行结构感知优化[28-29]。SeisSol 已有生成内核、融合 batched GEMM 和多后端加速的生产实践[13-14]，而速率—状态摩擦模型具有历史状态和非线性求解特征[15-17]。本文不把 DCU 稀疏优化本身视为新问题；待回答的是：在同一设备上对 Triton 与 HIP 给予可审计的映射候选、正确性和计时合同后，后端排序及其解释是否仍成立。
 
-据此，本文回答三个问题：RQ1，在登记候选空间内，对称映射候选和调优预算如何改变 Triton/HIP 结论；RQ2，不同计时边界如何改变同一算子的性能解释；RQ3，可逆干预能排除哪些关于 RSF 非线性内核差距的单因素解释，以及这些独立内核证据在 TPV101 应用背景中的适用边界是什么。本文贡献如下。
+据此，本文回答三个问题：RQ1，在登记候选空间内，对称映射候选和调优预算如何改变 Triton/HIP 结论；RQ2，不同计时边界如何改变同一算子的性能解释；RQ3，可逆干预如何区分 RSF 非线性内核中实际迭代轨迹、函数路径和静态循环上界的作用，以及这些独立内核证据在 TPV101 应用背景中的适用边界是什么。本文贡献如下。
 
 1. 提出登记候选空间内的公平映射合同：独立 FP64 reference、对称候选预算、冻结规则、失败记录和作业级重复共同限定后端比较；`orani678` 的胜负反转表明简单基线会把映射收益误读为语言收益。
 2. 建立分层计时语义，将首次调用、host、single-event、batch、graph 与 profiler kernel duration 分开报告；规则算子的作业级比值接近 1，但不据此声称统计等效。
-3. 对官方 Aging-RSF 语义执行可逆干预，证明实际迭代数与超越函数的存在均不足以单独解释剩余差距；TPV101 仅提供应用成本背景，完整 SeisSol Triton 生产接入不属于本文贡献。
+3. 对官方 Aging-RSF 语义执行可逆干预，区分实际迭代轨迹、函数路径和静态循环上界的作用：前两者不足以单独解释差距，缩短登记案例的 oracle 上界则使相对差距收窄；TPV101 仅提供应用成本背景，完整 SeisSol Triton 生产接入不属于本文贡献。
 
 ![图2 研究设计与证据合同](figures/figure2_evidence_framework.png)
 
@@ -48,13 +48,13 @@ Triton 以 program instance 和 tile 为主要抽象，使开发者能够用较�
 
 ### 2.1 GPU DSL 与科学计算算子
 
-Triton 的编译抽象最初面向规则张量计算，通过块级程序描述和自动代码生成减轻 CUDA 风格低层编程负担[1]。Chen 和 Xia 在 RTX 3090 上比较了 stencil、SpMV、GEMM 与 N-body，指出 Triton 对结构和计算强度的响应不同[2]。Ewart 和 Araya-Polo 的 2026 年预印本比较了多厂商高阶 stencil，并以存储层次和 Roofline 分析实现差异[3]；Li 等的同期预印本则从现代 DSL 的正确性与替换质量差距出发，提出仅通过 correctness 不能推出高性能[4]。这些结果为“correct but slow”问题提供了直接背景，但其平台、算子和基线与本文不同，不能代替国产 DCU 上的实测。
+Triton 的编译抽象最初面向规则张量计算，通过块级程序描述和自动代码生成减轻 CUDA 风格低层编程负担[1]。Chen 和 Xia 在 RTX 3090 上比较了 stencil、SpMV、GEMM 与 N-body，指出 Triton 对结构和计算强度的响应不同[2]。Ewart 和 Araya-Polo 的 2026 年预印本比较了多厂商高阶 stencil，并以存储层次和 Roofline 分析实现差异[3]；Li 等的同期预印本则从现代 DSL 的正确性与替换质量差距出发，提出仅通过 correctness 不能推出高性能[4]。Kerncap 预印本针对 AMD GPU 上 HIP/Triton 内核的自动隔离与可复现调优[30]，但内核隔离不等于生产调用路径已被替换。这些结果为“correct but slow”和内核证据边界提供背景，不能代替本文受测 DCU 栈上的配对测量。
 
 性能可移植框架通常通过显式执行空间、数据布局或调度策略，把算法表达与目标相关优化分离。Kokkos、RAJA、Halide 和 Devito 分别展示了多核/众核抽象、可移植循环策略、算法—schedule 分离和自动 stencil 生成[7-10]。这类工作说明高层表达并不会消除目标相关选择。本文进一步把这一认识转化为后端比较的操作性约束：两端需要得到相同数量级的 mapping 候选和调优预算，并在正确性过滤后比较各自最佳候选。
 
 ### 2.2 SpMV、计时边界与性能模型
 
-SpMV 的行长分布、内存访问和负载均衡共同决定线程映射收益。Bell 和 Garland 系统讨论了吞吐处理器上的格式与线程分配[11]，SuiteSparse Matrix Collection 为矩阵结构研究提供了可复用输入[12]。本文从该集合选取调优与正式评测矩阵[22-27]，不把有限样本解释为完整矩阵总体。
+SpMV 的行长分布、内存访问和负载均衡共同决定线程映射收益。Bell 和 Garland 系统讨论了吞吐处理器上的格式与线程分配[11]，SuiteSparse Matrix Collection 为矩阵结构研究提供了可复用输入[12]。更直接的国产平台近邻已在海光 DCU 上研究 wavefront 级 CSR 映射、长短行调度和存储访问[28]；另一项 DCU 工作优化的是 SpGEMM，而非本文的 SpMV[29]。本文从 SuiteSparse 集合选取调优与正式评测矩阵[22-27]，贡献不在于提出新的 CSR 算法或压过厂商库，而在于控制两种编程后端的候选空间与测量合同后检验排序是否反转。
 
 Roofline 以算术强度连接带宽和计算 ceiling[5]，适合对设备侧限制进行分类，却不包含 JIT、主机提交、event、graph replay 和间接访问等完整调用路径。类似地，性能可移植性指标要求显式指定平台集合、问题和效率基准[6]。本文两个平台的软件版本没有对齐，因此只在各平台内计算比值，并用第二平台检验关系方向，不计算严格的性能可移植性单值。
 
@@ -95,6 +95,8 @@ HIP 候选包含 one-thread-per-row 与 cooperative-row，Triton 候选包含 ro
 
 RSF 机制实验先固定实际迭代轨迹，再依次以 lookup 替换 coefficient 中的 `log+exp`、`sqrt`、asinh 路径、全部超越函数，并设置普通算术占位，最后恢复原实现。预登记判断为：若某因素的存在是相对差距的主要解释，移除后 Triton/HIP 比值应缩小；原实现恢复值必须在 ±10% 门槛内。PMC 独立采集 `SQ_INSTS_VALU`，仅作为方向性线索。
 
+进一步将 fixed replay 的静态循环上界由 60 缩至 22，两个后端均保持九个冻结输入、线程映射、数学表达式与 pre60→bound22→restore60 顺序。22 是这九例已知实际迭代次数的最大值，不适用于未知输入。独立 CPU FP64 reference 与 BW1000 六种规模的五字段 correctness 先行；正式计时以 `n=65537`、30 次任务内采样和五个独立作业为单位，PMC 另开作业采集，不用于 speedup。
+
 应用迁移设置三个门禁：Kernel 检查 C0—C6 数值和重复稳定性；Interop 检查外部 device pointer、非默认 stream 和 face×padded 布局；Production 检查真实 `LTSRateAndState`、SYCL queue、auxiliary memory、MPI/LTS 生命周期、TPV101 路径及端到端时间。前一门禁通过不自动推出后一门禁通过。
 
 ## 4 实验结果
@@ -129,7 +131,7 @@ RSF-C3 与规则算子的表现不同。在 n=65537、batch=128 的五个独立�
 
 固定实际迭代轨迹后，HIP/Triton 为 57.12/224.08 μs；紧邻恢复为 57.28/225.44 μs，比值没有缩小。这排除了实际迭代轨迹及该冻结协议下路径差异作为相对差距的充分单因素解释；它不单独隔离动态收敛控制流、谓词化或 lowering 成本。干预闭环的输出通过独立 reference，恢复也满足预登记的 ±10% 门槛。
 
-### 4.4 可逆消融否定超越函数单因素解释
+### 4.4 可逆干预区分函数路径与静态循环上界
 
 函数路径消融给出负面因果结果。固定原实现的 Triton/HIP 比值约为 3.89—4.02；lookup asinh 使 HIP 和 Triton 分别降至 39.52 和 194.80 μs，但比值扩大到 4.93；lookup 全部超越函数进一步降至 34.08 和 192.16 μs，比值扩大到 5.64。普通算术占位的比值为 5.54。也就是说，超越函数对两端绝对成本均有贡献，但移除它们没有产生预登记的“相对差距缩小”响应，反而让 HIP 获益更多。
 
@@ -138,6 +140,8 @@ RSF-C3 与规则算子的表现不同。在 n=65537、batch=128 的五个独立�
 **图5  RSF-C3 可逆消融与方向复现。** 性能比值来自冻结的 fixed-replay 消融协议；PMC 时间不进入 speedup。函数替换同时会改变生成代码的多种属性，故该图只检验预登记的单因素方向，不定位编译器根因。东方仅用于验证“移除函数后差距不缩小”的干预方向，不与 BW1000 拼接绝对倍率。
 
 独立 PMC 显示，原始 fixed replay、lookup coefficient、sqrt、asinh、全部函数和算术占位的 Triton/HIP `SQ_INSTS_VALU` 比分别为 2.34、2.38、2.32、2.21、2.31 和 2.64。该观察与“剩余差距来自更宽的循环、逐 lane 控制、算术与 lowering 组合”相容，但计数器不能区分谓词化、重复计算、指令选择或代码体积，因而不足以定位唯一根因。东方在相同冻结干预下得到 lookup asinh 5.37、lookup all 5.63，并同样观察到两端加速而比值不缩小，为负面因果方向提供第二平台栈证据。
+
+与固定实际迭代但保留 60 轮上界的负结果不同，缩短**静态上界**在 BW1000 上产生了方向一致的正响应。九例最大实际迭代为 22；五个独立作业中，HIP 与 Triton 的 22/60 延迟比中位数分别为 0.895 和 0.709，Triton/HIP 比值由 3.714 降至 2.900，五个任务均缩小，且两端 60 轮恢复值均通过 ±10% 门槛。独立 PMC 的 `SQ_INSTS_VALU` 在 HIP 为 3,812,013→3,695,163，在 Triton 为 8,610,000→3,351,750。该成对干预支持静态上界参与形成登记案例的多余指令量及相对差距，但 22 是仅对已知九例正确的 oracle，且改变编译期上界可能同时改变控制流与代码生成，不能据此认定唯一编译器根因或可部署加速。任务级原始样本与失败 smoke 见 SM6。
 
 ### 4.5 第二平台的有限外部有效性
 
@@ -171,20 +175,20 @@ Production 门禁尚未通过。真实 `LTSRateAndState`、SYCL queue、auxiliar
 
 对大规模规则 stencil 和 reduction，五个受测作业的稳态比值接近 1；这支持把 Triton 纳入后续工程候选，但不构成等效性判定。若关注单次小 kernel 响应，则应显式计入事件和调用路径。对 SpMV，应先依据输入结构评估 cooperative、block-row 等 mapping，不能由“规则/不规则”标签直接选择语言。对当前 RSF-C3，batch 和 kernel timeline 均保留明显差距，在剩余机制未分离前应保留 HIP baseline。
 
-### 6.3 负面结果与机制证据
+### 6.3 正负干预与机制边界
 
-RSF 消融没有给出唯一根因，却提高了机制结论的可信度。固定实际迭代和函数移除均未使差距按预登记方向缩小，因此两个直观解释不再适合作为主要原因。剩余搜索可以集中于固定上限循环、逐 lane predicate、除法与选择指令、代码体积和后端 lowering 的组合。Roofline 或 PMC 可以帮助确定检查方向，但只有冻结干预、恢复和 reference 才能把相关观察提升为可证伪的机制检验。
+RSF 的负面与正面干预共同限定了机制解释：只固定实际迭代轨迹或移除函数路径并不缩小相对差距，但在已知九例上缩短静态循环上界会缩小差距。因而“实际迭代次数”和“静态编译期上界”不可混为一谈；后者的效应与 PMC 中 Triton VALU 计数的大幅下降相符。该设计仍不能分离循环展开、逐 lane predicate、指令选择与后端 lowering，也不能解释缩短后仍存的约 2.9 倍差距。下一步应在同一输入与映射下比较 22 轮编译产物并做受控控制流改写；未知输入的安全上界策略则需要另一组正确性和生产门禁。
 
 ### 6.4 与相邻工作的关系
 
-本文不重复声称 SpMV 结构敏感性或目标相关调度是新现象[7-12]，也不把两个软件栈的趋势复现解释为普适性能可移植性[6]。相对于 NVIDIA 上的 Triton/HPC 比较和多厂商 stencil 预印本[2-4]，本文的增量在于把 baseline 公平性、分层计时、负面可逆消融和应用迁移门禁放入同一证据架构。相对于 SeisSol 已完成的融合与生产加速工作[13]，本文提供的是 RSF 局部后端迁移成熟度的有界评估，而非新的完整应用后端。
+本文不重复声称 SpMV 结构敏感性或目标相关调度是新现象[7-12,28-29]，也不把两个软件栈的趋势复现解释为普适性能可移植性[6]。相对于 Triton/HPC 比较、多厂商 stencil 和 DCU 专用稀疏优化[2-4,28-29]，本文的增量在于把 baseline 公平性、分层计时、可逆机制干预和应用迁移门禁放入同一证据架构。相对于 SeisSol 已完成的融合与生产加速工作[13]以及 HIP/Triton 内核隔离工具[30]，本文提供的是 RSF 局部后端迁移成熟度的有界评估，而非新的完整应用后端或自动隔离方法。
 
 | 最近邻工作族 | 已有覆盖 | 本文新增证据 | 改变的研究决策 |
 |---|---|---|---|
 | Triton/HPC 算子比较[2-3] | NVIDIA 平台上的规则性、计算强度与基线差异 | 双国产 DCU 栈；同预算四格映射；作业级胜负反转 | 先冻结候选空间，再解释语言/后端排序 |
 | 多后端 stencil 与性能可移植性[4,6] | 多平台趋势与可移植性度量 | 七层计时把 single-event、稳态吞吐和 kernel duration 分开 | 不用单一 event 倍率代表纯 kernel 效率或严格可移植性 |
-| GPU SpMV 方法[11-12] | 稀疏结构、格式和线程分配影响性能 | `orani678` 在简单映射与登记 best-vs-best 下结论反转 | 把映射族作为公平基线的一部分，而非后验优化细节 |
-| SeisSol 生成与融合内核[13-14] | 生产代码生成、融合 batched GEMM 和应用集成 | 官方 Aging-RSF 语义上的可逆负面消融与 TPV101 应用边界 | 保留独立内核结论，不把它外推为生产后端或应用加速 |
+| GPU/DCU 稀疏方法[11-12,28-29] | 稀疏结构、格式和线程分配影响性能；已有 DCU 专用 SpMV/SpGEMM 优化 | `orani678` 在简单映射与登记 best-vs-best 下结论反转 | 把映射族作为跨后端公平基线的一部分，而非声称新 CSR 方法 |
+| SeisSol 生成与融合内核[13-14] | 生产代码生成、融合 batched GEMM 和应用集成 | 官方 Aging-RSF 语义上的负面及静态上界正面干预与 TPV101 应用边界 | 保留独立内核结论，不把它外推为生产后端或应用加速 |
 
 **表2  最近邻工作与本文决策增量。** “新增”指当前证据包中的组合式、可复核增量，不构成“首次”或普适性声明。
 
@@ -194,7 +198,7 @@ RSF 消融没有给出唯一根因，却提高了机制结论的可信度。固�
 
 **平台与统计。** 两个平台的软件栈未对齐，实验以单卡、有限作业数为主；跨平台只比较关系方向。五个作业的区间是描述性稳定性证据，不代表广泛设备总体，也未进行形式统计等效检验。
 
-**计时与机制。** device event、batch、graph 和 profiler 各自包含不同边界，profiler 还可能扰动执行。PMC/ISA 只提供方向性线索，不能单独证明编译器根因。RSF lookup 与 placeholder 会同时改变调度、代码体积和常量传播，本文的因果结论只是否定预登记的强单因素假设。
+**计时与机制。** device event、batch、graph 和 profiler 各自包含不同边界，profiler 还可能扰动执行。PMC/ISA 只提供方向性线索，不能单独证明编译器根因。RSF lookup 与 placeholder 会同时改变调度、代码体积和常量传播；22 轮 oracle 上界也可能同时改变循环与生成代码，且只保证九个已知案例的正确性。因此，相对差距收窄仅构成受测输入的静态上界机制证据，不构成通用 RSF 优化或生产路径性能结论。
 
 **应用覆盖。** 最小 bridge 没有覆盖真实 SeisSol 的 LTS、MPI、SYCL queue、辅助内存和异常生命周期，不能支持端到端性能结论。完整生产路径保持 `NOT_TESTED`。
 
@@ -202,11 +206,11 @@ RSF 消融没有给出唯一根因，却提高了机制结论的可信度。固�
 
 ## 8 结论
 
-本文在两个国产 DCU 平台栈上评估了 Triton 与 HIP 的科学计算内核。对 RQ1，登记空间内的对称候选预算使 SpMV 的表面胜负发生反转，说明输入结构通过 mapping 收益影响结论。对 RQ2，分层计时显示五个受测作业中的大规则算子稳态比值接近 1，但该观察不等同于形式等效。对 RQ3，固定迭代与函数路径的可逆干预排除了实际迭代数和超越函数存在本身作为 RSF 差距的充分单因素解释。SeisSol 在本文中提供官方 Aging-RSF 语义与 TPV101 应用背景；完整生产生命周期和应用级 Triton 加速不在本文声称范围内。由此，受测平台栈上的后端选择应联合声明映射候选、计时语义和干预边界，不能由语言标签或单一倍率推断。
+本文在两个国产 DCU 平台栈上评估了 Triton 与 HIP 的科学计算内核。对 RQ1，登记空间内的对称候选预算使 SpMV 的表面胜负发生反转，说明输入结构通过 mapping 收益影响结论。对 RQ2，分层计时显示五个受测作业中的大规则算子稳态比值接近 1，但该观察不等同于形式等效。对 RQ3，固定实际迭代与函数路径的可逆干预排除了两个强单因素解释；进一步的 BW1000 静态上界干预显示，已知案例的 60→22 轮缩短能收窄但未消除跨端差距。SeisSol 在本文中提供官方 Aging-RSF 语义与 TPV101 应用背景；完整生产生命周期和应用级 Triton 加速不在本文声称范围内。由此，受测平台栈上的后端选择应联合声明映射候选、计时语义和干预边界，不能由语言标签或单一倍率推断。
 
 ## 数据与代码可用性
 
-本文实验脚本、冻结协议、结构化结果、任务级日志、失败记录、内核源码、图件源数据和版本信息已公开于 https://github.com/ShuaibiaoLi/rsf-triton-evaluation-artifact ，冻结版本为 `v1.0.1`。代码采用 MIT License，数据、图件与文档采用 CC BY 4.0。补充材料 SM1—SM8 的文件清单见 `supplementary_materials_index.md`。本公开仓库不是匿名审稿入口，目前尚无 DOI；涉及平台访问限制的第三方材料不在本包内重新授权。
+实验脚本、冻结协议、结构化结果、任务级日志、失败记录、内核源码、图件源数据和版本信息归档于 https://github.com/ShuaibiaoLi/rsf-triton-evaluation-artifact ，本稿对应冻结版本为 `v1.0.2`。该版本在 `v1.0.1` 基础上纳入 RSF 静态循环上界 v3 的五作业原始记录、独立 PMC、源码和只读复核脚本；作业单位、输入、环境与 SHA256 清单见补充材料 SM6、SM8。代码采用 MIT License，数据、图件与文档采用 CC BY 4.0。GitHub 公开仓库不是匿名审稿入口，目前尚无 DOI；受限第三方材料不在本包内重新授权。
 
 ## 伦理声明
 
@@ -237,6 +241,7 @@ RSF 消融没有给出唯一根因，却提高了机制结论的可信度。固�
 | 七层计时与 profiler timeline | 925680、925708、925715、925723 | `docs/reports/timing_decomposition_revision_v2.md`；`results/bw1000/revision_v1/timing/` |
 | 非 SpMV 独立作业 | 925740_[0-4] | `docs/reports/nonspmv_independent_jobs_revision_v1.md`；`results/bw1000/revision_v1/formal/nonspmv-independent-jobs-v1.json` |
 | RSF fixed replay、函数消融、PMC 与东方复现 | 925770、925877、925991、927685、22427075 | `docs/reports/rsf_c3_causal_ablation_revision_v2.md`；`results/{bw1000,dongfang}/revision_v1/ablation/` |
+| RSF 静态循环上界 60→22 与独立 PMC | 936008_[0-4]、936030；失败 smoke 935980 | `docs/reports/rsf_c3_loop_bound_revision_v3.md`；`results/bw1000/revision_v2/ablation/rsf-c3-loop-bound-*-v3.json`；纳入 `v1.0.2` |
 | RSF C4—C6 与最小互操作 | 22391310、22391312、22391368 及 BW1000 C0—C6 证据 | `docs/paper/rewrite_20261016/evidence_architecture.md` 所列最终报告与原始日志 |
 | 官方 SeisSol TPV101 应用上下文 | BW1000 作业 866206；另含匹配 FL=3/FL=0 smoke 对照 | `BW1000_test/seissol-source/evidence/866206/slurm-smoke-866206.out`；`docs/reports/seissol_rsf_hotspot_final_report_v1.md`；`docs/reports/seissol_hotspot_inventory_and_portability_stage_v1.md` |
 
@@ -297,4 +302,10 @@ RSF 消融没有给出唯一根因，却提高了机制结论的可信度。固�
 [26] SUITESPARSE MATRIX COLLECTION. HB/orani678[DB/OL]. [2026-10-16]. https://sparse.tamu.edu/HB/orani678.
 
 [27] SUITESPARSE MATRIX COLLECTION. FEMLAB/sme3Da[DB/OL]. [2026-10-16]. https://sparse.tamu.edu/FEMLAB/sme3Da.
+
+[28] XING L, JIN S, LIU W, et al. DCU-aware CSR optimization for sparse stiffness matrix–vector multiplication on sugon supercomputers[J]. The Journal of Supercomputing, 2026, 82: Article 491. DOI: 10.1007/s11227-026-08634-y.
+
+[29] GUO H, WANG H, CHEN W, et al. Optimizing sparse general matrix–matrix multiplication for DCUs[J]. The Journal of Supercomputing, 2024, 80: 20176-20200. DOI: 10.1007/s11227-024-06234-2.
+
+[30] RAMOS C, LOWERY K. Kerncap: automated kernel extraction and isolation for AMD GPUs[EB/OL]. arXiv:2605.03208, 2026[2026-10-18]. https://arxiv.org/abs/2605.03208. （预印本）
 

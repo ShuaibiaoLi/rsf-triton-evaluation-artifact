@@ -1,0 +1,22 @@
+{
+  "schema_version": "rsf-c3-loop-bound-triton/3.0",
+  "status": "PASS",
+  "mode": "smoke",
+  "n": 1,
+  "max_abs_differences": {
+    "60": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "22": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  }
+}

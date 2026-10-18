@@ -1,0 +1,11 @@
+correctness variant=pre60 n=65537 max_abs_error=1.6002692420091558e-16 failures=0 status=PASS
+correctness variant=bound22 n=65537 max_abs_error=1.6002692420091558e-16 failures=0 status=PASS
+RSF_C3_LOOP_BOUND_NATIVE_V3_PASS mode=smoke
+HIP_PROF:on Sun Oct 18 00:53:19 2026
+HIP_PROF:process id '725895'
+HIP_PROF:db file '/public/home/cnic_lsb/generic-microbench/evidence/revision-v2-rsf-c3-loop-bound-pmc-936030/native-pmc.db'
+HIP_PROF:out put file '/public/home/cnic_lsb/generic-microbench/evidence/revision-v2-rsf-c3-loop-bound-pmc-936030/native-pmc'
+HIP_PROF:profiling ' /public/home/cnic_lsb/generic-microbench/evidence/revision-v2-rsf-c3-loop-bound-pmc-936030/native 65537 1 2 smoke'
+HIP_PROF:process begin
+HIP_PROF:process end run total cost:1(s)
+HIP_PROF:finish

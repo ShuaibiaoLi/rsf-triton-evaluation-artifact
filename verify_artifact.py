@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import csv, hashlib, json, statistics
+import csv, hashlib, json, statistics, subprocess, sys
 from pathlib import Path
 
 root = Path(__file__).resolve().parent
@@ -61,6 +61,9 @@ for entry in supplement["artifacts"]:
     if hashlib.sha256(path.read_bytes()).hexdigest() != entry["sha256"]:
         raise SystemExit(f"FAIL supplement hash: {entry['path']}")
 print(f"PASS {len(supplement['artifacts'])} supplement links and hashes")
+
+subprocess.run([sys.executable, str(root / "scripts/verify_rsf_c3_loop_bound_v3.py")],
+               cwd=root, check=True)
 
 for line in (root / "SHA256SUMS").read_text().splitlines():
     expected, rel = line.split("  ", 1)

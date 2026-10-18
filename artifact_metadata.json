@@ -1,6 +1,6 @@
 {
   "artifact": "rsf-triton-artifact-v1",
-  "file_count_excluding_manifest": 712,
+  "file_count_excluding_manifest": 811,
   "claim_scope": [
     "registered-space mapping",
     "timing semantics",
@@ -11,5 +11,7 @@
     "code": "MIT",
     "data_figures_documentation": "CC-BY-4.0"
   },
-  "license_status": "APPROVED_BY_AUTHOR"
+  "license_status": "APPROVED_BY_AUTHOR",
+  "release_version": "v1.0.2",
+  "added_evidence": "BW1000 RSF-C3 static loop-bound v3: five independent tasks, smoke, failed smoke, and PMC"
 }

@@ -1,0 +1,10 @@
+timestamp=2026-10-17T16:53:16Z
+hostname=f11r2n01
+slurm_job_id=936030
+/public/software/compiler/dtk-26.04/bin/hipprof
+dcc version: 25.10.0-0
+clang version 17.0.0 (http://112.11.119.99:55080/dcutoolkit/driverruntime/llvm-project.git ff5bf917a679c83afe927af051a20b86fef7b07d)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /public/software/compiler/dtk-26.04/llvm/bin
+Python 3.12.14

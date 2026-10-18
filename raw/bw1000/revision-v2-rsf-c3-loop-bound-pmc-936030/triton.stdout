@@ -1,0 +1,9 @@
+{"status": "PASS", "mode": "smoke", "n": 65537}
+HIP_PROF:on Sun Oct 18 00:53:55 2026
+HIP_PROF:process id '730362'
+HIP_PROF:db file '/public/home/cnic_lsb/generic-microbench/evidence/revision-v2-rsf-c3-loop-bound-pmc-936030/triton-pmc.db'
+HIP_PROF:out put file '/public/home/cnic_lsb/generic-microbench/evidence/revision-v2-rsf-c3-loop-bound-pmc-936030/triton-pmc'
+HIP_PROF:profiling ' python /public/home/cnic_lsb/generic-microbench/rsf_c3_loop_bound_triton_v3.py --rsf-root /public/home/cnic_lsb/rsf-triton-gate --source-v2 /public/home/cnic_lsb/generic-microbench/rsf_c3_fixed_replay_triton_v2.py --n 65537 --warmup 1 --repeat 2 --smoke --output /public/home/cnic_lsb/generic-microbench/evidence/revision-v2-rsf-c3-loop-bound-pmc-936030/triton-profile.json'
+HIP_PROF:process begin
+HIP_PROF:process end run total cost:31(s)
+HIP_PROF:finish

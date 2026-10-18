@@ -1,0 +1,15 @@
+correctness variant=pre60 n=1 max_abs_error=1.1102230246251565e-16 failures=0 status=PASS
+correctness variant=bound22 n=1 max_abs_error=1.1102230246251565e-16 failures=0 status=PASS
+summary variant=pre60 median_us=17.599999905 p5_us=17.599999905 p95_us=22.064000368
+sample variant=pre60 index=0 us=17.599999905
+sample variant=pre60 index=1 us=17.599999905
+sample variant=pre60 index=2 us=22.560000420
+summary variant=bound22 median_us=15.200000256 p5_us=14.336000383 p95_us=19.664000720
+sample variant=bound22 index=0 us=15.200000256
+sample variant=bound22 index=1 us=14.240000397
+sample variant=bound22 index=2 us=20.160000771
+summary variant=restore60 median_us=22.399999201 p5_us=14.335999824 p95_us=22.544000298
+sample variant=restore60 index=0 us=13.439999893
+sample variant=restore60 index=1 us=22.560000420
+sample variant=restore60 index=2 us=22.399999201
+reversibility restore_over_pre=1.272727234 status=FAIL

@@ -1,0 +1,3 @@
+correctness variant=pre60 n=257 max_abs_error=1.6002692420091558e-16 failures=0 status=PASS
+correctness variant=bound22 n=257 max_abs_error=1.6002692420091558e-16 failures=0 status=PASS
+RSF_C3_LOOP_BOUND_NATIVE_V3_PASS mode=smoke

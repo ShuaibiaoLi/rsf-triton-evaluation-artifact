@@ -1,0 +1,135 @@
+{
+  "schema_version": "rsf-c3-loop-bound-independent-jobs/3.0",
+  "platform": "BW1000",
+  "array_job_id": 936008,
+  "experimental_unit": "one Slurm array task",
+  "status": "PASS_DESCRIPTIVE",
+  "jobs": [
+    {
+      "task_id": 0,
+      "raw_directory": "results/raw/bw1000/revision-v2-rsf-c3-loop-bound-formal-936009",
+      "order": "hip_first",
+      "hip_median_us": {
+        "pre60": 62.558501959,
+        "bound22": 53.598999977,
+        "restore60": 57.119499892
+      },
+      "triton_median_us": {
+        "pre60": 218.72000396251678,
+        "bound22": 154.7199934720993,
+        "restore60": 218.1594967842102
+      },
+      "hip_bound22_over_pre60": 0.8567820248018098,
+      "triton_bound22_over_pre60": 0.7073883991818805,
+      "triton_over_hip_pre60": 3.4962474661855385,
+      "triton_over_hip_bound22": 2.8866208984960835
+    },
+    {
+      "task_id": 1,
+      "raw_directory": "results/raw/bw1000/revision-v2-rsf-c3-loop-bound-formal-936012",
+      "order": "triton_first",
+      "hip_median_us": {
+        "pre60": 63.199996948,
+        "bound22": 53.840000182,
+        "restore60": 57.119999081
+      },
+      "triton_median_us": {
+        "pre60": 218.47999840974808,
+        "bound22": 156.15999698638916,
+        "restore60": 219.43999826908112
+      },
+      "hip_bound22_over_pre60": 0.8518987781961245,
+      "triton_bound22_over_pre60": 0.7147564908597219,
+      "triton_over_hip_pre60": 3.456962167094883,
+      "triton_over_hip_bound22": 2.90044569945223
+    },
+    {
+      "task_id": 2,
+      "raw_directory": "results/raw/bw1000/revision-v2-rsf-c3-loop-bound-formal-936013",
+      "order": "hip_first",
+      "hip_median_us": {
+        "pre60": 57.360500097,
+        "bound22": 53.680500016,
+        "restore60": 57.19999969
+      },
+      "triton_median_us": {
+        "pre60": 224.95999932289124,
+        "bound22": 159.28000211715698,
+        "restore60": 221.840001642704
+      },
+      "hip_bound22_over_pre60": 0.9358443515175617,
+      "triton_bound22_over_pre60": 0.7080369958951593,
+      "triton_over_hip_pre60": 3.9218625873636137,
+      "triton_over_hip_bound22": 2.9671855155909874
+    },
+    {
+      "task_id": 3,
+      "raw_directory": "results/raw/bw1000/revision-v2-rsf-c3-loop-bound-formal-936017",
+      "order": "triton_first",
+      "hip_median_us": {
+        "pre60": 59.919999912,
+        "bound22": 53.599998355,
+        "restore60": 57.280000299
+      },
+      "triton_median_us": {
+        "pre60": 222.56000339984894,
+        "bound22": 160.64000129699707,
+        "restore60": 221.43999487161636
+      },
+      "hip_bound22_over_pre60": 0.8945260085734026,
+      "triton_bound22_over_pre60": 0.7217828848087899,
+      "triton_over_hip_pre60": 3.7142857764804087,
+      "triton_over_hip_bound22": 2.997015041550127
+    },
+    {
+      "task_id": 4,
+      "raw_directory": "results/raw/bw1000/revision-v2-rsf-c3-loop-bound-formal-936008",
+      "order": "hip_first",
+      "hip_median_us": {
+        "pre60": 58.081001043,
+        "bound22": 53.601000458,
+        "restore60": 57.121001184
+      },
+      "triton_median_us": {
+        "pre60": 218.87999773025513,
+        "bound22": 155.12000024318695,
+        "restore60": 218.31999719142914
+      },
+      "hip_bound22_over_pre60": 0.9228663331459585,
+      "triton_bound22_over_pre60": 0.7086988388694833,
+      "triton_over_hip_pre60": 3.7685300494082106,
+      "triton_over_hip_bound22": 2.893975838468424
+    }
+  ],
+  "summary": {
+    "hip_bound22_over_pre60": {
+      "median": 0.8945260085734026,
+      "p5": 0.8528754275172616,
+      "p95": 0.9332487478432411
+    },
+    "triton_bound22_over_pre60": {
+      "median": 0.7086988388694833,
+      "p5": 0.7075181185245363,
+      "p95": 0.7203776060189764
+    },
+    "triton_over_hip_pre60": {
+      "median": 3.7142857764804087,
+      "p5": 3.4648192269130145,
+      "p95": 3.891196079772533
+    },
+    "triton_over_hip_bound22": {
+      "median": 2.90044569945223,
+      "p5": 2.8880918864905514,
+      "p95": 2.991049136358299
+    }
+  },
+  "source_sha256_manifest": [
+    "4e4f664fdc7ba3a333b00cca421e92a5509d4e8fe6f63a3941f4e8c4bb6893b7  /public/home/cnic_lsb/generic-microbench/rsf_c3_fixed_replay_native_v2.cpp",
+    "30bfc3237a288ace8e2d249c668d38d83ecf6eb876a0ba8f36521ef149308da5  /public/home/cnic_lsb/generic-microbench/rsf_c3_fixed_replay_triton_v2.py",
+    "640c13bd085880612b83164be6e0856aac1adacdb3a69bab8c0a8b0262f5fd54  /public/home/cnic_lsb/generic-microbench/rsf_c3_loop_bound_native_v3.cpp",
+    "55163b24d6404448984a7a1b475e3668a449f06038547b2b5878d8edba5dc1ca  /public/home/cnic_lsb/generic-microbench/rsf_c3_loop_bound_triton_v3.py",
+    "85648b412750421478260e7c679d9a5573e29804f9d9d6ac1405cc055547207c  /public/home/cnic_lsb/generic-microbench/run_rsf_c3_loop_bound_v3.slurm",
+    "3c05879dea01d06df92fa4bf62039ce685f68e7f34ec38509ec249493e4dd9e3  /public/home/cnic_lsb/rsf-triton-gate/aging_rsf_fp64_reference.py",
+    "8f25369a2a774c73854c62e19b174ad4b8db870ccdeab9e0b24c77e756b68da3  /public/home/cnic_lsb/rsf-triton-gate/test-data/generated/src03-aging-rsf-newton-fp64-input-v1.tsv"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "rsf-c3-loop-bound-pmc/3.0",
+  "platform": "BW1000",
+  "job_id": 936030,
+  "status": "PASS_DIRECTIONAL_PROFILE",
+  "profile_time_used_for_speedup": false,
+  "source_hashes_match_formal": true,
+  "raw_directory": "results/raw/bw1000/revision-v2-rsf-c3-loop-bound-pmc-936030",
+  "backends": {
+    "hip": {
+      "pre60": {
+        "dispatch_index": 0,
+        "kernel_name": "_Z19fixed_replay_kernelPK5InputPdS2_S2_PiS3_i",
+        "grid": 65792,
+        "workgroup": 256,
+        "SQ_INSTS_VALU": 3812013,
+        "SQ_INSTS_VMEM_RD": 6150,
+        "SQ_INSTS_VMEM_WR": 5125,
+        "arch_vgpr": 64,
+        "sgpr": 48,
+        "scr": 0
+      },
+      "bound22": {
+        "dispatch_index": 1,
+        "kernel_name": "_Z23bounded_replay22_kernelPK5InputPdS2_S2_PiS3_i",
+        "grid": 65792,
+        "workgroup": 256,
+        "SQ_INSTS_VALU": 3695163,
+        "SQ_INSTS_VMEM_RD": 6150,
+        "SQ_INSTS_VMEM_WR": 5125,
+        "arch_vgpr": 64,
+        "sgpr": 48,
+        "scr": 0
+      },
+      "valu_bound22_over_pre60": 0.9693469041160143
+    },
+    "triton": {
+      "pre60": {
+        "dispatch_index": 1,
+        "kernel_name": "fixed_replay_kernel",
+        "grid": 65600,
+        "workgroup": 64,
+        "SQ_INSTS_VALU": 8610000,
+        "SQ_INSTS_VMEM_RD": 12300,
+        "SQ_INSTS_VMEM_WR": 5125,
+        "arch_vgpr": 52,
+        "sgpr": 64,
+        "scr": 0
+      },
+      "bound22": {
+        "dispatch_index": 21,
+        "kernel_name": "fixed_replay_kernel",
+        "grid": 65600,
+        "workgroup": 64,
+        "SQ_INSTS_VALU": 3351750,
+        "SQ_INSTS_VMEM_RD": 12300,
+        "SQ_INSTS_VMEM_WR": 5125,
+        "arch_vgpr": 52,
+        "sgpr": 64,
+        "scr": 0
+      },
+      "valu_bound22_over_pre60": 0.3892857142857143
+    }
+  }
+}

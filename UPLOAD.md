@@ -1,5 +1,7 @@
 # GitHub upload checklist
 
+Historical note: the repository already exists. The creation commands below describe the original `v1.0.0` setup and must not be rerun for `v1.0.2`. For the present update, verify the worktree, commit the curated additions, and create a new tag without moving `v1.0.0` or `v1.0.1`.
+
 ## Author gates before upload
 
 1. Confirm that the author names, affiliation, email, and acknowledgement text in the manuscript may be public.
